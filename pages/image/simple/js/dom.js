@@ -17,7 +17,6 @@ export const DOM = {
     subCategory7: () => document.getElementById('simple-sub-category-7'),
     subCategory8: () => document.getElementById('simple-sub-category-8'),
 
-    languageSelect: () => document.getElementById('simple-language-select'),
 
     // Dynamic Inputs
     dynamicInputsContainer: () => document.getElementById('simple-dynamic-inputs'),

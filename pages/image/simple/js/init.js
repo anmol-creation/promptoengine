@@ -21,13 +21,6 @@ export function initSimpleMode() {
         initMustacheOptions();
         initVisualGuide();
         initEvents();
-
-        const langDrop = DOM.languageSelect();
-        if (langDrop) {
-            initDropdown(langDrop, ["English", "Hindi", "Hinglish"], (val) => {}, "English");
-            const trigger = langDrop.querySelector('.selected-text');
-            if(trigger) trigger.textContent = "English";
-        }
     } catch (e) {
         console.error("CRITICAL: Failed to initialize Simple Mode components.", e);
         // We can throw further or let the UI stay partially loaded.
