@@ -49,7 +49,7 @@
     border-radius: 24px;
     box-shadow: 0 10px 30px -10px var(--shadow-color);
     border: 1px solid var(--border-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
 }
 
 .feature-section:hover {
@@ -371,21 +371,6 @@ body.dark-mode .static-text {
     gap: 40px; /* Increased gap */
 }
 
-@keyframes slideUpFade {
-    0% { opacity: 0; transform: translateY(30px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-#capability-section {
-    animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-#comparison-section {
-    animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-#pricing-section {
-    animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
 .comparison-card {
     padding: 50px;
     border-radius: 30px; /* Softer corners */
@@ -562,7 +547,7 @@ body.dark-mode .with-card li {
     box-shadow: 0 15px 40px rgba(111, 182, 255, 0.2);
     position: relative;
     overflow: hidden;
-    transform: scale(1.05); /* Slightly prominent */
+    transform: scale(1.05);
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
 }
 
@@ -824,4 +809,22 @@ body.dark-mode .with-account {
     .faq-question {
         font-size: 1.1rem;
     }
+}
+
+@keyframes slideUpFade {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#capability-section {
+    opacity: 0;
+    animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+#comparison-section {
+    opacity: 0;
+    animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+#pricing-section {
+    opacity: 0;
+    animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
