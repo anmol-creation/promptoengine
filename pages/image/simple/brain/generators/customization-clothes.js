@@ -51,19 +51,58 @@ export const getFemaleClothingColors = (itemName, type) => {
 
     const options = {};
 
+    const singleColorMap = {
+        "White": "#FFFFFF", "Black": "#000000", "Grey": "#808080", "Blue": "#0000FF", "Royal Blue": "#4169E1",
+        "Red": "#FF0000", "Green": "#008000", "Emerald Green": "#50C878", "Yellow": "#FFFF00", "Pink": "#FFC0CB",
+        "Pastel Pink": "#FFD1DC", "Purple": "#800080", "Maroon": "#800000", "Golden": "#FFD700", "Silver": "#C0C0C0",
+        "Neon Green": "#39FF14", "Beige": "#F5F5DC", "Brown": "#A52A2A"
+    };
     if (type === 'single') {
         singleColors.forEach(color => {
+
+            let iconSvg = "";
+            if (color === "Floral Pattern") {
+                iconSvg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:#ff9999;stop-opacity:1' /><stop offset='50%' style='stop-color:#99ff99;stop-opacity:1' /><stop offset='100%' style='stop-color:#9999ff;stop-opacity:1' /></linearGradient></defs><circle cx='50' cy='50' r='45' fill='url(#grad)' stroke='#ccc' stroke-width='5'/></svg>`;
+            } else if (singleColorMap[color]) {
+                iconSvg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='${singleColorMap[color]}' stroke='#ccc' stroke-width='5'/></svg>`;
+            }
             options[color] = {
                 type: "option",
+                icon: iconSvg,
                 prompt: `wearing a ${color} ${itemName}`
             };
+
         });
     } else if (type === 'combo') {
+        const comboColorMap = {
+            "White": "#FFFFFF", "Black": "#000000", "Blue": "#0000FF", "Red": "#FF0000",
+            "Yellow": "#FFFF00", "Pink": "#FFC0CB", "Beige": "#F5F5DC", "Brown": "#A52A2A", "Neon": "#39FF14"
+        };
         Object.entries(comboColors).forEach(([label, promptFragment]) => {
+
+            let iconSvg = "";
+            let c1 = "", c2 = "";
+
+            if (label.includes("White Top + Blue Bottom")) { c1 = "White"; c2 = "Blue"; }
+            else if (label.includes("Black + Black")) { c1 = "Black"; c2 = "Black"; }
+            else if (label.includes("Pink Top + White Bottom")) { c1 = "Pink"; c2 = "White"; }
+            else if (label.includes("Red Top + Black Bottom")) { c1 = "Red"; c2 = "Black"; }
+            else if (label.includes("Yellow Top + Blue Bottom")) { c1 = "Yellow"; c2 = "Blue"; }
+            else if (label.includes("White Top + Black Bottom")) { c1 = "White"; c2 = "Black"; }
+            else if (label.includes("Black Top + Blue Bottom")) { c1 = "Black"; c2 = "Blue"; }
+            else if (label.includes("Beige Top + Brown Bottom")) { c1 = "Beige"; c2 = "Brown"; }
+            else if (label.includes("Neon + Black")) { c1 = "Neon"; c2 = "Black"; }
+
+            if (c1 && c2 && comboColorMap[c1] && comboColorMap[c2]) {
+                iconSvg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='${comboColorMap[c1]}' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='${comboColorMap[c2]}' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`;
+            }
+
             options[label] = {
                 type: "option",
+                icon: iconSvg,
                 prompt: `wearing ${itemName}, ${promptFragment}`
             };
+
         });
     }
 

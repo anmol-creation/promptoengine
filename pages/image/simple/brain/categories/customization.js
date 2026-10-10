@@ -247,92 +247,92 @@ export const customizationCategory = {
                                     type: "group",
                                     icon: ICONS.clothes,
                                     options: {
-                                        "White": { type: "option", prompt: "wearing white T-Shirt" },
-                                        "Black": { type: "option", prompt: "wearing black T-Shirt" },
-                                        "Grey": { type: "option", prompt: "wearing grey T-Shirt" },
-                                        "Blue": { type: "option", prompt: "wearing blue T-Shirt" },
-                                        "Red": { type: "option", prompt: "wearing red T-Shirt" },
-                                        "Green": { type: "option", prompt: "wearing green T-Shirt" },
-                                        "Yellow": { type: "option", prompt: "wearing yellow T-Shirt" },
-                                        "Neutral": { type: "option", prompt: "wearing T-Shirt in neutral color" }
+                                        "White": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#FFFFFF' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing white T-Shirt" },
+                                        "Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000000' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing black T-Shirt" },
+                                        "Grey": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#808080' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing grey T-Shirt" },
+                                        "Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#0000FF' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing blue T-Shirt" },
+                                        "Red": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#FF0000' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing red T-Shirt" },
+                                        "Green": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#008000' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing green T-Shirt" },
+                                        "Yellow": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#FFFF00' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing yellow T-Shirt" },
+                                        "Neutral": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#D3D3D3' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing T-Shirt in neutral color" }
                                     }
                                 },
                                 "Shirt": {
                                     type: "group",
                                     icon: ICONS.clothes,
                                     options: {
-                                        "White": { type: "option", prompt: "wearing white Shirt" },
-                                        "Black": { type: "option", prompt: "wearing black Shirt" },
-                                        "Blue": { type: "option", prompt: "wearing blue Shirt" },
-                                        "Grey": { type: "option", prompt: "wearing grey Shirt" },
-                                        "Light Blue": { type: "option", prompt: "wearing light blue Shirt" },
-                                        "Neutral": { type: "option", prompt: "wearing Shirt in neutral color" }
+                                        "White": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#FFFFFF' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing white Shirt" },
+                                        "Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000000' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing black Shirt" },
+                                        "Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#0000FF' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing blue Shirt" },
+                                        "Grey": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#808080' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing grey Shirt" },
+                                        "Light Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#ADD8E6' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing light blue Shirt" },
+                                        "Neutral": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#D3D3D3' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Shirt in neutral color" }
                                     }
                                 },
                                 "Polo T-Shirt": {
                                     type: "group",
                                     icon: ICONS.clothes,
                                     options: {
-                                        "White": { type: "option", prompt: "wearing white Polo T-Shirt" },
-                                        "Black": { type: "option", prompt: "wearing black Polo T-Shirt" },
-                                        "Blue": { type: "option", prompt: "wearing blue Polo T-Shirt" },
-                                        "Red": { type: "option", prompt: "wearing red Polo T-Shirt" },
-                                        "Neutral": { type: "option", prompt: "wearing Polo T-Shirt in neutral color" }
+                                        "White": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#FFFFFF' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing white Polo T-Shirt" },
+                                        "Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000000' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing black Polo T-Shirt" },
+                                        "Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#0000FF' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing blue Polo T-Shirt" },
+                                        "Red": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#FF0000' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing red Polo T-Shirt" },
+                                        "Neutral": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#D3D3D3' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Polo T-Shirt in neutral color" }
                                     }
                                 },
                                 "Kurta": {
                                     type: "group",
                                     icon: ICONS.clothes,
                                     options: {
-                                        "White": { type: "option", prompt: "wearing white Kurta" },
-                                        "Black": { type: "option", prompt: "wearing black Kurta" },
-                                        "Yellow": { type: "option", prompt: "wearing yellow Kurta" },
-                                        "Blue": { type: "option", prompt: "wearing blue Kurta" },
-                                        "Neutral": { type: "option", prompt: "wearing Kurta in neutral color" }
+                                        "White": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#FFFFFF' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing white Kurta" },
+                                        "Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000000' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing black Kurta" },
+                                        "Yellow": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#FFFF00' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing yellow Kurta" },
+                                        "Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#0000FF' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing blue Kurta" },
+                                        "Neutral": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#D3D3D3' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Kurta in neutral color" }
                                     }
                                 },
                                 "Hoodie": {
                                     type: "group",
                                     icon: ICONS.clothes,
                                     options: {
-                                        "Black": { type: "option", prompt: "wearing black Hoodie" },
-                                        "Grey": { type: "option", prompt: "wearing grey Hoodie" },
-                                        "White": { type: "option", prompt: "wearing white Hoodie" },
-                                        "Blue": { type: "option", prompt: "wearing blue Hoodie" },
-                                        "Neutral": { type: "option", prompt: "wearing Hoodie in neutral color" }
+                                        "Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000000' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing black Hoodie" },
+                                        "Grey": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#808080' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing grey Hoodie" },
+                                        "White": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#FFFFFF' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing white Hoodie" },
+                                        "Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#0000FF' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing blue Hoodie" },
+                                        "Neutral": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#D3D3D3' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Hoodie in neutral color" }
                                     }
                                 },
                                 "Sweater": {
                                     type: "group",
                                     icon: ICONS.clothes,
                                     options: {
-                                        "Black": { type: "option", prompt: "wearing black Sweater" },
-                                        "Grey": { type: "option", prompt: "wearing grey Sweater" },
-                                        "White": { type: "option", prompt: "wearing white Sweater" },
-                                        "Blue": { type: "option", prompt: "wearing blue Sweater" },
-                                        "Beige": { type: "option", prompt: "wearing beige Sweater" },
-                                        "Neutral": { type: "option", prompt: "wearing Sweater in neutral color" }
+                                        "Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000000' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing black Sweater" },
+                                        "Grey": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#808080' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing grey Sweater" },
+                                        "White": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#FFFFFF' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing white Sweater" },
+                                        "Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#0000FF' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing blue Sweater" },
+                                        "Beige": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#F5F5DC' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing beige Sweater" },
+                                        "Neutral": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#D3D3D3' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Sweater in neutral color" }
                                     }
                                 },
                                 "Jacket": {
                                     type: "group",
                                     icon: ICONS.clothes,
                                     options: {
-                                        "Black": { type: "option", prompt: "wearing black Jacket" },
-                                        "Brown": { type: "option", prompt: "wearing brown Jacket" },
+                                        "Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000000' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing black Jacket" },
+                                        "Brown": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#A52A2A' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing brown Jacket" },
                                         "Denim Blue": { type: "option", prompt: "wearing denim blue Jacket" },
-                                        "Grey": { type: "option", prompt: "wearing grey Jacket" },
-                                        "Neutral": { type: "option", prompt: "wearing Jacket in neutral color" }
+                                        "Grey": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#808080' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing grey Jacket" },
+                                        "Neutral": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#D3D3D3' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Jacket in neutral color" }
                                     }
                                 },
                                 "Blazer": {
                                     type: "group",
                                     icon: ICONS.tie,
                                     options: {
-                                        "Black": { type: "option", prompt: "wearing black Blazer" },
-                                        "Navy Blue": { type: "option", prompt: "wearing navy blue Blazer" },
-                                        "Grey": { type: "option", prompt: "wearing grey Blazer" },
-                                        "Neutral": { type: "option", prompt: "wearing Blazer in neutral color" }
+                                        "Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000000' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing black Blazer" },
+                                        "Navy Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000080' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing navy blue Blazer" },
+                                        "Grey": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#808080' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing grey Blazer" },
+                                        "Neutral": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#D3D3D3' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Blazer in neutral color" }
                                     }
                                 }
                             }
@@ -345,64 +345,64 @@ export const customizationCategory = {
                                     type: "group",
                                     icon: ICONS.clothes,
                                     options: {
-                                        "Blue": { type: "option", prompt: "wearing blue Jeans" },
-                                        "Black": { type: "option", prompt: "wearing black Jeans" },
-                                        "Grey": { type: "option", prompt: "wearing grey Jeans" },
-                                        "Light Blue": { type: "option", prompt: "wearing light blue Jeans" },
-                                        "Neutral": { type: "option", prompt: "wearing Jeans in neutral color" }
+                                        "Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#0000FF' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing blue Jeans" },
+                                        "Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000000' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing black Jeans" },
+                                        "Grey": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#808080' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing grey Jeans" },
+                                        "Light Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#ADD8E6' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing light blue Jeans" },
+                                        "Neutral": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#D3D3D3' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Jeans in neutral color" }
                                     }
                                 },
                                 "Trousers": {
                                     type: "group",
                                     icon: ICONS.clothes,
                                     options: {
-                                        "Black": { type: "option", prompt: "wearing black Trousers" },
-                                        "Grey": { type: "option", prompt: "wearing grey Trousers" },
-                                        "Beige": { type: "option", prompt: "wearing beige Trousers" },
-                                        "Navy Blue": { type: "option", prompt: "wearing navy blue Trousers" },
-                                        "Neutral": { type: "option", prompt: "wearing Trousers in neutral color" }
+                                        "Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000000' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing black Trousers" },
+                                        "Grey": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#808080' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing grey Trousers" },
+                                        "Beige": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#F5F5DC' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing beige Trousers" },
+                                        "Navy Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000080' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing navy blue Trousers" },
+                                        "Neutral": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#D3D3D3' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Trousers in neutral color" }
                                     }
                                 },
                                 "Chinos": {
                                     type: "group",
                                     icon: ICONS.clothes,
                                     options: {
-                                        "Beige": { type: "option", prompt: "wearing beige Chinos" },
-                                        "Khaki": { type: "option", prompt: "wearing khaki Chinos" },
-                                        "Navy Blue": { type: "option", prompt: "wearing navy blue Chinos" },
-                                        "Black": { type: "option", prompt: "wearing black Chinos" },
-                                        "Neutral": { type: "option", prompt: "wearing Chinos in neutral color" }
+                                        "Beige": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#F5F5DC' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing beige Chinos" },
+                                        "Khaki": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#F0E68C' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing khaki Chinos" },
+                                        "Navy Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000080' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing navy blue Chinos" },
+                                        "Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000000' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing black Chinos" },
+                                        "Neutral": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#D3D3D3' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Chinos in neutral color" }
                                     }
                                 },
                                 "Formal Pants": {
                                     type: "group",
                                     icon: ICONS.tie,
                                     options: {
-                                        "Black": { type: "option", prompt: "wearing black Formal Pants" },
-                                        "Grey": { type: "option", prompt: "wearing grey Formal Pants" },
-                                        "Navy Blue": { type: "option", prompt: "wearing navy blue Formal Pants" },
-                                        "Neutral": { type: "option", prompt: "wearing Formal Pants in neutral color" }
+                                        "Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000000' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing black Formal Pants" },
+                                        "Grey": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#808080' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing grey Formal Pants" },
+                                        "Navy Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000080' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing navy blue Formal Pants" },
+                                        "Neutral": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#D3D3D3' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Formal Pants in neutral color" }
                                     }
                                 },
                                 "Shorts": {
                                     type: "group",
                                     icon: ICONS.clothes,
                                     options: {
-                                        "Black": { type: "option", prompt: "wearing black Shorts" },
-                                        "Blue": { type: "option", prompt: "wearing blue Shorts" },
-                                        "Grey": { type: "option", prompt: "wearing grey Shorts" },
-                                        "Beige": { type: "option", prompt: "wearing beige Shorts" },
-                                        "Neutral": { type: "option", prompt: "wearing Shorts in neutral color" }
+                                        "Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000000' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing black Shorts" },
+                                        "Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#0000FF' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing blue Shorts" },
+                                        "Grey": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#808080' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing grey Shorts" },
+                                        "Beige": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#F5F5DC' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing beige Shorts" },
+                                        "Neutral": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#D3D3D3' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Shorts in neutral color" }
                                     }
                                 },
                                 "Joggers": {
                                     type: "group",
                                     icon: ICONS.clothes,
                                     options: {
-                                        "Black": { type: "option", prompt: "wearing black Joggers" },
-                                        "Grey": { type: "option", prompt: "wearing grey Joggers" },
-                                        "Blue": { type: "option", prompt: "wearing blue Joggers" },
-                                        "Neutral": { type: "option", prompt: "wearing Joggers in neutral color" }
+                                        "Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000000' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing black Joggers" },
+                                        "Grey": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#808080' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing grey Joggers" },
+                                        "Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#0000FF' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing blue Joggers" },
+                                        "Neutral": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#D3D3D3' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Joggers in neutral color" }
                                     }
                                 },
                                 "Pyjama / Lounge Pants": {
@@ -410,10 +410,10 @@ export const customizationCategory = {
                                     icon: ICONS.clothes,
                                     options: {
                                         "Plaid": { type: "option", prompt: "wearing plaid Pyjama" },
-                                        "Grey": { type: "option", prompt: "wearing grey Lounge Pants" },
-                                        "Black": { type: "option", prompt: "wearing black Lounge Pants" },
-                                        "Blue": { type: "option", prompt: "wearing blue Lounge Pants" },
-                                        "Neutral": { type: "option", prompt: "wearing Lounge Pants in neutral color" }
+                                        "Grey": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#808080' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing grey Lounge Pants" },
+                                        "Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#000000' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing black Lounge Pants" },
+                                        "Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#0000FF' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing blue Lounge Pants" },
+                                        "Neutral": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><circle cx='50' cy='50' r='45' fill='#D3D3D3' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Lounge Pants in neutral color" }
                                     }
                                 }
                             }
@@ -428,16 +428,16 @@ export const customizationCategory = {
                                     icon: ICONS.clothes,
                                     generatorID: "fullOutfitColorGenerator",
                                     options: {
-                                        "White + Blue": { type: "option", prompt: "wearing Casual Outfit, white top and blue bottom" },
-                                        "Black + Blue": { type: "option", prompt: "wearing Casual Outfit, black top and blue bottom" },
-                                        "Grey + Black": { type: "option", prompt: "wearing Casual Outfit, grey top and black bottom" },
-                                        "White + Black": { type: "option", prompt: "wearing Casual Outfit, white top and black bottom" },
-                                        "Beige + Blue": { type: "option", prompt: "wearing Casual Outfit, beige top and blue bottom" },
-                                        "Olive Green + Black": { type: "option", prompt: "wearing Casual Outfit, olive green top and black bottom" },
-                                        "Navy Blue + Grey": { type: "option", prompt: "wearing Casual Outfit, navy blue top and grey bottom" },
-                                        "Brown + Beige": { type: "option", prompt: "wearing Casual Outfit, brown top and beige bottom" },
-                                        "Maroon + Black": { type: "option", prompt: "wearing Casual Outfit, maroon top and black bottom" },
-                                        "Light Blue + White": { type: "option", prompt: "wearing Casual Outfit, light blue top and white bottom" }
+                                        "White + Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#FFFFFF' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#0000FF' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Casual Outfit, white top and blue bottom" },
+                                        "Black + Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#000000' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#0000FF' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Casual Outfit, black top and blue bottom" },
+                                        "Grey + Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#808080' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#000000' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Casual Outfit, grey top and black bottom" },
+                                        "White + Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#FFFFFF' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#000000' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Casual Outfit, white top and black bottom" },
+                                        "Beige + Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#F5F5DC' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#0000FF' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Casual Outfit, beige top and blue bottom" },
+                                        "Olive Green + Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#808000' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#000000' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Casual Outfit, olive green top and black bottom" },
+                                        "Navy Blue + Grey": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#000080' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#808080' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Casual Outfit, navy blue top and grey bottom" },
+                                        "Brown + Beige": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#A52A2A' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#F5F5DC' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Casual Outfit, brown top and beige bottom" },
+                                        "Maroon + Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#800000' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#000000' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Casual Outfit, maroon top and black bottom" },
+                                        "Light Blue + White": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#ADD8E6' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#FFFFFF' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Casual Outfit, light blue top and white bottom" }
                                     }
                                 },
                                 "Formal Outfit": {
@@ -446,11 +446,11 @@ export const customizationCategory = {
                                     icon: ICONS.tie,
                                     generatorID: "fullOutfitColorGenerator",
                                     options: {
-                                        "White + Black": { type: "option", prompt: "wearing Formal Outfit, white top and black bottom" },
-                                        "Light Blue + Navy Blue": { type: "option", prompt: "wearing Formal Outfit, light blue top and navy blue bottom" },
-                                        "White + Grey": { type: "option", prompt: "wearing Formal Outfit, white top and grey bottom" },
-                                        "Black + Black": { type: "option", prompt: "wearing Formal Outfit, black top and black bottom" },
-                                        "Pink + Grey": { type: "option", prompt: "wearing Formal Outfit, light pink top and grey bottom" }
+                                        "White + Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#FFFFFF' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#000000' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Formal Outfit, white top and black bottom" },
+                                        "Light Blue + Navy Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#ADD8E6' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#000080' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Formal Outfit, light blue top and navy blue bottom" },
+                                        "White + Grey": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#FFFFFF' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#808080' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Formal Outfit, white top and grey bottom" },
+                                        "Black + Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#000000' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#000000' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Formal Outfit, black top and black bottom" },
+                                        "Pink + Grey": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#FFC0CB' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#808080' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Formal Outfit, light pink top and grey bottom" }
                                     }
                                 },
                                 "Semi-Formal Outfit": {
@@ -459,9 +459,9 @@ export const customizationCategory = {
                                     icon: ICONS.clothes,
                                     generatorID: "fullOutfitColorGenerator",
                                     options: {
-                                        "Blue + Beige": { type: "option", prompt: "wearing Semi-Formal Outfit, blue top and beige bottom" },
-                                        "Black + Grey": { type: "option", prompt: "wearing Semi-Formal Outfit, black top and grey bottom" },
-                                        "White + Blue": { type: "option", prompt: "wearing Semi-Formal Outfit, white top and blue bottom" }
+                                        "Blue + Beige": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#0000FF' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#F5F5DC' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Semi-Formal Outfit, blue top and beige bottom" },
+                                        "Black + Grey": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#000000' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#808080' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Semi-Formal Outfit, black top and grey bottom" },
+                                        "White + Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#FFFFFF' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#0000FF' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Semi-Formal Outfit, white top and blue bottom" }
                                     }
                                 },
                                 "Traditional Outfit": {
@@ -470,9 +470,9 @@ export const customizationCategory = {
                                     icon: ICONS.clothes,
                                     generatorID: "fullOutfitColorGenerator",
                                     options: {
-                                        "White + White": { type: "option", prompt: "wearing Traditional Outfit, white top and white bottom" },
-                                        "Yellow + White": { type: "option", prompt: "wearing Traditional Outfit, yellow top and white bottom" },
-                                        "Blue + White": { type: "option", prompt: "wearing Traditional Outfit, blue top and white bottom" }
+                                        "White + White": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#FFFFFF' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#FFFFFF' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Traditional Outfit, white top and white bottom" },
+                                        "Yellow + White": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#FFFF00' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#FFFFFF' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Traditional Outfit, yellow top and white bottom" },
+                                        "Blue + White": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#0000FF' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#FFFFFF' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Traditional Outfit, blue top and white bottom" }
                                     }
                                 },
                                 "Party Outfit": {
@@ -481,9 +481,9 @@ export const customizationCategory = {
                                     icon: ICONS.clothes,
                                     generatorID: "fullOutfitColorGenerator",
                                     options: {
-                                        "Black + Black": { type: "option", prompt: "wearing Party Outfit, black top and black bottom" },
-                                        "Red + Black": { type: "option", prompt: "wearing Party Outfit, red top and black bottom" },
-                                        "White + Black": { type: "option", prompt: "wearing Party Outfit, white top and black bottom" }
+                                        "Black + Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#000000' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#000000' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Party Outfit, black top and black bottom" },
+                                        "Red + Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#FF0000' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#000000' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Party Outfit, red top and black bottom" },
+                                        "White + Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#FFFFFF' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#000000' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Party Outfit, white top and black bottom" }
                                     }
                                 },
                                 "Street Style": {
@@ -492,9 +492,9 @@ export const customizationCategory = {
                                     icon: ICONS.clothes,
                                     generatorID: "fullOutfitColorGenerator",
                                     options: {
-                                        "Black + Black": { type: "option", prompt: "wearing Street Style Outfit, black top and black bottom" },
+                                        "Black + Black": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#000000' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#000000' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Street Style Outfit, black top and black bottom" },
                                         "Oversized + Baggy": { type: "option", prompt: "wearing Street Style Outfit, oversized top and baggy bottom" },
-                                        "White + Blue": { type: "option", prompt: "wearing Street Style Outfit, white top and blue bottom" }
+                                        "White + Blue": { type: "option", icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='16' height='16'><path d='M50 5 A45 45 0 0 0 50 95 Z' fill='#FFFFFF' stroke='#ccc' stroke-width='3'/><path d='M50 5 A45 45 0 0 1 50 95 Z' fill='#0000FF' stroke='#ccc' stroke-width='3'/><circle cx='50' cy='50' r='45' fill='none' stroke='#ccc' stroke-width='5'/></svg>`, prompt: "wearing Street Style Outfit, white top and blue bottom" }
                                     }
                                 }
                             }
