@@ -190,6 +190,15 @@ export const creativeData = [
   
     
     },
+    {
+        createdAt: 1000000000103, // Updated Timestamp
+        id: "unique_id_formal_white",
+        ai_image: "https://res.cloudinary.com/daxgt0qfj/image/upload/v1791602500/1000130610_smka5q.webp",
+        ref_image: "https://res.cloudinary.com/daxgt0qfj/image/upload/v1769434347/1000086070_hxibee.webp",
+        prompt: "ULTRA-REALISTIC DRAMATIC PORTRAIT OF A MAN OR WOMAN (FROM UPLOADED EXACT SAME FACE ), HAIR OVER ONE EYE, WEARING A BLACK SHIRT CENTRED WITH AN INTENSE STARE. Remove Eye glasses BRIGHT SHARP HORIZONTAL RED LIGHT HIGHLIGHTS ONLY THE EYES AND REFLECTS ON THE GRAY WALL; REST IN DEEP SHADOW. MOODY, MINIMALIST, CINEMATIC. Preserve the subject's identity and image quality.",
+        subject: "male"
+    },
+
     
 
 ];

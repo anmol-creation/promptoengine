@@ -70,5 +70,13 @@ export const cinematic = [
     
   
     
-  }
-];
+  },
+  {
+        createdAt: 1000000000102, // Updated Timestamp
+        id: "unique_id_formal_white",
+        ai_image: "https://res.cloudinary.com/daxgt0qfj/image/upload/v1791601187/1000130605_knwshs.webp",
+        ref_image: "https://res.cloudinary.com/daxgt0qfj/image/upload/v1769434347/1000086070_hxibee.webp",
+        prompt: "create a moody mysterious portait ofmy picture, keep the same background and camera angle as per the reference warm golden hour sunlight casting dramatic shadow on a plain wall ensuring the strong shadow ofthe face on the wall is visible ratio 4:5 overall cinematic tone, Preserve the subject's identity and image quality.",
+        subject: "male"
+    }
+];''

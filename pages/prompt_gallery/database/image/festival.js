@@ -42,5 +42,13 @@ export const festival = [
     
   
     
-   }
+   },
+   {
+        createdAt: 1000000000098, // Updated Timestamp
+        id: "unique_id_formal_white",
+        ai_image: "https://res.cloudinary.com/daxgt0qfj/image/upload/v1791425479/1000129791_ebybmg.webp",
+        ref_image: "https://res.cloudinary.com/daxgt0qfj/image/upload/v1769434347/1000086070_hxibee.webp",
+        prompt: "Clean up the environment by eliminating random background distractions and noise, ensuring the primary subject remains the absolute focus. Adjust the light levels naturally so the main subject stands out without overexposure. Enhance the overall image resolution, making details crisper and eliminating visual grain. Balance natural skin tone. Preserve subject identity. Festival theme: Krishna janamasthmi  Transform the subject into a human figure inspired by the era of Hindu Mythology. Adjust clothing, accessories, and environment to reflect the historical and cultural aesthetic. Do NOT depict as a god or deity. Preserve subject identity and image quality. Automatically balance the colors in this image. Fix any unnatural tints, adjust white balance, and ensure vibrant yet realistic and true-to-life colors. Correct physical distortions in the image. Ensure the subject's hands, eyes, and overall posture obey natural human anatomy without introducing new artifacts.Preserve the subject's identity and image quality.",
+        subject: "male"
+    }
 ];

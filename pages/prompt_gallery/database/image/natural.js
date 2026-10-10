@@ -349,6 +349,22 @@ export const naturalData = [
         ai_image: "https://res.cloudinary.com/daxgt0qfj/image/upload/v1773994409/1000097271_q8csje.webp",
         ref_image: "https://res.cloudinary.com/daxgt0qfj/image/upload/v1769434347/1000086070_hxibee.webp",
         prompt: "Remove distracting background elements such as unnecessary people, clutter, wires, random objects, or visual noise that reduce image quality, while preserving the main subject and important scene elements. Balance exposure with respect to the subject. Enhance the overall image resolution, making details crisper and eliminating visual grain. Sharpen facial features while keeping the exact likeness of the person. Set aspect ratio to 4:5. background replaced with a modern art museum interior, elegant gallery lighting, paintings on the wall wearing Casual Outfit, beige top and blue bottom wearing reading glasses wearing Beige Low-top Sneakers Preserve the subject's identity and image quality."
+    },
+    {
+        createdAt: 1000000000097, // Updated Timestamp
+        id: "unique_id_formal_white",
+        ai_image: "https://res.cloudinary.com/daxgt0qfj/image/upload/v1791425004/1000124234_uluqdj.webp",
+        ref_image: "https://res.cloudinary.com/daxgt0qfj/image/upload/v1769434347/1000086070_hxibee.webp",
+        prompt: "Adjust the light levels naturally so the main subject stands out without overexposure. Enhance the overall image resolution, making details crisper and eliminating visual grain. Adjust skin hues for a realistic tone while preserving the original facial identity. Correct physical distortions in the image. Ensure the subject's hands, eyes, and overall posture obey natural human anatomy without introducing new artifacts. Restore the natural color palette of the image. Neutralize color casts and enhance overall color depth without oversaturating. Background: Gray side wall wearing light blue Shirt wearing black Formal Pants wearing White Low-top Sneakers standing with hands in pockets wearing a smartwatch Subject has a messy hairstyle.Preserve the subject's identity and image quality.",
+        subject: "male"
+    },
+    {
+        createdAt: 1000000000100, // Updated Timestamp
+        id: "unique_id_formal_white",
+        ai_image: "https://res.cloudinary.com/daxgt0qfj/image/upload/v1791425005/1000124417_o35g5x.webp",
+        ref_image: "https://res.cloudinary.com/daxgt0qfj/image/upload/v1769434347/1000086070_hxibee.webp",
+        prompt: " Remove distracting background elements such as unnecessary people, clutter, wires, random objects, or visual noise that reduce image quality, while preserving the main subject and important scene elements. Balance exposure with respect to the subject. Boost image quality by sharpening soft areas and removing any pixelation or artifacts. Enhance facial details and clarity without morphing the original identity. Apply professional auto-color correction. Ensure skin tones and environmental colors appear completely natural and balanced. Fix and correct any AI-generated structural anomalies in the subject's body. Ensure perfect human anatomy, especially fixing distorted eyes, hands, and proportions naturally. on a long highway road background wearing Street Style Outfit, oversized top and baggy bottom wearing aviator sunglasses wearing Grey Running Shoes checking watch Preserve the subject's identity and image quality.",
+        subject: "male"
     }
 
 ];

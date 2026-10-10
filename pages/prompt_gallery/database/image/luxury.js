@@ -190,6 +190,14 @@ export const luxuryData = [
         ref_image: "https://res.cloudinary.com/daxgt0qfj/image/upload/v1769434347/1000086070_hxibee.webp",
         prompt: "Balance exposure with respect to the subject. Improve overall clarity and sharpness. Reduce noise. Improve face clarity. Preserve subject identity. wearing Casual Outfit, white top and blue bottom wearing round sunglasses wearing White Canvas Shoes Background: Urban Street side profile of the car driving fast, motion blur on background and wheels, dynamic speed shot Preserve the subject's identity and image quality.",
         subject: "male"
+    },
+    {
+        createdAt: 1000000000101, // Updated Timestamp
+        id: "unique_id_formal_white",
+        ai_image: "https://res.cloudinary.com/daxgt0qfj/image/upload/v1791425917/1000129793_vvynto.webp",
+        ref_image: "https://res.cloudinary.com/daxgt0qfj/image/upload/v1769434347/1000086070_hxibee.webp",
+        prompt: "Declutter the background. Erase photobombers, stray objects, and unnecessary details without modifying the original subject. Correct the lighting and exposure to ensure the subject is well-lit and clearly visible. Enhance the overall image resolution, making details crisper and eliminating visual grain. Adjust skin hues for a realistic tone while preserving the original facial identity. Fix and correct any AI-generated structural anomalies in the subject's body. Ensure perfect human anatomy, especially fixing distorted eyes, hands, and proportions naturally. Apply professional auto-color correction. Ensure skin tones and environmental colors appear completely natural and balanced. on a long highway road background wearing Casual Outfit, light blue top and white bottom wearing round sunglasses wearing Black Low-top Sneakers Kawasaki Ninja H2, supercharged hypersport motorcycle, metallic carbon gray and green frame, futuristic aerodynamic wings, studio lighting leaning casually against a parked motorcycle, one leg crossed over the other, coffee shop background, relaxed urban vibe Preserve the subject's identity and image quality.",
+        subject: "male"
     }
     
     
