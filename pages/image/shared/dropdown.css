@@ -121,3 +121,12 @@
         background-color: #333;
     }
 }
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.dropdown-item svg {
+    flex-shrink: 0;
+}
