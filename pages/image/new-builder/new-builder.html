@@ -1,0 +1,68 @@
+<div id="new-builder-experiment" class="new-builder-container">
+    <!-- Top Area -->
+    <header class="nb-top-area">
+        <div class="nb-context">
+            <span class="nb-mode-label">Image Builder Experiment</span>
+            <span class="nb-progress">No changes selected</span>
+        </div>
+        <button id="nb-back-btn" class="nb-btn nb-btn-secondary">Back to Current Builder</button>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="nb-main-workspace">
+
+        <!-- Left Panel: Categories -->
+        <aside class="nb-left-panel" id="nb-left-panel">
+            <h3>Categories</h3>
+            <ul class="nb-category-list">
+                <li class="nb-category-item active">Subject</li>
+                <li class="nb-category-item">Style</li>
+                <li class="nb-category-item">Lighting</li>
+                <li class="nb-category-item">Camera</li>
+            </ul>
+        </aside>
+
+        <!-- Center Workspace: Selection Controls -->
+        <section class="nb-center-workspace" id="nb-center-workspace">
+            <div class="nb-workspace-header">
+                <h2>Subject</h2>
+                <button class="nb-mobile-toggle" id="nb-mobile-left-toggle">☰ Categories</button>
+            </div>
+            <div class="nb-options-grid">
+                <!-- Placeholder for options -->
+                <div class="nb-option-card">Portrait</div>
+                <div class="nb-option-card">Landscape</div>
+                <div class="nb-option-card">Character</div>
+                <div class="nb-option-card">Abstract</div>
+                <div class="nb-option-card">Vehicle</div>
+                <div class="nb-option-card">Animal</div>
+            </div>
+        </section>
+
+        <!-- Right Panel: Selected Changes & Preview -->
+        <aside class="nb-right-panel" id="nb-right-panel">
+            <div class="nb-panel-header">
+                <h3>Your Selections</h3>
+                <button class="nb-mobile-toggle" id="nb-mobile-right-toggle">Close</button>
+            </div>
+            <div class="nb-selected-list">
+                <div class="nb-empty-state">No changes yet. Start selecting options.</div>
+                <!-- Selected items would go here -->
+            </div>
+            <div class="nb-prompt-preview">
+                <h4>Prompt Preview</h4>
+                <p>Your prompt will appear here...</p>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- Bottom Actions -->
+    <footer class="nb-bottom-actions">
+        <button class="nb-btn nb-btn-outline" id="nb-reset-btn">Reset</button>
+        <div class="nb-mobile-review-toggle" id="nb-mobile-review-toggle">
+            Review Selections (0)
+        </div>
+        <button class="nb-btn nb-btn-primary" id="nb-create-btn">Create Prompt</button>
+    </footer>
+</div>
