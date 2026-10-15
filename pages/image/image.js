@@ -5,7 +5,8 @@ import { initDevTrigger } from '../../dev-access/trigger.js';
 
 const MODES = {
     SIMPLE: 'simple',
-    HARD: 'hard' // Maps to 'default' folder internally
+    HARD: 'hard', // Maps to 'default' folder internally
+    NEW_BUILDER: 'new-builder' // Experimental builder UI
 };
 
 // Cache for styles
@@ -47,6 +48,30 @@ async function loadMode(mode) {
                 module.initSimpleMode();
             } else {
                 throw new Error("initSimpleMode not found in module");
+            }
+        } else if (mode === MODES.NEW_BUILDER) {
+            // Load New Builder (Experiment)
+            await loadStyle('new-builder/new-builder.css');
+            const response = await fetch('new-builder/new-builder.html');
+            if (!response.ok) throw new Error(`Failed to fetch new-builder.html: ${response.statusText}`);
+
+            const html = await response.text();
+            container.innerHTML = html;
+
+            const module = await import('./new-builder/new-builder.js');
+            if (module && module.initNewBuilder) {
+                module.initNewBuilder();
+            } else {
+                throw new Error("initNewBuilder not found in module");
+            }
+
+            // Wire up "Back to Current Builder" button
+            const backBtn = document.getElementById('nb-back-btn');
+            if (backBtn) {
+                backBtn.addEventListener('click', () => {
+                    const simpleBtn = document.querySelector('.switch-btn[data-target="simple"]');
+                    if (simpleBtn) simpleBtn.click();
+                });
             }
         } else {
             // Load Hard Mode (Default)
