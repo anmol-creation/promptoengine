@@ -173,7 +173,16 @@ export const simpleBrainMap = {
                     "Basic / Core": {
                         type: "group",
                         options: {
-                            "Buttons (Primary, Ghost, etc.)": { type: "option", prompt: "Buttons (Primary, Secondary, Ghost, Icon Buttons)" },
+                            "Button": {
+                                type: "group",
+                                options: {
+                                    "CTA (Call to Action)": { type: "group", options: {} },
+                                    "Social Media / Login": { type: "group", options: {} },
+                                    "E-commerce / Cart": { type: "group", options: {} },
+                                    "Navigation / Menu": { type: "group", options: {} },
+                                    "Floating / Icon": { type: "group", options: {} }
+                                }
+                            },
                             "Badges / Chips": { type: "option", prompt: "Badges / Chips" },
                             "Icons & Avatars": { type: "option", prompt: "Icons & Avatars" }
                         }
