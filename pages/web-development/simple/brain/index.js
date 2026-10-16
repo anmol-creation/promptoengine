@@ -164,7 +164,19 @@ export const simpleBrainMap = {
             "Other": { type: "group", options: {} }
         }
     },
-    "Create": { type: "group", options: {} },
+    "Create": {
+        type: "group",
+        options: {
+            "Components (UI Elements)": { type: "group", options: {} },
+            "Pages (Views)": { type: "group", options: {} },
+            "Sections (Page Blocks)": { type: "group", options: {} },
+            "Layouts": { type: "group", options: {} },
+            "Styles & Theming": { type: "group", options: {} },
+            "Logic / Scripts": { type: "group", options: {} },
+            "Backend / APIs": { type: "group", options: {} },
+            "Configuration / Assets": { type: "group", options: {} }
+        }
+    },
     "Design": { type: "group", options: {} },
     "Content": { type: "group", options: {} },
     "Features": { type: "group", options: {} },
