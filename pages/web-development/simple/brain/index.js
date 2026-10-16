@@ -214,38 +214,106 @@ export const simpleBrainMap = {
                                     "Social Media / Login": {
                                         type: "group",
                                         options: {
-                                            "Brand Colors (Solid)": { type: "group", options: {} },
-                                            "Outline with Brand Icon": { type: "group", options: {} },
-                                            "Pill-shaped with Gradient": { type: "group", options: {} },
-                                            "Dark Mode Stealth": { type: "group", options: {} },
-                                            "Minimalist Icon-Only": { type: "group", options: {} }
+                                            "Brand Colors (Solid)": {
+                                                type: "option",
+                                                prompt: "Create a 'Brand Colors (Solid)' Social Media / Login button. It should feature a clean, flat design using the exact official hex color of the selected social media brand (e.g., Google White, Facebook Blue). Include the official vector logo icon on the left.\n\nImplementation Rules:\n- If integrating into an existing repository, adapt the button's spacing and border-radius to match the global UI theme, but strictly preserve the brand color and icon.\n- If standalone, provide the standard button code with placeholder brand colors.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the brand (e.g., Google, Apple) or framework?", label: "Custom Details" }
+                                            },
+                                            "Outline with Brand Icon": {
+                                                type: "option",
+                                                prompt: "Create an 'Outline with Brand Icon' Social Media / Login button. The button must have a transparent background with a solid border matching the brand's primary color. The brand icon should be placed on the left side with text in the center.\n\nImplementation Rules:\n- If integrating into an existing repository, match the border thickness and hover states (e.g., slight background fill on hover) to the current theme.\n- If standalone, provide a clean, modern outlined component.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the brand (e.g., Twitter) or framework?", label: "Custom Details" }
+                                            },
+                                            "Pill-shaped with Gradient": {
+                                                type: "option",
+                                                prompt: "Create a 'Pill-shaped with Gradient' Social Media / Login button. It should have a fully rounded pill shape (e.g., rounded-full) and a vibrant, modern background gradient (ideal for brands like Instagram or TikTok).\n\nImplementation Rules:\n- If integrating into an existing repository, ensure the pill shape doesn't clash with highly square themes, and adapt the gradient direction to match existing styles.\n- If standalone, generate the exact CSS gradient required.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the brand (e.g., Instagram) or framework?", label: "Custom Details" }
+                                            },
+                                            "Dark Mode Stealth": {
+                                                type: "option",
+                                                prompt: "Create a premium 'Dark Mode Stealth' Social Media / Login button. The background should be a deep dark grey or black, with a very subtle lighter border. The icon and text must be stark white for high contrast.\n\nImplementation Rules:\n- If integrating into an existing repository, utilize the theme's existing dark mode color variables (e.g., bg-gray-800 or surface colors).\n- If standalone, create an isolated dark-themed component.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the brand (e.g., Apple, GitHub) or framework?", label: "Custom Details" }
+                                            },
+                                            "Minimalist Icon-Only": {
+                                                type: "option",
+                                                prompt: "Create a 'Minimalist Icon-Only' Social Media / Login button. The button should display only the brand's logo inside a soft circular or rounded-square container, without any accompanying text. Include a subtle hover animation like a slight scale, spin, or bounce.\n\nImplementation Rules:\n- If integrating into an existing codebase, apply the repository's standard icon-button hover transition tokens.\n- If standalone, provide a compact, accessible icon button component.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the brand (e.g., Discord) or framework?", label: "Custom Details" }
+                                            }
                                         }
                                     },
                                     "E-commerce / Cart": {
                                         type: "group",
                                         options: {
-                                            "Urgent 'Buy Now' (Pulsing)": { type: "group", options: {} },
-                                            "Wide 'Add to Cart' Block": { type: "group", options: {} },
-                                            "Sleek Dark Mode Cart": { type: "group", options: {} },
-                                            "Split Button": { type: "group", options: {} }
+                                            "Urgent 'Buy Now' (Pulsing)": {
+                                                type: "option",
+                                                prompt: "Create an Urgent 'Buy Now' E-commerce button. The button must use a high-conversion, attention-grabbing color (like bright red, orange, or vibrant green) and feature a continuous, subtle pulsing or heartbeat animation to create urgency.\n\nImplementation Rules:\n- If integrating into an existing repository, respect the primary/secondary accent color system if possible, but prioritize visibility. Use existing keyframe animations if available.\n- If standalone, implement the keyframe pulsing CSS animation.",
+                                                dynamicInput: { type: "text", placeholder: "Any specific text (e.g., 'Buy Now') or tech stack?", label: "Custom Details" }
+                                            },
+                                            "Wide 'Add to Cart' Block": {
+                                                type: "option",
+                                                prompt: "Create a 'Wide Add to Cart Block' button. It should be a full-width (block-level) button designed for mobile product pages or sidebars. Include a shopping cart or bag icon aligned to the left or center, with bold, readable text.\n\nImplementation Rules:\n- If integrating into an existing repository, adapt the button's padding and typography to match the product details layout.\n- If standalone, provide a responsive full-width component.",
+                                                dynamicInput: { type: "text", placeholder: "Any specific text or tech stack?", label: "Custom Details" }
+                                            },
+                                            "Sleek Dark Mode Cart": {
+                                                type: "option",
+                                                prompt: "Create a 'Sleek Dark Mode Cart' E-commerce button. It should have a deep black or rich dark background with luxury contrast details (like gold, silver, or crisp white text and icon). The hover state should be elegant, perhaps a slight brightness increase.\n\nImplementation Rules:\n- If integrating into an existing repository, match the 'sleekness' to the existing premium/dark theme tokens.\n- If standalone, provide a high-end luxury e-commerce button.",
+                                                dynamicInput: { type: "text", placeholder: "Any specific text or tech stack?", label: "Custom Details" }
+                                            },
+                                            "Split Button": {
+                                                type: "option",
+                                                prompt: "Create a 'Split Button' for E-commerce. The left side is the primary action (e.g., 'Add to Cart') and the right side is a smaller, distinct section separated by a vertical divider line containing a dropdown chevron/arrow for selecting variants or quantities.\n\nImplementation Rules:\n- If integrating into an existing repository, ensure the divider and dropdown functionality integrate with the existing UI component library or state management.\n- If standalone, provide the HTML/CSS structure for the split layout.",
+                                                dynamicInput: { type: "text", placeholder: "Any specific text or tech stack?", label: "Custom Details" }
+                                            }
                                         }
                                     },
                                     "Navigation / Menu": {
                                         type: "group",
                                         options: {
-                                            "Ghost / Invisible": { type: "group", options: {} },
-                                            "Underline Slide (Hover)": { type: "group", options: {} },
-                                            "Pill-shaped Active State": { type: "group", options: {} },
-                                            "Retro Terminal Style": { type: "group", options: {} }
+                                            "Ghost / Invisible": {
+                                                type: "option",
+                                                prompt: "Create a 'Ghost / Invisible' Navigation button. The button should have no background or border by default, appearing just as text. On hover or focus, it should reveal a soft, low-opacity background color (e.g., light grey or pale primary color).\n\nImplementation Rules:\n- If integrating into an existing repository, use the theme's standard hover-state utility classes (e.g., hover:bg-gray-100 in Tailwind).\n- If standalone, provide a clean, accessible ghost button.",
+                                                dynamicInput: { type: "text", placeholder: "Button text or framework?", label: "Custom Details" }
+                                            },
+                                            "Underline Slide (Hover)": {
+                                                type: "option",
+                                                prompt: "Create an 'Underline Slide' Navigation button. It should appear as plain text, but upon hover, an underline should smoothly animate from left to right (or expand from the center) beneath the text.\n\nImplementation Rules:\n- If integrating into an existing repository, match the transition timing functions to the global animation rules.\n- If standalone, implement the ::after pseudo-element CSS animation logic.",
+                                                dynamicInput: { type: "text", placeholder: "Button text or framework?", label: "Custom Details" }
+                                            },
+                                            "Pill-shaped Active State": {
+                                                type: "option",
+                                                prompt: "Create a 'Pill-shaped Active State' Navigation button. When inactive, it looks like a standard ghost button. When marked as 'active' (current page), it morphs into a fully rounded pill shape with a solid or subtly tinted background color.\n\nImplementation Rules:\n- If integrating into an existing codebase, ensure it accepts an 'active' or 'isCurrent' prop/class and styles accordingly based on the theme.\n- If standalone, provide both default and active state CSS.",
+                                                dynamicInput: { type: "text", placeholder: "Button text or framework?", label: "Custom Details" }
+                                            },
+                                            "Retro Terminal Style": {
+                                                type: "option",
+                                                prompt: "Create a 'Retro Terminal Style' Navigation button. It should use a monospace typography font, with neon green or amber text on a dark background. The hover state should invert the colors entirely into a solid block (like an old command-line cursor).\n\nImplementation Rules:\n- If integrating into an existing repository, only apply this if it fits the thematic context, otherwise use custom scoped CSS to prevent bleeding.\n- If standalone, provide the complete retro aesthetic.",
+                                                dynamicInput: { type: "text", placeholder: "Button text or framework?", label: "Custom Details" }
+                                            }
                                         }
                                     },
                                     "Floating / Icon": {
                                         type: "group",
                                         options: {
-                                            "Circular Shadow Lift": { type: "group", options: {} },
-                                            "Glassmorphism FAB": { type: "group", options: {} },
-                                            "Expanding FAB": { type: "group", options: {} },
-                                            "Glowing Neon FAB": { type: "group", options: {} }
+                                            "Circular Shadow Lift": {
+                                                type: "option",
+                                                prompt: "Create a 'Circular Shadow Lift' Floating Action Button (FAB). It must be a perfect circle containing an icon (e.g., a plus sign or message icon), featuring a heavy drop shadow. On hover, the button should lift up slightly (translateY) and the shadow should expand.\n\nImplementation Rules:\n- If integrating into an existing repository, position it fixed to the bottom-right corner and use the theme's shadow elevation tokens.\n- If standalone, provide the fixed positioning and hover physics.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the icon (e.g., Plus, Chat) or tech stack?", label: "Custom Details" }
+                                            },
+                                            "Glassmorphism FAB": {
+                                                type: "option",
+                                                prompt: "Create a 'Glassmorphism' Floating Action Button (FAB). The circular button should have a frosted glass effect (backdrop-blur), semi-transparent background, and a delicate border, allowing underlying page content to blur as it scrolls behind it.\n\nImplementation Rules:\n- If integrating into an existing repository, ensure the blur effect is performant and matches the project's glassmorphism style guide.\n- If standalone, include a colorful background behind it to prove the blur works.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the icon or tech stack?", label: "Custom Details" }
+                                            },
+                                            "Expanding FAB": {
+                                                type: "option",
+                                                prompt: "Create an 'Expanding' Floating Action Button (FAB). Initially, it should be a small circle with just an icon. On hover, the button must smoothly expand horizontally into a pill shape to reveal descriptive text next to the icon.\n\nImplementation Rules:\n- If integrating into an existing repository, implement smooth CSS transitions for width/max-width and text opacity.\n- If standalone, provide the complete HTML/CSS for the expanding animation.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the text (e.g., 'New Post') and icon?", label: "Custom Details" }
+                                            },
+                                            "Glowing Neon FAB": {
+                                                type: "option",
+                                                prompt: "Create a 'Glowing Neon' Floating Action Button (FAB). The circular button should have a continuous, radiating neon pulse effect behind it (like radar waves or a glowing aura). Ideal for chat support or AI assistant triggers.\n\nImplementation Rules:\n- If integrating into an existing repository, use existing keyframe animations if present, and adapt the glow color to the primary brand color.\n- If standalone, provide the custom keyframe animations for the glowing rings.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the icon (e.g., Bot, Chat) or tech stack?", label: "Custom Details" }
+                                            }
                                         }
                                     }
                                 }
