@@ -176,11 +176,54 @@ export const simpleBrainMap = {
                             "Button": {
                                 type: "group",
                                 options: {
-                                    "CTA (Call to Action)": { type: "group", options: {} },
-                                    "Social Media / Login": { type: "group", options: {} },
-                                    "E-commerce / Cart": { type: "group", options: {} },
-                                    "Navigation / Menu": { type: "group", options: {} },
-                                    "Floating / Icon": { type: "group", options: {} }
+                                    "CTA (Call to Action)": {
+                                        type: "group",
+                                        options: {
+                                            "Neon Cyberpunk": { type: "group", options: {} },
+                                            "Glassmorphism (Frosted)": { type: "group", options: {} },
+                                            "Soft Neumorphic": { type: "group", options: {} },
+                                            "Elegant Gradient": { type: "group", options: {} },
+                                            "High-Contrast Minimalist": { type: "group", options: {} },
+                                            "Playful Bouncy / 3D Pop": { type: "group", options: {} }
+                                        }
+                                    },
+                                    "Social Media / Login": {
+                                        type: "group",
+                                        options: {
+                                            "Brand Colors (Solid)": { type: "group", options: {} },
+                                            "Outline with Brand Icon": { type: "group", options: {} },
+                                            "Pill-shaped with Gradient": { type: "group", options: {} },
+                                            "Dark Mode Stealth": { type: "group", options: {} },
+                                            "Minimalist Icon-Only": { type: "group", options: {} }
+                                        }
+                                    },
+                                    "E-commerce / Cart": {
+                                        type: "group",
+                                        options: {
+                                            "Urgent 'Buy Now' (Pulsing)": { type: "group", options: {} },
+                                            "Wide 'Add to Cart' Block": { type: "group", options: {} },
+                                            "Sleek Dark Mode Cart": { type: "group", options: {} },
+                                            "Split Button": { type: "group", options: {} }
+                                        }
+                                    },
+                                    "Navigation / Menu": {
+                                        type: "group",
+                                        options: {
+                                            "Ghost / Invisible": { type: "group", options: {} },
+                                            "Underline Slide (Hover)": { type: "group", options: {} },
+                                            "Pill-shaped Active State": { type: "group", options: {} },
+                                            "Retro Terminal Style": { type: "group", options: {} }
+                                        }
+                                    },
+                                    "Floating / Icon": {
+                                        type: "group",
+                                        options: {
+                                            "Circular Shadow Lift": { type: "group", options: {} },
+                                            "Glassmorphism FAB": { type: "group", options: {} },
+                                            "Expanding FAB": { type: "group", options: {} },
+                                            "Glowing Neon FAB": { type: "group", options: {} }
+                                        }
+                                    }
                                 }
                             },
                             "Badges / Chips": { type: "option", prompt: "Badges / Chips" },
