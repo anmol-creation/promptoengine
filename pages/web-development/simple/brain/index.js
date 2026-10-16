@@ -164,7 +164,84 @@ export const simpleBrainMap = {
             "Other": { type: "group", options: {} }
         }
     },
-    "Create": { type: "group", options: {} },
+    "Create": {
+        type: "group",
+        options: {
+            "Components (UI Elements)": {
+                type: "group",
+                options: {
+                    "Basic / Core": {
+                        type: "group",
+                        options: {
+                            "Button": {
+                                type: "group",
+                                options: {
+                                    "CTA (Call to Action)": { type: "group", options: {} },
+                                    "Social Media / Login": { type: "group", options: {} },
+                                    "E-commerce / Cart": { type: "group", options: {} },
+                                    "Navigation / Menu": { type: "group", options: {} },
+                                    "Floating / Icon": { type: "group", options: {} }
+                                }
+                            },
+                            "Badges / Chips": { type: "option", prompt: "Badges / Chips" },
+                            "Icons & Avatars": { type: "option", prompt: "Icons & Avatars" }
+                        }
+                    },
+                    "Form Elements": {
+                        type: "group",
+                        options: {
+                            "Input Fields": { type: "option", prompt: "Input Fields (Text, Password, Email, etc.)" },
+                            "Checkboxes & Radio Buttons": { type: "option", prompt: "Checkboxes & Radio Buttons" },
+                            "Dropdowns & Select Menus": { type: "option", prompt: "Dropdowns & Select Menus" },
+                            "Toggles / Switches": { type: "option", prompt: "Toggles / Switches" },
+                            "Textareas": { type: "option", prompt: "Textareas" },
+                            "Sliders / Range Inputs": { type: "option", prompt: "Sliders / Range Inputs" },
+                            "File Uploaders": { type: "option", prompt: "File Uploaders" },
+                            "Date / Time Pickers": { type: "option", prompt: "Date / Time Pickers" }
+                        }
+                    },
+                    "Navigation": {
+                        type: "group",
+                        options: {
+                            "Navbar / Top Header": { type: "option", prompt: "Navbar / Top Header" },
+                            "Sidebar / Drawer": { type: "option", prompt: "Sidebar / Drawer" },
+                            "Breadcrumbs": { type: "option", prompt: "Breadcrumbs" },
+                            "Pagination": { type: "option", prompt: "Pagination" },
+                            "Tabs": { type: "option", prompt: "Tabs" }
+                        }
+                    },
+                    "Data Display & Layout": {
+                        type: "group",
+                        options: {
+                            "Cards": { type: "option", prompt: "Cards" },
+                            "Tables / Data Grids": { type: "option", prompt: "Tables / Data Grids" },
+                            "Accordions / Collapsible Panels": { type: "option", prompt: "Accordions / Collapsible Panels" },
+                            "Carousels / Image Sliders": { type: "option", prompt: "Carousels / Image Sliders" },
+                            "Modals / Dialogs": { type: "option", prompt: "Modals / Dialogs" },
+                            "Tooltips / Popovers": { type: "option", prompt: "Tooltips / Popovers" },
+                            "Progress Bars": { type: "option", prompt: "Progress Bars" }
+                        }
+                    },
+                    "Feedback & Alerts": {
+                        type: "group",
+                        options: {
+                            "Alerts / Banners": { type: "option", prompt: "Alerts / Banners" },
+                            "Toast Notifications / Snackbars": { type: "option", prompt: "Toast Notifications / Snackbars" },
+                            "Spinners / Loading Indicators": { type: "option", prompt: "Spinners / Loading Indicators" },
+                            "Skeleton Screens": { type: "option", prompt: "Skeleton Screens (Loading state)" }
+                        }
+                    }
+                }
+            },
+            "Pages (Views)": { type: "group", options: {} },
+            "Sections (Page Blocks)": { type: "group", options: {} },
+            "Layouts": { type: "group", options: {} },
+            "Styles & Theming": { type: "group", options: {} },
+            "Logic / Scripts": { type: "group", options: {} },
+            "Backend / APIs": { type: "group", options: {} },
+            "Configuration / Assets": { type: "group", options: {} }
+        }
+    },
     "Design": { type: "group", options: {} },
     "Content": { type: "group", options: {} },
     "Features": { type: "group", options: {} },
