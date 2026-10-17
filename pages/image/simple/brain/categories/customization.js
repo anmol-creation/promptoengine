@@ -847,6 +847,7 @@ export const customizationCategory = {
                                 "Neutral": { type: "option", prompt: "with a Neutral expression" },
                                 "Serious": { type: "option", prompt: "with a Serious expression" },
                                 "Intense Gaze": { type: "option", prompt: "with a Intense Gaze expression" },
+                                "Intense Piercing Stare": { type: "option", prompt: "with an intense, piercing and serious stare directly at the camera" },
                                 "Suspicious": { type: "option", prompt: "with a Suspicious expression" },
                                 "Determined": { type: "option", prompt: "with a Determined expression" }
                             }
@@ -1061,6 +1062,7 @@ export const customizationCategory = {
                             icon: ICONS.user,
                             options: {
                                 "Open Straight Hair": { type: "option", prompt: "with Open Straight Hair hairstyle" },
+                                "Side-Swept Messy Fringe": { type: "option", prompt: "with messy side-swept fringe covering one eye" },
                                 "Wavy / Curls": { type: "option", prompt: "with Wavy / Curls hairstyle" },
                                 "Ponytail": { type: "option", prompt: "with Ponytail hairstyle" },
                                 "Messy Bun": { type: "option", prompt: "with Messy Bun hairstyle" },
@@ -1366,7 +1368,8 @@ export const customizationCategory = {
                             icon: ICONS.expressions,
                             options: {
                                 "Neutral": { type: "option", prompt: "with a Neutral expression" },
-                                "Intense": { type: "option", prompt: "with a Intense expression" }
+                                "Intense": { type: "option", prompt: "with a Intense expression" },
+                                "Intense Piercing Stare": { type: "option", prompt: "with an intense, piercing and serious stare directly at the camera" }
                             }
                         },
                         "Sad": {

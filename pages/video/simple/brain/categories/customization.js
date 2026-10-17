@@ -83,7 +83,8 @@ export const customizationCategory = {
                         "Short & Neat": { type: "option", prompt: "with short, neatly styled hair perfectly combed" },
                         "Long & Flowing": { type: "option", prompt: "with long, flowing hair naturally blowing in the wind" },
                         "Curly / Textured": { type: "option", prompt: "with voluminous, textured curly hair" },
-                        "Bald / Shaved": { type: "option", prompt: "with a completely bald or closely shaved head" }
+                        "Bald / Shaved": { type: "option", prompt: "with a completely bald or closely shaved head" },
+                        "Side-Swept Messy Fringe": { type: "option", prompt: "with messy side-swept fringe covering one eye" }
                     }
                 },
                 "Makeup & Facial Features": {

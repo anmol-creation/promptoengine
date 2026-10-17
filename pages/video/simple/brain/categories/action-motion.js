@@ -64,6 +64,7 @@ export const actionMotionCategory = {
                     options: {
                         "Shouting": { type: "option", prompt: "shouting angrily with a wide-open mouth, tense facial muscles, and flared nostrils" },
                         "Glaring": { type: "option", prompt: "glaring intensely with narrowed, piercing eyes and a stiff jaw" },
+                        "Intense Piercing Stare": { type: "option", prompt: "with an intense, piercing and serious stare directly at the camera" },
                         "Teeth Clenching": { type: "option", prompt: "clenching teeth tightly with a visibly tense jawline and a frustrated expression" }
                     }
                 },
