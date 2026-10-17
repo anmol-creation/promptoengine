@@ -25,6 +25,18 @@ export const fixImageCategory = {
                         "Type": { type: "input", prompt: "Background: \${input}" },
                         "Auto AI": { type: "static", prompt: "Automatically optimize and enhance the image." },
 
+
+                        "Traditional Deity Murals": {
+                            type: "group",
+                            options: {
+                                "Shiva Mural": { type: "static", prompt: "A textured stone wall serving as the canvas for a massive, vibrant mural of Lord Shiva in deep meditation. The artwork clearly shows his blue throat, a crescent moon in his matted hair, a coiled cobra around his neck, and a glowing trident (Trishul) beside him, painted with rich ash-grey, deep blue, and bright ochre pigments. The subject is standing barefoot in front of this mural" },
+                                "Vishnu Mural": { type: "static", prompt: "A rustic, weathered wall adorned with an intricate, traditional painting of Lord Vishnu. He is beautifully depicted with calm blue skin, wearing bright yellow silk, holding the Sudarshana Chakra, a conch shell, a lotus, and a mace, adorned with heavy gold jewelry and rich azure tones. The subject is standing barefoot in front of this mural" },
+                                "Hanuman Mural": { type: "static", prompt: "An ancient temple wall featuring a powerful, dynamic mural of Lord Hanuman. The artwork showcases his muscular physique in deep saffron and vermillion orange, wearing a golden crown and holding his massive mace (Gada), radiating a strong, devotional energy. The subject is standing barefoot in front of this mural" },
+                                "Durga Mural": { type: "static", prompt: "A dramatic, large-scale mural on a distressed wall depicting Goddess Durga. She is shown with ten arms holding divine weapons, riding a fierce, majestic lion. The painting uses intense reds, bright yellows, and deep crimsons to capture her fierce, protective energy. The subject is standing barefoot in front of this mural" },
+                                "Kali Mural": { type: "static", prompt: "A dark, moody stone wall featuring a striking, intense mural of Goddess Kali. The artwork depicts her with dark skin, disheveled wild hair, wearing a garland of skulls, with her tongue protruding. The mural uses stark contrasts of pitch black, blood red, and glowing white for raw, untamed power. The subject is standing barefoot in front of this mural" },
+                                "Krishna Mural": { type: "static", prompt: "A colorful, slightly peeling plaster wall decorated with a serene mural of Lord Krishna playing his wooden flute. He is depicted with a peacock feather in his crown, wearing vibrant yellow garments, surrounded by subtle lotus motifs, painted in soft, joyous greens, blues, and golds. The subject is standing barefoot in front of this mural" }
+                            }
+                        },
                         "Nature & Landscapes": {
                             type: "group",
                             options: {
