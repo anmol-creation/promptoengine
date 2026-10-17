@@ -68,6 +68,7 @@ export const gesturePoseOptions = {
             "Adjusting Tie/Cufflinks": { type: "option", prompt: "adjusting tie or cufflinks" },
             "Hand in Hair": { type: "option", prompt: "standing with hand in hair" },
             "Looking Away": { type: "option", prompt: "looking away from camera" },
+            "Profile View (Side Face)": { type: "option", prompt: "face in full side profile, looking away" },
             "Walking Towards Camera": { type: "option", prompt: "walking towards the camera" },
             "Back to Camera": { type: "option", prompt: "standing with back to the camera" }
         }

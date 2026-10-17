@@ -38,6 +38,19 @@ export const effectsCategory = {
                 "Bleach Bypass": { type: "option", prompt: "gritty bleach bypass film look" }
             }
         },
+        "Lighting & Shadows": {
+            type: "group",
+            icon: ICONS.magicWand,
+            options: {
+                "Dappled Light": { type: "option", prompt: "dappled sunlight filtering through leaves, casting soft shadows on the subject" },
+                "Window Blind Shadows": { type: "option", prompt: "harsh horizontal lines of light and shadow from window blinds across the face" },
+                "Silhouette (Backlit)": { type: "option", prompt: "strong backlighting creating a dark silhouette with bright rim light" },
+                "Split Lighting": { type: "option", prompt: "dramatic split lighting, half of the face in deep shadow, the other half brightly lit" },
+                "Neon Glow Shadows": { type: "option", prompt: "colorful neon lights casting vibrant, dramatic shadows" },
+                "Harsh Sunlight": { type: "option", prompt: "stark, sharp, dark shadows cast by direct midday harsh sunlight" },
+                "Golden Hour Glow": { type: "option", prompt: "warm, long shadows cast by the setting sun during golden hour" }
+            }
+        },
         "Lenses & Focus Techniques": {
             type: "group",
             icon: ICONS.lens,

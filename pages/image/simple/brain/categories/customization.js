@@ -658,8 +658,21 @@ export const customizationCategory = {
                                 "Reading Glasses": { type: "option", prompt: "wearing reading glasses" },
                                 "Thick-rimmed Glasses": { type: "option", prompt: "wearing thick-rimmed glasses" },
                                 "Rimless Glasses": { type: "option", prompt: "wearing rimless glasses" },
+                                "Rectangular Glasses": { type: "option", prompt: "wearing rectangular glasses" },
                                 "Monocle": { type: "option", prompt: "wearing a monocle" },
                                 "Eye Patch": { type: "option", prompt: "wearing an eye patch" }
+                            }
+                        },
+                        "Masks & Face Covers": {
+                            type: "group",
+                            icon: ICONS.user,
+                            options: {
+                                "Black Cloth Mask": { type: "option", prompt: "wearing a black cloth face mask" },
+                                "Surgical Mask": { type: "option", prompt: "wearing a light blue surgical mask" },
+                                "Bandana Face Cover": { type: "option", prompt: "wearing a patterned bandana covering the lower half of the face" },
+                                "Cyberpunk LED Mask": { type: "option", prompt: "wearing a futuristic cyberpunk LED face mask" },
+                                "Balaclava (Ski Mask)": { type: "option", prompt: "wearing a dark balaclava ski mask covering the head and lower face" },
+                                "Scarf over Face": { type: "option", prompt: "wearing a thick scarf pulled up over the nose and mouth" }
                             }
                         },
                         "Neckwear": {
@@ -1233,7 +1246,18 @@ export const customizationCategory = {
                                 "Aviator Sunglasses": { type: "option", prompt: "wearing Aviator Sunglasses" },
                                 "Reading Glasses": { type: "option", prompt: "wearing Reading Glasses" },
                                 "Oversized Sunglasses": { type: "option", prompt: "wearing Oversized Sunglasses" },
+                                "Rectangular Glasses": { type: "option", prompt: "wearing rectangular glasses" },
                                 "Transparent Frame Glasses": { type: "option", prompt: "wearing Transparent Frame Glasses" }
+                            }
+                        },
+                        "Masks & Face Covers": {
+                            type: "group",
+                            icon: ICONS.user,
+                            options: {
+                                "Black Cloth Mask": { type: "option", prompt: "wearing a black cloth face mask" },
+                                "Surgical Mask": { type: "option", prompt: "wearing a light blue surgical mask" },
+                                "Bandana Face Cover": { type: "option", prompt: "wearing a patterned bandana covering the lower half of the face" },
+                                "Scarf over Face": { type: "option", prompt: "wearing a thick scarf pulled up over the nose and mouth" }
                             }
                         },
                         "Bags (Carrying Items)": {

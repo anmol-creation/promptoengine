@@ -74,6 +74,15 @@ export const cameraLightingCategory = {
                         "Silhouette / Backlit": { type: "option", prompt: "strongly backlit with the primary light source directly behind the subject, turning them into a stark, dark silhouette against a bright background" },
                         "Moody / Low-key": { type: "option", prompt: "lit with moody, low-key lighting featuring deep, dramatic shadows and only small, intense pools of focused light" }
                     }
+                },
+                "Shadows & Special Lighting": {
+                    type: "group",
+                    options: {
+                        "Dappled Light / Leaf Shadows": { type: "option", prompt: "illuminated by dappled sunlight filtering through leaves, casting soft organic shadows across the subject" },
+                        "Window Blind Shadows": { type: "option", prompt: "lit with harsh horizontal lines of light and shadow cast from window blinds" },
+                        "Split Lighting": { type: "option", prompt: "dramatically lit with split lighting, where half the scene is bright and the other half is in deep shadow" },
+                        "Neon Glow Shadows": { type: "option", prompt: "colorful neon lights casting vibrant and dynamic dramatic shadows" }
+                    }
                 }
             }
         }

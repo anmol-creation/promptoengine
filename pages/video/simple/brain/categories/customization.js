@@ -40,8 +40,20 @@ export const customizationCategory = {
                     type: "group",
                     options: {
                         "Sunglasses": { type: "option", prompt: "wearing stylish dark sunglasses reflecting the surrounding light" },
+                        "Rectangular Glasses": { type: "option", prompt: "wearing rectangular glasses" },
                         "Hats / Caps": { type: "option", prompt: "wearing a casual baseball cap or stylish fedora hat" },
                         "Helmet": { type: "option", prompt: "wearing a protective or futuristic helmet covering the head" }
+                    }
+                },
+                "Masks & Face Covers": {
+                    type: "group",
+                    options: {
+                        "Black Cloth Mask": { type: "option", prompt: "wearing a black cloth face mask" },
+                        "Surgical Mask": { type: "option", prompt: "wearing a light blue surgical mask" },
+                        "Bandana Face Cover": { type: "option", prompt: "wearing a patterned bandana covering the lower half of the face" },
+                        "Cyberpunk LED Mask": { type: "option", prompt: "wearing a futuristic cyberpunk LED face mask" },
+                        "Balaclava (Ski Mask)": { type: "option", prompt: "wearing a dark balaclava ski mask covering the head and lower face" },
+                        "Scarf over Face": { type: "option", prompt: "wearing a thick scarf pulled up over the nose and mouth" }
                     }
                 },
                 "Jewelry & Wearables": {

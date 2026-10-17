@@ -32,7 +32,9 @@ export const actionMotionCategory = {
                         "Lounging": { type: "option", prompt: "lounging casually in a relaxed, reclined posture" },
                         "Sleeping": { type: "option", prompt: "sleeping peacefully with a still body and slow, rhythmic breathing" },
                         "Meditating": { type: "option", prompt: "meditating in a still, focused pose with eyes closed and serene expression" },
-                        "Standing Still": { type: "option", prompt: "standing completely still with perfect posture and minimal movement" }
+                        "Standing Still": { type: "option", prompt: "standing completely still with perfect posture and minimal movement" },
+                        "Looking Away": { type: "option", prompt: "standing still and looking away off-camera, deep in thought" },
+                        "Profile View": { type: "option", prompt: "face turned completely away in side profile" }
                     }
                 }
             }
