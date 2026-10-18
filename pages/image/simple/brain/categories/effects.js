@@ -72,7 +72,16 @@ export const effectsCategory = {
                 "Oil Painting": { type: "option", prompt: "rendered in a classic oil painting style" },
                 "Pencil Sketch": { type: "option", prompt: "rendered as a black and white pencil sketch" },
                 "Watercolor": { type: "option", prompt: "rendered in a soft watercolor painting style" },
-                "Pop Art Comic": { type: "option", prompt: "comic book pop art style with halftone dots" }
+                "Pop Art Comic": { type: "option", prompt: "comic book pop art style with halftone dots" },
+                "Crayon / Oil Pastel": { type: "option", prompt: "rendered as a colorful child-like crayon or oil pastel drawing with rough paper texture" },
+                "Colored Pencil Sketch": { type: "option", prompt: "rendered as a detailed colored pencil sketch with fine lines and visible shading" },
+                "Charcoal Sketch": { type: "option", prompt: "rendered as a dramatic black and white charcoal sketch with smudged shadows" },
+                "Chalk on Blackboard": { type: "option", prompt: "rendered as a chalk drawing on a dark blackboard background with chalk dust texture" },
+                "Marker Pen Illustration": { type: "option", prompt: "rendered as a bold marker pen illustration with solid vibrant colors and thick outlines" },
+                "Finger Painting": { type: "option", prompt: "rendered in a messy, thick impasto finger painting style" },
+                "Gouache / Poster Color": { type: "option", prompt: "rendered in a matte gouache or poster color style with flat, smooth blending" },
+                "Woodblock Print": { type: "option", prompt: "rendered as a retro linocut or woodblock print with carved lines and high contrast" },
+                "Ballpoint Pen Doodle": { type: "option", prompt: "rendered as a rough, cross-hatched ballpoint pen doodle in blue ink" }
             }
         },
         "Trendy Overlays": {
@@ -83,6 +92,52 @@ export const effectsCategory = {
                 "Sparkles / Glitter": { type: "option", prompt: "with a sparkling glitter overlay effect" },
                 "Date & Time Stamp": { type: "option", prompt: "with a retro camcorder date/time stamp overlay" },
                 "Prism Effect": { type: "option", prompt: "with photographic prism light distortion" }
+            }
+        },
+        "Typography & Text Overlays": {
+            type: "group",
+            icon: ICONS.magicWand, // Using generic icon for now
+            options: {
+                "Bold Intersecting Text": {
+                    type: "option",
+                    prompt: "dramatic portrait with giant bold typography text '{dynamic_input}' intersecting and blending with the subject, movie poster style, text behind and partially in front of subject",
+                    dynamicInput: { enabled: true, placeholder: "Type a word (e.g., ENDURE)", required: true }
+                },
+                "Text Mask (Subject Inside)": {
+                    type: "option",
+                    prompt: "subject's image visible only inside the large bold text '{dynamic_input}', masked over a solid background, modern typographic art",
+                    dynamicInput: { enabled: true, placeholder: "Type a word", required: true }
+                },
+                "Split Face Text Mask": {
+                    type: "option",
+                    prompt: "split composition where the left half is the subject's portrait and the right half is white space with large vertical typography text '{dynamic_input}' masking the rest of the subject's face inside the letters, dramatic editorial typography art",
+                    dynamicInput: { enabled: true, placeholder: "Type vertical text", required: true }
+                },
+                "Glowing Neon Sign": {
+                    type: "option",
+                    prompt: "subject illuminated by a bright glowing neon sign that reads '{dynamic_input}', cyberpunk or moody night aesthetic, vibrant reflections",
+                    dynamicInput: { enabled: true, placeholder: "Type a neon text", required: true }
+                },
+                "Magazine Cover Layout": {
+                    type: "option",
+                    prompt: "styled like a high-end fashion magazine cover with the bold title '{dynamic_input}' at the top, professional editorial layout",
+                    dynamicInput: { enabled: true, placeholder: "Magazine Name", required: true }
+                },
+                "Graffiti Wall Text": {
+                    type: "option",
+                    prompt: "subject standing in front of an urban brick wall with vibrant street graffiti text reading '{dynamic_input}' painted on it",
+                    dynamicInput: { enabled: true, placeholder: "Type graffiti text", required: true }
+                },
+                "Cinematic Movie Title": {
+                    type: "option",
+                    prompt: "epic cinematic movie poster composition with the title text '{dynamic_input}' in metallic, glowing font at the bottom center",
+                    dynamicInput: { enabled: true, placeholder: "Movie Title", required: true }
+                },
+                "Typewriter Print Overlay": {
+                    type: "option",
+                    prompt: "vintage artistic photo with random scattered typewriter print overlay words containing '{dynamic_input}', artistic grunge aesthetic",
+                    dynamicInput: { enabled: true, placeholder: "Type word(s)", required: true }
+                }
             }
         }
     }
