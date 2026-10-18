@@ -91,12 +91,15 @@ function prepareStackItem(level, value, node) {
     let stackOption = null;
     const selections = State.getAllSelections();
 
-    if (level === 1) {
-        stackCategory = selections[1];
-        stackOption = selections[1];
-    } else if (level >= 1) {
-        stackCategory = selections[level - 1];
-        stackOption = value;
+    if (level >= 1) {
+        // Fix for deep nesting:
+        // Use the root category as the stack item's primary category
+        stackCategory = selections[0]; // e.g., "Create"
+
+        // Use the context path as the option text to show in the UI badge
+        // Skip the root category itself to save space
+        const contextPath = selections.slice(1).join(' > ');
+        stackOption = contextPath;
     }
 
     if (stackCategory && stackOption) {
