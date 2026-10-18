@@ -108,6 +108,11 @@ export const effectsCategory = {
                     prompt: "subject's image visible only inside the large bold text '{dynamic_input}', masked over a solid background, modern typographic art",
                     dynamicInput: { enabled: true, placeholder: "Type a word", required: true }
                 },
+                "Split Face Text Mask": {
+                    type: "option",
+                    prompt: "split composition where the left half is the subject's portrait and the right half is white space with large vertical typography text '{dynamic_input}' masking the rest of the subject's face inside the letters, dramatic editorial typography art",
+                    dynamicInput: { enabled: true, placeholder: "Type vertical text", required: true }
+                },
                 "Glowing Neon Sign": {
                     type: "option",
                     prompt: "subject illuminated by a bright glowing neon sign that reads '{dynamic_input}', cyberpunk or moody night aesthetic, vibrant reflections",
