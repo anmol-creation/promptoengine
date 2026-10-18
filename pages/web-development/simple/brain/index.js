@@ -556,7 +556,86 @@ export const simpleBrainMap = {
                     "Data Display & Layout": {
                         type: "group",
                         options: {
-                            "Cards": { type: "option", prompt: "Cards" },
+                            "Cards": {
+                                type: "group",
+                                options: {
+                                    "Blog / Article Cards": {
+                                        type: "group",
+                                        options: {
+                                            "Standard Feature Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Standard Feature' Blog/Article Card. It must have a full-width featured image at the top with rounded top corners. Below the image, include a category tag, a bold title, a short text snippet (2-3 lines max), and a footer with the author's avatar, name, and publish date. Apply a soft drop-shadow on hover.\n\nImplementation Rules:\n- If integrating into an existing repository, use existing typography and card shadow tokens.\n- If standalone, provide the complete HTML/CSS with placeholder images.",
+                                                dynamicInput: { type: "text", placeholder: "Specify topic (e.g., Tech, Lifestyle) or framework?", label: "Custom Details" }
+                                            },
+                                            "Horizontal / List Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Horizontal / List' Article Card. This is a wide card where the image sits on the left side (taking up about 30-40% width) and the content (title, excerpt, meta info) sits vertically aligned on the right. Perfect for dense list views. Ensure it stacks vertically on mobile screens.\n\nImplementation Rules:\n- If integrating into an existing repository, rely on CSS Grid or Flexbox utility classes to handle the responsive stacking.\n- If standalone, provide the responsive media queries.",
+                                                dynamicInput: { type: "text", placeholder: "Specify topic or tech stack?", label: "Custom Details" }
+                                            }
+                                        }
+                                    },
+                                    "Product / E-commerce Cards": {
+                                        type: "group",
+                                        options: {
+                                            "Grid Product Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Grid Product Card'. It should feature a large product image, the product name, star rating, and price. Crucially, it must include a prominent 'Add to Cart' button (either visible by default or revealed seamlessly upon hovering the card). Include a subtle 'Sale' or 'New' badge overlapping the image corner.\n\nImplementation Rules:\n- If integrating into an existing repository, utilize the theme's button and badge components.\n- If standalone, implement the hover-reveal logic using CSS.",
+                                                dynamicInput: { type: "text", placeholder: "Product type (e.g., Shoes, Tech) or framework?", label: "Custom Details" }
+                                            },
+                                            "Minimalist Fashion Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Minimalist Fashion' Product Card. Focus on high-end aesthetics: large, tall imagery, ample whitespace, and elegant serif or fine sans-serif typography. Omit heavy borders or shadows. The 'Quick View' or cart actions should be extremely subtle, perhaps appearing as icons overlaying the image on hover.\n\nImplementation Rules:\n- If integrating into an existing repository, adapt the typography to the closest elegant font family available in the theme.\n- If standalone, provide a clean, high-fashion aesthetic.",
+                                                dynamicInput: { type: "text", placeholder: "Product type or brand style?", label: "Custom Details" }
+                                            }
+                                        }
+                                    },
+                                    "Profile / User Cards": {
+                                        type: "group",
+                                        options: {
+                                            "Centered Profile Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Centered Profile Card'. The layout should be strictly center-aligned. It must include a cover/banner image at the top, with a circular user avatar overlapping the bottom edge of the banner. Below that, center the user's name, title/role, a short bio, and a row of social media icon links.\n\nImplementation Rules:\n- If integrating into an existing repository, handle image fallbacks correctly.\n- If standalone, use negative margins to overlap the avatar on the banner.",
+                                                dynamicInput: { type: "text", placeholder: "User profession (e.g., Designer) or framework?", label: "Custom Details" }
+                                            },
+                                            "Horizontal Contact Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Horizontal Contact Card'. A compact, wide card displaying an avatar on the left, name and job title in the middle, and quick action buttons (like 'Message' or 'Follow') aligned to the right. Ideal for directory listings.\n\nImplementation Rules:\n- If integrating into an existing repository, use flexbox space-between for alignment.\n- If standalone, ensure it is responsive and stacks gracefully if the screen is too narrow.",
+                                                dynamicInput: { type: "text", placeholder: "Context or tech stack?", label: "Custom Details" }
+                                            }
+                                        }
+                                    },
+                                    "Pricing / Subscription Cards": {
+                                        type: "group",
+                                        options: {
+                                            "Standard Tier Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Standard Pricing Tier Card'. It should display a tier name (e.g., 'Pro'), a large monthly price figure, a bulleted list of features (with checkmark icons), and a wide CTA button at the bottom. The design should be clean and readable.\n\nImplementation Rules:\n- If integrating into an existing repository, map checkmarks to existing SVG icons and use standard list styling.\n- If standalone, provide the complete structure.",
+                                                dynamicInput: { type: "text", placeholder: "Tier name (e.g., 'Basic') or framework?", label: "Custom Details" }
+                                            },
+                                            "Highlighted 'Popular' Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Highlighted Popular Pricing Card'. This card is meant to stand out in a 3-column pricing grid. It must have a distinct primary background color (or thick top border), a 'Most Popular' badge at the top, slightly larger typography, and an inverted CTA button color to draw immediate attention.\n\nImplementation Rules:\n- If integrating into an existing repository, use the brand's primary accent color heavily here to contrast with standard cards.\n- If standalone, implement the visual highlight effect.",
+                                                dynamicInput: { type: "text", placeholder: "Tier name or framework?", label: "Custom Details" }
+                                            }
+                                        }
+                                    },
+                                    "Dashboard / Stat Cards": {
+                                        type: "group",
+                                        options: {
+                                            "Simple Metric Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Simple Metric Card' for a dashboard. It should be a compact rectangular block containing a title (e.g., 'Total Sales'), a large prominent number, and a small icon representing the metric in the top right corner.\n\nImplementation Rules:\n- If integrating into an existing repository, use existing grid container padding and subtle borders/shadows.\n- If standalone, provide a clean dashboard-style component.",
+                                                dynamicInput: { type: "text", placeholder: "Metric name (e.g., 'Revenue')?", label: "Custom Details" }
+                                            },
+                                            "Trend & Sparkline Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Trend & Sparkline Card'. Similar to a metric card, but it must include a percentage indicator showing growth/decline (colored green for up, red for down) and a small, simplified line chart (sparkline) at the bottom visualizing the recent trend.\n\nImplementation Rules:\n- If integrating into an existing repository, you may use an SVG graphic to simulate the sparkline if charting libraries aren't explicitly requested.\n- If standalone, provide an SVG path to represent the sparkline.",
+                                                dynamicInput: { type: "text", placeholder: "Metric name or tech stack?", label: "Custom Details" }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
                             "Tables / Data Grids": { type: "option", prompt: "Tables / Data Grids" },
                             "Accordions / Collapsible Panels": { type: "option", prompt: "Accordions / Collapsible Panels" },
                             "Carousels / Image Sliders": { type: "option", prompt: "Carousels / Image Sliders" },
