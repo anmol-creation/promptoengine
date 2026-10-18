@@ -10,27 +10,30 @@ export function getSimpleModeData() {
     stack.forEach(item => {
         let p = "";
 
-        // Resolve the path to get the prompt
-        let currentData = simpleBrainMap[item.category];
-
         // Handle "Plan" special sequential fields
         if (["Field", "Target Audience", "Goal", "Platform", "Complexity", "Monetization", "Technology Preference", "Additional Requirements", "Output Format"].includes(item.category)) {
             p = `[${item.category}]: ${item.option || item.inputValue}`;
         } else {
-             // Try to resolve path
-            if (item.path && item.path.length > 0) {
+            // We already stored leafNode when we added to stack!
+            if (item.leafNode && item.leafNode.prompt) {
+                p = item.leafNode.prompt;
+                if (item.inputValue) {
+                    p += `\n[Custom Instructions]: ${item.inputValue}`;
+                }
+            } else if (item.path && item.path.length > 0) {
+                 // Fallback if path was provided
+                 let currentData = simpleBrainMap[item.category];
                  for (let i = 1; i < item.path.length; i++) {
                      if (currentData && currentData.options && currentData.options[item.path[i]]) {
                          currentData = currentData.options[item.path[i]];
                      }
                  }
-            }
-
-            if (currentData && currentData.prompt) {
-                p = currentData.prompt;
-                if (item.inputValue) {
-                    p += `\n[Custom Instructions]: ${item.inputValue}`;
-                }
+                 if (currentData && currentData.prompt) {
+                    p = currentData.prompt;
+                    if (item.inputValue) {
+                        p += `\n[Custom Instructions]: ${item.inputValue}`;
+                    }
+                 }
             }
         }
 
@@ -43,7 +46,7 @@ export function getSimpleModeData() {
         }
     });
 
-    // Process Current Pending Category
+    // Process Current Pending Category (From UI Selectors)
     const currentItems = [];
     if (State.selectedCategory) {
         const category = State.selectedCategory;
@@ -51,40 +54,31 @@ export function getSimpleModeData() {
         let isValid = false;
 
         const selections = State.getAllSelections();
-        let currentData = simpleBrainMap[category];
+        let leafNode = simpleBrainMap[category];
 
         let startIndex = 0;
         if (selections.length > 0 && selections[0] === category) {
             startIndex = 1;
         }
 
-        // Validate selection path
-        for (let i = startIndex; i < selections.length; i++) {
-            const sel = selections[i];
-            if (currentData && currentData.options && currentData.options[sel]) {
-                currentData = currentData.options[sel];
-            } else {
-                 break;
-            }
-        }
-
-        // Resolve leaf
-        let leafNode = simpleBrainMap[category];
+        // Traverse down exactly matching selections array
         for (let i = startIndex; i < selections.length; i++) {
             const sel = selections[i];
             if (leafNode && leafNode.options && leafNode.options[sel]) {
                 leafNode = leafNode.options[sel];
+            } else {
+                leafNode = null;
+                break;
             }
         }
 
-        if (currentData && currentData.type === 'group') {
+        if (!leafNode || leafNode.type === 'group') {
             // Invalid/Incomplete
+            isValid = false;
         } else {
             isValid = true;
-            if (leafNode && typeof leafNode === 'object') {
-                if (leafNode.prompt) {
-                    categoryPrompt = leafNode.prompt;
-                }
+            if (typeof leafNode === 'object' && leafNode.prompt) {
+                categoryPrompt = leafNode.prompt;
             } else if (typeof leafNode === 'string') {
                  categoryPrompt = leafNode;
             }
@@ -96,7 +90,6 @@ export function getSimpleModeData() {
         }
 
         if (categoryPrompt) {
-             // Add context path
              let contextPath = selections.join(' > ');
              categoryPrompt = `=== ${contextPath} ===\n${categoryPrompt}`;
 
