@@ -393,7 +393,66 @@ export const simpleBrainMap = {
                                     }
                                 }
                             },
-                            "Icons & Avatars": { type: "option", prompt: "Icons & Avatars" }
+                            "Icons & Avatars": {
+                                type: "group",
+                                options: {
+                                    "Avatars / Profile Pics": {
+                                        type: "group",
+                                        options: {
+                                            "Standard Image Avatar": {
+                                                type: "option",
+                                                prompt: "Create a 'Standard Image Avatar'. It should be a perfectly circular (or slightly rounded square) container holding a profile image. Ensure the image uses `object-fit: cover` to maintain aspect ratio without stretching. Include an inner shadow or delicate border to define the edge.\n\nImplementation Rules:\n- If integrating into an existing repository, utilize the project's standard avatar dimension tokens (e.g., w-10 h-10).\n- If standalone, provide a default placeholder image.",
+                                                dynamicInput: { type: "text", placeholder: "Specify shape preference (e.g., 'perfect circle') or framework?", label: "Custom Details" }
+                                            },
+                                            "Initials / Letter Avatar": {
+                                                type: "option",
+                                                prompt: "Create an 'Initials / Letter Avatar'. Used when a user has no profile picture. It should feature a solid, vibrant background color with the user's initials in crisp, white, centered text. Ensure perfect vertical and horizontal alignment of the text.\n\nImplementation Rules:\n- If integrating into an existing repository, dynamically pull colors from a predefined theme palette based on the user's name if possible.\n- If standalone, provide the CSS for centering text perfectly within a circle.",
+                                                dynamicInput: { type: "text", placeholder: "Specify initials (e.g., 'JD') or background color?", label: "Custom Details" }
+                                            },
+                                            "Avatar Group (Stacked)": {
+                                                type: "option",
+                                                prompt: "Create an 'Avatar Group' component. This should display multiple circular avatars horizontally, slightly overlapping each other (using negative margins). Include a final '+N' avatar (e.g., '+3') indicating remaining hidden users, with a distinct muted background.\n\nImplementation Rules:\n- If integrating into an existing repository, ensure standard z-index stacking so the first avatar is on top, and match standard borders.\n- If standalone, provide the flexbox and negative margin CSS trick.",
+                                                dynamicInput: { type: "text", placeholder: "How many avatars to show initially, or tech stack?", label: "Custom Details" }
+                                            },
+                                            "Active Status Avatar": {
+                                                type: "option",
+                                                prompt: "Create an 'Active Status Avatar'. This is a standard image avatar but includes a small, colored notification dot (usually green for online) positioned in the bottom-right corner. The dot must have a thick border matching the background behind the avatar to cut into the main image visually.\n\nImplementation Rules:\n- If integrating into an existing repository, use absolute positioning relative to the avatar container for the status dot.\n- If standalone, implement the 'cut-out' visual effect using border-color matching.",
+                                                dynamicInput: { type: "text", placeholder: "Specify status (e.g., online, offline, busy) or tech stack?", label: "Custom Details" }
+                                            }
+                                        }
+                                    },
+                                    "Icon Buttons / Controls": {
+                                        type: "group",
+                                        options: {
+                                            "Subtle Hover Icon Button": {
+                                                type: "option",
+                                                prompt: "Create a 'Subtle Hover Icon Button'. By default, it appears just as an icon. On hover, a soft, semi-transparent circular background should appear behind it, and the icon color might slightly darken or change to the primary brand color.\n\nImplementation Rules:\n- If integrating into an existing repository, match the hover background opacity to the system's interactive states.\n- If standalone, provide an accessible `<button>` tag containing an SVG.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the icon type (e.g., Settings, Heart) or framework?", label: "Custom Details" }
+                                            },
+                                            "Solid Primary Icon Button": {
+                                                type: "option",
+                                                prompt: "Create a 'Solid Primary Icon Button'. A bold, prominent button containing only an icon. It should use the primary brand color for the background and a contrasting color (usually white) for the icon. Include standard button hover states (like a slight brightness adjustment or shadow).\n\nImplementation Rules:\n- If integrating into an existing repository, ensure the button maintains a perfect 1:1 aspect ratio (square or circular) across sizes.\n- If standalone, provide the CSS to force a square/circular aspect ratio regardless of icon size.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the icon type (e.g., Play, Add) or framework?", label: "Custom Details" }
+                                            }
+                                        }
+                                    },
+                                    "Illustrative / Feature Icons": {
+                                        type: "group",
+                                        options: {
+                                            "Duotone / Two-Color Icon": {
+                                                type: "option",
+                                                prompt: "Create a 'Duotone / Two-Color' illustrative icon container. The icon should utilize two distinct shades of the same color palette (e.g., a dark solid primary shape and a lighter, semi-transparent secondary shape) for a modern, layered look.\n\nImplementation Rules:\n- If integrating into an existing repository, apply the primary and secondary brand colors to the SVG's `fill` and `currentColor` properties.\n- If standalone, provide a sample two-tone SVG.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the concept (e.g., 'Cloud Storage', 'Security')?", label: "Custom Details" }
+                                            },
+                                            "Icon with Soft Glow / Aura": {
+                                                type: "option",
+                                                prompt: "Create an 'Icon with Soft Glow'. The icon sits centered within a rounded container that has a soft, glowing background shadow (aura) matching the icon's color, giving it a premium, floating appearance.\n\nImplementation Rules:\n- If integrating into an existing repository, utilize the theme's soft box-shadow tokens, adjusting the shadow color dynamically if possible.\n- If standalone, provide the custom colored box-shadow CSS.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the concept and preferred color?", label: "Custom Details" }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     },
                     "Form Elements": {
