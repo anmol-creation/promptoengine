@@ -318,8 +318,141 @@ export const simpleBrainMap = {
                                     }
                                 }
                             },
-                            "Badges / Chips": { type: "option", prompt: "Badges / Chips" },
-                            "Icons & Avatars": { type: "option", prompt: "Icons & Avatars" }
+                            "Badges / Chips": {
+                                type: "group",
+                                options: {
+                                    "Status / Indicator": {
+                                        type: "group",
+                                        options: {
+                                            "Soft Pastel Status (Modern)": {
+                                                type: "option",
+                                                prompt: "Create a 'Soft Pastel' status badge. It should use a very light, semi-transparent background color (e.g., pale green, pale red) with dark, matching text color for high readability. It should feature rounded pill corners and minimal padding for a compact look.\n\nImplementation Rules:\n- If integrating into an existing repository, adapt the colors to match the project's state colors (success, warning, error).\n- If standalone, provide a versatile component with success/error variants.",
+                                                dynamicInput: { type: "text", placeholder: "Specify status text (e.g., 'Active', 'Pending') or tech stack?", label: "Custom Details" }
+                                            },
+                                            "Solid High-Contrast Indicator": {
+                                                type: "option",
+                                                prompt: "Create a 'Solid High-Contrast' status indicator badge. It requires a stark, solid background color representing the state (e.g., solid red for error, solid green for success) with crisp white text. Include a tiny, matching status icon (like a checkmark or cross) on the left.\n\nImplementation Rules:\n- If integrating into an existing repository, ensure the solid colors are accessible against the existing background.\n- If standalone, include standard SVG icons for different states.",
+                                                dynamicInput: { type: "text", placeholder: "Specify status text and icon preference?", label: "Custom Details" }
+                                            },
+                                            "Dot Indicator (Minimal)": {
+                                                type: "option",
+                                                prompt: "Create a 'Dot Indicator' minimal badge. Instead of a background fill, this badge should have a transparent background with a small, glowing or solid colored circle (dot) preceding the text. The text color should subtly match the dot.\n\nImplementation Rules:\n- If integrating into an existing repository, implement a subtle pulse animation on the dot if the state is 'live' or 'active'.\n- If standalone, provide the HTML/CSS for the pulsing dot effect.",
+                                                dynamicInput: { type: "text", placeholder: "Specify status text (e.g., 'Online') or tech stack?", label: "Custom Details" }
+                                            }
+                                        }
+                                    },
+                                    "Notification / Counter": {
+                                        type: "group",
+                                        options: {
+                                            "Floating Notification Dot (Overlays)": {
+                                                type: "option",
+                                                prompt: "Create a 'Floating Notification Dot' badge. This is a tiny, circular badge meant to overlay on top of an icon (like a bell or cart). It should have a vibrant red or accent color, a white border to separate it from the underlying icon, and display a small number (e.g., '3', '99+').\n\nImplementation Rules:\n- If integrating into an existing repository, ensure absolute positioning works within a relative parent icon container.\n- If standalone, provide an example icon container to demonstrate the overlay.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the number (e.g., '99+') or the icon it overlays?", label: "Custom Details" }
+                                            },
+                                            "Pill Counter (Inline)": {
+                                                type: "option",
+                                                prompt: "Create an inline 'Pill Counter' badge. This is used alongside text (e.g., inside a sidebar menu item). It should be a small, elongated pill shape with a muted background (like light gray) and dark, bold numeric text to show counts.\n\nImplementation Rules:\n- If integrating into an existing repository, adapt the typography to match secondary text sizes.\n- If standalone, provide a clean, inline flexbox alignment.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the number or context (e.g., 'Sidebar menu count')?", label: "Custom Details" }
+                                            }
+                                        }
+                                    },
+                                    "Tag / Filter Chips": {
+                                        type: "group",
+                                        options: {
+                                            "Dismissible Tag (With 'X')": {
+                                                type: "option",
+                                                prompt: "Create a 'Dismissible Tag' chip. It should look like a standard tag or category chip but must include a small 'X' icon or close button on the right side. Include a subtle hover state where the 'X' icon darkens or the chip background slightly changes to indicate interactability.\n\nImplementation Rules:\n- If integrating into an existing repository, ensure the close button triggers existing event handlers smoothly.\n- If standalone, provide the visual hover states for the close icon.",
+                                                dynamicInput: { type: "text", placeholder: "Specify tag text (e.g., 'Web Design') or tech stack?", label: "Custom Details" }
+                                            },
+                                            "Outlined Filter Chip": {
+                                                type: "option",
+                                                prompt: "Create an 'Outlined Filter' chip. It should have a transparent background with a solid, thin 1px border. On hover or active state, the background should fill slightly with the border color. Ideal for multi-select filtering interfaces.\n\nImplementation Rules:\n- If integrating into an existing repository, match the border radius to the project's global inputs.\n- If standalone, provide a clean outlined component with an 'active' class state.",
+                                                dynamicInput: { type: "text", placeholder: "Specify filter text or active/inactive state preference?", label: "Custom Details" }
+                                            },
+                                            "Gradient Hash Tag": {
+                                                type: "option",
+                                                prompt: "Create a 'Gradient Hash' tag chip. The chip should have a very subtle, modern gradient background. The text should start with a hashtag symbol (#) and use a trendy, slightly bolder typography.\n\nImplementation Rules:\n- If integrating into an existing repository, use gradients that compliment the brand identity.\n- If standalone, provide a modern, visually appealing gradient mix.",
+                                                dynamicInput: { type: "text", placeholder: "Specify tag text (e.g., '#development')?", label: "Custom Details" }
+                                            }
+                                        }
+                                    },
+                                    "Interactive / Action": {
+                                        type: "group",
+                                        options: {
+                                            "Selectable Choice Chip": {
+                                                type: "option",
+                                                prompt: "Create a 'Selectable Choice' chip. This acts like a radio button. When unselected, it looks like a standard outline chip. When selected, it must smoothly transition into a solid filled state with an optional checkmark icon appearing on the left.\n\nImplementation Rules:\n- If integrating into an existing repository, utilize existing checkmark icons and theme transition tokens.\n- If standalone, implement a hidden radio input logic with sibling CSS for state changes.",
+                                                dynamicInput: { type: "text", placeholder: "Specify choice text (e.g., 'Size: Medium') or tech stack?", label: "Custom Details" }
+                                            },
+                                            "Avatar Chip (Contact / User)": {
+                                                type: "option",
+                                                prompt: "Create an 'Avatar Chip' for displaying users or contacts. It should be a pill-shaped chip containing a tiny circular user avatar image on the far left, followed by the user's name. Include a subtle shadow and hover lift effect.\n\nImplementation Rules:\n- If integrating into an existing repository, handle missing image fallbacks (e.g., initials) gracefully.\n- If standalone, include an image tag with a placeholder URL.",
+                                                dynamicInput: { type: "text", placeholder: "Specify user name (e.g., 'John Doe') or avatar URL?", label: "Custom Details" }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "Icons & Avatars": {
+                                type: "group",
+                                options: {
+                                    "Avatars / Profile Pics": {
+                                        type: "group",
+                                        options: {
+                                            "Standard Image Avatar": {
+                                                type: "option",
+                                                prompt: "Create a 'Standard Image Avatar'. It should be a perfectly circular (or slightly rounded square) container holding a profile image. Ensure the image uses `object-fit: cover` to maintain aspect ratio without stretching. Include an inner shadow or delicate border to define the edge.\n\nImplementation Rules:\n- If integrating into an existing repository, utilize the project's standard avatar dimension tokens (e.g., w-10 h-10).\n- If standalone, provide a default placeholder image.",
+                                                dynamicInput: { type: "text", placeholder: "Specify shape preference (e.g., 'perfect circle') or framework?", label: "Custom Details" }
+                                            },
+                                            "Initials / Letter Avatar": {
+                                                type: "option",
+                                                prompt: "Create an 'Initials / Letter Avatar'. Used when a user has no profile picture. It should feature a solid, vibrant background color with the user's initials in crisp, white, centered text. Ensure perfect vertical and horizontal alignment of the text.\n\nImplementation Rules:\n- If integrating into an existing repository, dynamically pull colors from a predefined theme palette based on the user's name if possible.\n- If standalone, provide the CSS for centering text perfectly within a circle.",
+                                                dynamicInput: { type: "text", placeholder: "Specify initials (e.g., 'JD') or background color?", label: "Custom Details" }
+                                            },
+                                            "Avatar Group (Stacked)": {
+                                                type: "option",
+                                                prompt: "Create an 'Avatar Group' component. This should display multiple circular avatars horizontally, slightly overlapping each other (using negative margins). Include a final '+N' avatar (e.g., '+3') indicating remaining hidden users, with a distinct muted background.\n\nImplementation Rules:\n- If integrating into an existing repository, ensure standard z-index stacking so the first avatar is on top, and match standard borders.\n- If standalone, provide the flexbox and negative margin CSS trick.",
+                                                dynamicInput: { type: "text", placeholder: "How many avatars to show initially, or tech stack?", label: "Custom Details" }
+                                            },
+                                            "Active Status Avatar": {
+                                                type: "option",
+                                                prompt: "Create an 'Active Status Avatar'. This is a standard image avatar but includes a small, colored notification dot (usually green for online) positioned in the bottom-right corner. The dot must have a thick border matching the background behind the avatar to cut into the main image visually.\n\nImplementation Rules:\n- If integrating into an existing repository, use absolute positioning relative to the avatar container for the status dot.\n- If standalone, implement the 'cut-out' visual effect using border-color matching.",
+                                                dynamicInput: { type: "text", placeholder: "Specify status (e.g., online, offline, busy) or tech stack?", label: "Custom Details" }
+                                            }
+                                        }
+                                    },
+                                    "Icon Buttons / Controls": {
+                                        type: "group",
+                                        options: {
+                                            "Subtle Hover Icon Button": {
+                                                type: "option",
+                                                prompt: "Create a 'Subtle Hover Icon Button'. By default, it appears just as an icon. On hover, a soft, semi-transparent circular background should appear behind it, and the icon color might slightly darken or change to the primary brand color.\n\nImplementation Rules:\n- If integrating into an existing repository, match the hover background opacity to the system's interactive states.\n- If standalone, provide an accessible `<button>` tag containing an SVG.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the icon type (e.g., Settings, Heart) or framework?", label: "Custom Details" }
+                                            },
+                                            "Solid Primary Icon Button": {
+                                                type: "option",
+                                                prompt: "Create a 'Solid Primary Icon Button'. A bold, prominent button containing only an icon. It should use the primary brand color for the background and a contrasting color (usually white) for the icon. Include standard button hover states (like a slight brightness adjustment or shadow).\n\nImplementation Rules:\n- If integrating into an existing repository, ensure the button maintains a perfect 1:1 aspect ratio (square or circular) across sizes.\n- If standalone, provide the CSS to force a square/circular aspect ratio regardless of icon size.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the icon type (e.g., Play, Add) or framework?", label: "Custom Details" }
+                                            }
+                                        }
+                                    },
+                                    "Illustrative / Feature Icons": {
+                                        type: "group",
+                                        options: {
+                                            "Duotone / Two-Color Icon": {
+                                                type: "option",
+                                                prompt: "Create a 'Duotone / Two-Color' illustrative icon container. The icon should utilize two distinct shades of the same color palette (e.g., a dark solid primary shape and a lighter, semi-transparent secondary shape) for a modern, layered look.\n\nImplementation Rules:\n- If integrating into an existing repository, apply the primary and secondary brand colors to the SVG's `fill` and `currentColor` properties.\n- If standalone, provide a sample two-tone SVG.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the concept (e.g., 'Cloud Storage', 'Security')?", label: "Custom Details" }
+                                            },
+                                            "Icon with Soft Glow / Aura": {
+                                                type: "option",
+                                                prompt: "Create an 'Icon with Soft Glow'. The icon sits centered within a rounded container that has a soft, glowing background shadow (aura) matching the icon's color, giving it a premium, floating appearance.\n\nImplementation Rules:\n- If integrating into an existing repository, utilize the theme's soft box-shadow tokens, adjusting the shadow color dynamically if possible.\n- If standalone, provide the custom colored box-shadow CSS.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the concept and preferred color?", label: "Custom Details" }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     },
                     "Form Elements": {
@@ -338,17 +471,171 @@ export const simpleBrainMap = {
                     "Navigation": {
                         type: "group",
                         options: {
-                            "Navbar / Top Header": { type: "option", prompt: "Navbar / Top Header" },
-                            "Sidebar / Drawer": { type: "option", prompt: "Sidebar / Drawer" },
-                            "Breadcrumbs": { type: "option", prompt: "Breadcrumbs" },
-                            "Pagination": { type: "option", prompt: "Pagination" },
-                            "Tabs": { type: "option", prompt: "Tabs" }
+                            "Navbar / Top Header": {
+                                type: "group",
+                                options: {
+                                    "Standard Sticky Navbar": {
+                                        type: "option",
+                                        prompt: "Create a 'Standard Sticky Navbar'. It should stick to the top of the viewport on scroll (`position: sticky` or `fixed`). Include a logo on the left, horizontal navigation links centered or right-aligned, and a CTA/Login button on the far right. It must have a subtle drop-shadow that appears only when scrolling down.\n\nImplementation Rules:\n- If integrating into an existing repository, utilize existing brand logos and theme colors for the active link state.\n- If standalone, provide a complete HTML/CSS structure with placeholder logo and JS for the scroll-shadow effect.",
+                                        dynamicInput: { type: "text", placeholder: "Specify links (e.g., Home, About) or framework?", label: "Custom Details" }
+                                    },
+                                    "Glassmorphism Navbar": {
+                                        type: "option",
+                                        prompt: "Create a 'Glassmorphism Navbar'. The header background must be semi-transparent with a frosted glass blur effect (`backdrop-filter: blur`). It must seamlessly overlay the page content below it. Keep text contrast high.\n\nImplementation Rules:\n- If integrating into an existing repository, verify that the browser support for backdrop-filter aligns with project requirements and use appropriate fallbacks.\n- If standalone, include a colorful background behind the content area to demonstrate the glass blur effect.",
+                                        dynamicInput: { type: "text", placeholder: "Brand colors or tech stack?", label: "Custom Details" }
+                                    },
+                                    "Mega Menu Header": {
+                                        type: "option",
+                                        prompt: "Create a 'Mega Menu Header'. When hovering over a navigation link, a large, full-width dropdown panel should animate in. This panel should be capable of holding multi-column lists of links, promotional images, and categories.\n\nImplementation Rules:\n- If integrating into an existing repository, structure the HTML semantically for accessibility (ARIA roles) while mapping to existing theme styles.\n- If standalone, provide the complex CSS dropdown logic and a sample 3-column layout inside the menu.",
+                                        dynamicInput: { type: "text", placeholder: "Which link triggers the mega menu (e.g., 'Products')?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Sidebar / Drawer": {
+                                type: "group",
+                                options: {
+                                    "Collapsible Sidebar (Admin)": {
+                                        type: "option",
+                                        prompt: "Create a 'Collapsible Sidebar'. Ideal for dashboards. It should contain a vertical list of icon-text links. It must include a toggle button to collapse the sidebar into a compact state showing only icons, smoothly animating the width change.\n\nImplementation Rules:\n- If integrating into an existing repository, manage the expanded/collapsed state globally if required by the layout wrapper.\n- If standalone, provide the CSS transitions and a small script to toggle the 'collapsed' class.",
+                                        dynamicInput: { type: "text", placeholder: "Specify initial state (open/closed) or tech stack?", label: "Custom Details" }
+                                    },
+                                    "Off-canvas Drawer (Mobile)": {
+                                        type: "option",
+                                        prompt: "Create an 'Off-canvas Mobile Drawer'. It should remain completely hidden off-screen by default. Triggered by a hamburger menu, it should slide in smoothly from the edge, pushing or overlaying the main content, complete with a dark semi-transparent backdrop overlay.\n\nImplementation Rules:\n- If integrating into an existing repository, ensure the z-index is higher than all standard page content and prevent body scrolling when open.\n- If standalone, provide the HTML structure for the drawer, overlay, and trigger button.",
+                                        dynamicInput: { type: "text", placeholder: "Slide from left or right? Tech stack?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Breadcrumbs": {
+                                type: "group",
+                                options: {
+                                    "Minimalist Slash Separator": {
+                                        type: "option",
+                                        prompt: "Create a 'Minimalist Breadcrumb' navigation. Use simple, muted text for parent links and a distinct primary color for the current active page. Use a forward slash (`/`) as a subtle separator between links, with adequate spacing.\n\nImplementation Rules:\n- If integrating into an existing repository, utilize the theme's secondary typography colors.\n- If standalone, provide a clean semantic `<nav>` and `<ol>` structure.",
+                                        dynamicInput: { type: "text", placeholder: "Specify path (e.g., Home / Category / Product)?", label: "Custom Details" }
+                                    },
+                                    "Chevron Block Breadcrumbs": {
+                                        type: "option",
+                                        prompt: "Create 'Chevron Block Breadcrumbs'. The links should be housed within connected, arrow-shaped blocks (chevrons) pointing to the right. Use contrasting background colors for each block to clearly indicate depth and progression.\n\nImplementation Rules:\n- If integrating into an existing repository, adapt the block colors to align with the primary brand gradient or palette.\n- If standalone, implement the chevron shapes using CSS borders or SVG backgrounds.",
+                                        dynamicInput: { type: "text", placeholder: "Specify path or framework?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Pagination": {
+                                type: "group",
+                                options: {
+                                    "Classic Numbered Pagination": {
+                                        type: "option",
+                                        prompt: "Create a 'Classic Numbered Pagination' block. It should feature 'Previous' and 'Next' buttons on the ends, with clickable page numbers in the middle. The current active page should be highlighted with a solid primary background, while inactive pages are subtle.\n\nImplementation Rules:\n- If integrating into an existing repository, ensure the interactive states match global button styles.\n- If standalone, provide a responsive list format ensuring elements wrap cleanly on small screens.",
+                                        dynamicInput: { type: "text", placeholder: "Total pages or framework?", label: "Custom Details" }
+                                    },
+                                    "Load More Trigger (Spinner)": {
+                                        type: "option",
+                                        prompt: "Create a 'Load More' button / Infinite Scroll Trigger. Instead of numbers, create a centered button at the bottom of a list. When clicked, it should transition to a loading spinner state while fetching more content.\n\nImplementation Rules:\n- If integrating into an existing repository, use existing SVG spinner assets and button loading states.\n- If standalone, provide the CSS keyframes for a simple spinner inside the button.",
+                                        dynamicInput: { type: "text", placeholder: "Text (e.g., 'Load More Articles')?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Tabs": {
+                                type: "group",
+                                options: {
+                                    "Underline Animated Tabs": {
+                                        type: "option",
+                                        prompt: "Create 'Underline Animated Tabs'. A horizontal list of text tabs. The active tab has a solid underline. When clicking a different tab, the underline must smoothly slide across the X-axis to align under the newly selected tab.\n\nImplementation Rules:\n- If integrating into an existing repository, sync the animation duration with global transition tokens.\n- If standalone, provide the JS logic required to calculate underline width and left-offset dynamically.",
+                                        dynamicInput: { type: "text", placeholder: "Tab names (e.g., Details, Reviews)?", label: "Custom Details" }
+                                    },
+                                    "Segmented Control (Pill) Tabs": {
+                                        type: "option",
+                                        prompt: "Create a 'Segmented Control' or 'Pill' tab interface. The tabs sit inside a common rounded container with a muted background. The active tab is a solid pill shape that sits inside this container, resembling an iOS segmented control.\n\nImplementation Rules:\n- If integrating into an existing repository, match the border radius to the project's form inputs.\n- If standalone, provide a clean flexbox layout with an active state class.",
+                                        dynamicInput: { type: "text", placeholder: "Tab names or framework?", label: "Custom Details" }
+                                    }
+                                }
+                            }
                         }
                     },
                     "Data Display & Layout": {
                         type: "group",
                         options: {
-                            "Cards": { type: "option", prompt: "Cards" },
+                            "Cards": {
+                                type: "group",
+                                options: {
+                                    "Blog / Article Cards": {
+                                        type: "group",
+                                        options: {
+                                            "Standard Feature Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Standard Feature' Blog/Article Card. It must have a full-width featured image at the top with rounded top corners. Below the image, include a category tag, a bold title, a short text snippet (2-3 lines max), and a footer with the author's avatar, name, and publish date. Apply a soft drop-shadow on hover.\n\nImplementation Rules:\n- If integrating into an existing repository, use existing typography and card shadow tokens.\n- If standalone, provide the complete HTML/CSS with placeholder images.",
+                                                dynamicInput: { type: "text", placeholder: "Specify topic (e.g., Tech, Lifestyle) or framework?", label: "Custom Details" }
+                                            },
+                                            "Horizontal / List Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Horizontal / List' Article Card. This is a wide card where the image sits on the left side (taking up about 30-40% width) and the content (title, excerpt, meta info) sits vertically aligned on the right. Perfect for dense list views. Ensure it stacks vertically on mobile screens.\n\nImplementation Rules:\n- If integrating into an existing repository, rely on CSS Grid or Flexbox utility classes to handle the responsive stacking.\n- If standalone, provide the responsive media queries.",
+                                                dynamicInput: { type: "text", placeholder: "Specify topic or tech stack?", label: "Custom Details" }
+                                            }
+                                        }
+                                    },
+                                    "Product / E-commerce Cards": {
+                                        type: "group",
+                                        options: {
+                                            "Grid Product Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Grid Product Card'. It should feature a large product image, the product name, star rating, and price. Crucially, it must include a prominent 'Add to Cart' button (either visible by default or revealed seamlessly upon hovering the card). Include a subtle 'Sale' or 'New' badge overlapping the image corner.\n\nImplementation Rules:\n- If integrating into an existing repository, utilize the theme's button and badge components.\n- If standalone, implement the hover-reveal logic using CSS.",
+                                                dynamicInput: { type: "text", placeholder: "Product type (e.g., Shoes, Tech) or framework?", label: "Custom Details" }
+                                            },
+                                            "Minimalist Fashion Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Minimalist Fashion' Product Card. Focus on high-end aesthetics: large, tall imagery, ample whitespace, and elegant serif or fine sans-serif typography. Omit heavy borders or shadows. The 'Quick View' or cart actions should be extremely subtle, perhaps appearing as icons overlaying the image on hover.\n\nImplementation Rules:\n- If integrating into an existing repository, adapt the typography to the closest elegant font family available in the theme.\n- If standalone, provide a clean, high-fashion aesthetic.",
+                                                dynamicInput: { type: "text", placeholder: "Product type or brand style?", label: "Custom Details" }
+                                            }
+                                        }
+                                    },
+                                    "Profile / User Cards": {
+                                        type: "group",
+                                        options: {
+                                            "Centered Profile Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Centered Profile Card'. The layout should be strictly center-aligned. It must include a cover/banner image at the top, with a circular user avatar overlapping the bottom edge of the banner. Below that, center the user's name, title/role, a short bio, and a row of social media icon links.\n\nImplementation Rules:\n- If integrating into an existing repository, handle image fallbacks correctly.\n- If standalone, use negative margins to overlap the avatar on the banner.",
+                                                dynamicInput: { type: "text", placeholder: "User profession (e.g., Designer) or framework?", label: "Custom Details" }
+                                            },
+                                            "Horizontal Contact Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Horizontal Contact Card'. A compact, wide card displaying an avatar on the left, name and job title in the middle, and quick action buttons (like 'Message' or 'Follow') aligned to the right. Ideal for directory listings.\n\nImplementation Rules:\n- If integrating into an existing repository, use flexbox space-between for alignment.\n- If standalone, ensure it is responsive and stacks gracefully if the screen is too narrow.",
+                                                dynamicInput: { type: "text", placeholder: "Context or tech stack?", label: "Custom Details" }
+                                            }
+                                        }
+                                    },
+                                    "Pricing / Subscription Cards": {
+                                        type: "group",
+                                        options: {
+                                            "Standard Tier Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Standard Pricing Tier Card'. It should display a tier name (e.g., 'Pro'), a large monthly price figure, a bulleted list of features (with checkmark icons), and a wide CTA button at the bottom. The design should be clean and readable.\n\nImplementation Rules:\n- If integrating into an existing repository, map checkmarks to existing SVG icons and use standard list styling.\n- If standalone, provide the complete structure.",
+                                                dynamicInput: { type: "text", placeholder: "Tier name (e.g., 'Basic') or framework?", label: "Custom Details" }
+                                            },
+                                            "Highlighted 'Popular' Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Highlighted Popular Pricing Card'. This card is meant to stand out in a 3-column pricing grid. It must have a distinct primary background color (or thick top border), a 'Most Popular' badge at the top, slightly larger typography, and an inverted CTA button color to draw immediate attention.\n\nImplementation Rules:\n- If integrating into an existing repository, use the brand's primary accent color heavily here to contrast with standard cards.\n- If standalone, implement the visual highlight effect.",
+                                                dynamicInput: { type: "text", placeholder: "Tier name or framework?", label: "Custom Details" }
+                                            }
+                                        }
+                                    },
+                                    "Dashboard / Stat Cards": {
+                                        type: "group",
+                                        options: {
+                                            "Simple Metric Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Simple Metric Card' for a dashboard. It should be a compact rectangular block containing a title (e.g., 'Total Sales'), a large prominent number, and a small icon representing the metric in the top right corner.\n\nImplementation Rules:\n- If integrating into an existing repository, use existing grid container padding and subtle borders/shadows.\n- If standalone, provide a clean dashboard-style component.",
+                                                dynamicInput: { type: "text", placeholder: "Metric name (e.g., 'Revenue')?", label: "Custom Details" }
+                                            },
+                                            "Trend & Sparkline Card": {
+                                                type: "option",
+                                                prompt: "Create a 'Trend & Sparkline Card'. Similar to a metric card, but it must include a percentage indicator showing growth/decline (colored green for up, red for down) and a small, simplified line chart (sparkline) at the bottom visualizing the recent trend.\n\nImplementation Rules:\n- If integrating into an existing repository, you may use an SVG graphic to simulate the sparkline if charting libraries aren't explicitly requested.\n- If standalone, provide an SVG path to represent the sparkline.",
+                                                dynamicInput: { type: "text", placeholder: "Metric name or tech stack?", label: "Custom Details" }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
                             "Tables / Data Grids": { type: "option", prompt: "Tables / Data Grids" },
                             "Accordions / Collapsible Panels": { type: "option", prompt: "Accordions / Collapsible Panels" },
                             "Carousels / Image Sliders": { type: "option", prompt: "Carousels / Image Sliders" },
