@@ -72,7 +72,16 @@ export const effectsCategory = {
                 "Oil Painting": { type: "option", prompt: "rendered in a classic oil painting style" },
                 "Pencil Sketch": { type: "option", prompt: "rendered as a black and white pencil sketch" },
                 "Watercolor": { type: "option", prompt: "rendered in a soft watercolor painting style" },
-                "Pop Art Comic": { type: "option", prompt: "comic book pop art style with halftone dots" }
+                "Pop Art Comic": { type: "option", prompt: "comic book pop art style with halftone dots" },
+                "Crayon / Oil Pastel": { type: "option", prompt: "rendered as a colorful child-like crayon or oil pastel drawing with rough paper texture" },
+                "Colored Pencil Sketch": { type: "option", prompt: "rendered as a detailed colored pencil sketch with fine lines and visible shading" },
+                "Charcoal Sketch": { type: "option", prompt: "rendered as a dramatic black and white charcoal sketch with smudged shadows" },
+                "Chalk on Blackboard": { type: "option", prompt: "rendered as a chalk drawing on a dark blackboard background with chalk dust texture" },
+                "Marker Pen Illustration": { type: "option", prompt: "rendered as a bold marker pen illustration with solid vibrant colors and thick outlines" },
+                "Finger Painting": { type: "option", prompt: "rendered in a messy, thick impasto finger painting style" },
+                "Gouache / Poster Color": { type: "option", prompt: "rendered in a matte gouache or poster color style with flat, smooth blending" },
+                "Woodblock Print": { type: "option", prompt: "rendered as a retro linocut or woodblock print with carved lines and high contrast" },
+                "Ballpoint Pen Doodle": { type: "option", prompt: "rendered as a rough, cross-hatched ballpoint pen doodle in blue ink" }
             }
         },
         "Trendy Overlays": {
