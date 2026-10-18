@@ -318,7 +318,81 @@ export const simpleBrainMap = {
                                     }
                                 }
                             },
-                            "Badges / Chips": { type: "option", prompt: "Badges / Chips" },
+                            "Badges / Chips": {
+                                type: "group",
+                                options: {
+                                    "Status / Indicator": {
+                                        type: "group",
+                                        options: {
+                                            "Soft Pastel Status (Modern)": {
+                                                type: "option",
+                                                prompt: "Create a 'Soft Pastel' status badge. It should use a very light, semi-transparent background color (e.g., pale green, pale red) with dark, matching text color for high readability. It should feature rounded pill corners and minimal padding for a compact look.\n\nImplementation Rules:\n- If integrating into an existing repository, adapt the colors to match the project's state colors (success, warning, error).\n- If standalone, provide a versatile component with success/error variants.",
+                                                dynamicInput: { type: "text", placeholder: "Specify status text (e.g., 'Active', 'Pending') or tech stack?", label: "Custom Details" }
+                                            },
+                                            "Solid High-Contrast Indicator": {
+                                                type: "option",
+                                                prompt: "Create a 'Solid High-Contrast' status indicator badge. It requires a stark, solid background color representing the state (e.g., solid red for error, solid green for success) with crisp white text. Include a tiny, matching status icon (like a checkmark or cross) on the left.\n\nImplementation Rules:\n- If integrating into an existing repository, ensure the solid colors are accessible against the existing background.\n- If standalone, include standard SVG icons for different states.",
+                                                dynamicInput: { type: "text", placeholder: "Specify status text and icon preference?", label: "Custom Details" }
+                                            },
+                                            "Dot Indicator (Minimal)": {
+                                                type: "option",
+                                                prompt: "Create a 'Dot Indicator' minimal badge. Instead of a background fill, this badge should have a transparent background with a small, glowing or solid colored circle (dot) preceding the text. The text color should subtly match the dot.\n\nImplementation Rules:\n- If integrating into an existing repository, implement a subtle pulse animation on the dot if the state is 'live' or 'active'.\n- If standalone, provide the HTML/CSS for the pulsing dot effect.",
+                                                dynamicInput: { type: "text", placeholder: "Specify status text (e.g., 'Online') or tech stack?", label: "Custom Details" }
+                                            }
+                                        }
+                                    },
+                                    "Notification / Counter": {
+                                        type: "group",
+                                        options: {
+                                            "Floating Notification Dot (Overlays)": {
+                                                type: "option",
+                                                prompt: "Create a 'Floating Notification Dot' badge. This is a tiny, circular badge meant to overlay on top of an icon (like a bell or cart). It should have a vibrant red or accent color, a white border to separate it from the underlying icon, and display a small number (e.g., '3', '99+').\n\nImplementation Rules:\n- If integrating into an existing repository, ensure absolute positioning works within a relative parent icon container.\n- If standalone, provide an example icon container to demonstrate the overlay.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the number (e.g., '99+') or the icon it overlays?", label: "Custom Details" }
+                                            },
+                                            "Pill Counter (Inline)": {
+                                                type: "option",
+                                                prompt: "Create an inline 'Pill Counter' badge. This is used alongside text (e.g., inside a sidebar menu item). It should be a small, elongated pill shape with a muted background (like light gray) and dark, bold numeric text to show counts.\n\nImplementation Rules:\n- If integrating into an existing repository, adapt the typography to match secondary text sizes.\n- If standalone, provide a clean, inline flexbox alignment.",
+                                                dynamicInput: { type: "text", placeholder: "Specify the number or context (e.g., 'Sidebar menu count')?", label: "Custom Details" }
+                                            }
+                                        }
+                                    },
+                                    "Tag / Filter Chips": {
+                                        type: "group",
+                                        options: {
+                                            "Dismissible Tag (With 'X')": {
+                                                type: "option",
+                                                prompt: "Create a 'Dismissible Tag' chip. It should look like a standard tag or category chip but must include a small 'X' icon or close button on the right side. Include a subtle hover state where the 'X' icon darkens or the chip background slightly changes to indicate interactability.\n\nImplementation Rules:\n- If integrating into an existing repository, ensure the close button triggers existing event handlers smoothly.\n- If standalone, provide the visual hover states for the close icon.",
+                                                dynamicInput: { type: "text", placeholder: "Specify tag text (e.g., 'Web Design') or tech stack?", label: "Custom Details" }
+                                            },
+                                            "Outlined Filter Chip": {
+                                                type: "option",
+                                                prompt: "Create an 'Outlined Filter' chip. It should have a transparent background with a solid, thin 1px border. On hover or active state, the background should fill slightly with the border color. Ideal for multi-select filtering interfaces.\n\nImplementation Rules:\n- If integrating into an existing repository, match the border radius to the project's global inputs.\n- If standalone, provide a clean outlined component with an 'active' class state.",
+                                                dynamicInput: { type: "text", placeholder: "Specify filter text or active/inactive state preference?", label: "Custom Details" }
+                                            },
+                                            "Gradient Hash Tag": {
+                                                type: "option",
+                                                prompt: "Create a 'Gradient Hash' tag chip. The chip should have a very subtle, modern gradient background. The text should start with a hashtag symbol (#) and use a trendy, slightly bolder typography.\n\nImplementation Rules:\n- If integrating into an existing repository, use gradients that compliment the brand identity.\n- If standalone, provide a modern, visually appealing gradient mix.",
+                                                dynamicInput: { type: "text", placeholder: "Specify tag text (e.g., '#development')?", label: "Custom Details" }
+                                            }
+                                        }
+                                    },
+                                    "Interactive / Action": {
+                                        type: "group",
+                                        options: {
+                                            "Selectable Choice Chip": {
+                                                type: "option",
+                                                prompt: "Create a 'Selectable Choice' chip. This acts like a radio button. When unselected, it looks like a standard outline chip. When selected, it must smoothly transition into a solid filled state with an optional checkmark icon appearing on the left.\n\nImplementation Rules:\n- If integrating into an existing repository, utilize existing checkmark icons and theme transition tokens.\n- If standalone, implement a hidden radio input logic with sibling CSS for state changes.",
+                                                dynamicInput: { type: "text", placeholder: "Specify choice text (e.g., 'Size: Medium') or tech stack?", label: "Custom Details" }
+                                            },
+                                            "Avatar Chip (Contact / User)": {
+                                                type: "option",
+                                                prompt: "Create an 'Avatar Chip' for displaying users or contacts. It should be a pill-shaped chip containing a tiny circular user avatar image on the far left, followed by the user's name. Include a subtle shadow and hover lift effect.\n\nImplementation Rules:\n- If integrating into an existing repository, handle missing image fallbacks (e.g., initials) gracefully.\n- If standalone, include an image tag with a placeholder URL.",
+                                                dynamicInput: { type: "text", placeholder: "Specify user name (e.g., 'John Doe') or avatar URL?", label: "Custom Details" }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
                             "Icons & Avatars": { type: "option", prompt: "Icons & Avatars" }
                         }
                     },
