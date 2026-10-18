@@ -471,11 +471,86 @@ export const simpleBrainMap = {
                     "Navigation": {
                         type: "group",
                         options: {
-                            "Navbar / Top Header": { type: "option", prompt: "Navbar / Top Header" },
-                            "Sidebar / Drawer": { type: "option", prompt: "Sidebar / Drawer" },
-                            "Breadcrumbs": { type: "option", prompt: "Breadcrumbs" },
-                            "Pagination": { type: "option", prompt: "Pagination" },
-                            "Tabs": { type: "option", prompt: "Tabs" }
+                            "Navbar / Top Header": {
+                                type: "group",
+                                options: {
+                                    "Standard Sticky Navbar": {
+                                        type: "option",
+                                        prompt: "Create a 'Standard Sticky Navbar'. It should stick to the top of the viewport on scroll (`position: sticky` or `fixed`). Include a logo on the left, horizontal navigation links centered or right-aligned, and a CTA/Login button on the far right. It must have a subtle drop-shadow that appears only when scrolling down.\n\nImplementation Rules:\n- If integrating into an existing repository, utilize existing brand logos and theme colors for the active link state.\n- If standalone, provide a complete HTML/CSS structure with placeholder logo and JS for the scroll-shadow effect.",
+                                        dynamicInput: { type: "text", placeholder: "Specify links (e.g., Home, About) or framework?", label: "Custom Details" }
+                                    },
+                                    "Glassmorphism Navbar": {
+                                        type: "option",
+                                        prompt: "Create a 'Glassmorphism Navbar'. The header background must be semi-transparent with a frosted glass blur effect (`backdrop-filter: blur`). It must seamlessly overlay the page content below it. Keep text contrast high.\n\nImplementation Rules:\n- If integrating into an existing repository, verify that the browser support for backdrop-filter aligns with project requirements and use appropriate fallbacks.\n- If standalone, include a colorful background behind the content area to demonstrate the glass blur effect.",
+                                        dynamicInput: { type: "text", placeholder: "Brand colors or tech stack?", label: "Custom Details" }
+                                    },
+                                    "Mega Menu Header": {
+                                        type: "option",
+                                        prompt: "Create a 'Mega Menu Header'. When hovering over a navigation link, a large, full-width dropdown panel should animate in. This panel should be capable of holding multi-column lists of links, promotional images, and categories.\n\nImplementation Rules:\n- If integrating into an existing repository, structure the HTML semantically for accessibility (ARIA roles) while mapping to existing theme styles.\n- If standalone, provide the complex CSS dropdown logic and a sample 3-column layout inside the menu.",
+                                        dynamicInput: { type: "text", placeholder: "Which link triggers the mega menu (e.g., 'Products')?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Sidebar / Drawer": {
+                                type: "group",
+                                options: {
+                                    "Collapsible Sidebar (Admin)": {
+                                        type: "option",
+                                        prompt: "Create a 'Collapsible Sidebar'. Ideal for dashboards. It should contain a vertical list of icon-text links. It must include a toggle button to collapse the sidebar into a compact state showing only icons, smoothly animating the width change.\n\nImplementation Rules:\n- If integrating into an existing repository, manage the expanded/collapsed state globally if required by the layout wrapper.\n- If standalone, provide the CSS transitions and a small script to toggle the 'collapsed' class.",
+                                        dynamicInput: { type: "text", placeholder: "Specify initial state (open/closed) or tech stack?", label: "Custom Details" }
+                                    },
+                                    "Off-canvas Drawer (Mobile)": {
+                                        type: "option",
+                                        prompt: "Create an 'Off-canvas Mobile Drawer'. It should remain completely hidden off-screen by default. Triggered by a hamburger menu, it should slide in smoothly from the edge, pushing or overlaying the main content, complete with a dark semi-transparent backdrop overlay.\n\nImplementation Rules:\n- If integrating into an existing repository, ensure the z-index is higher than all standard page content and prevent body scrolling when open.\n- If standalone, provide the HTML structure for the drawer, overlay, and trigger button.",
+                                        dynamicInput: { type: "text", placeholder: "Slide from left or right? Tech stack?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Breadcrumbs": {
+                                type: "group",
+                                options: {
+                                    "Minimalist Slash Separator": {
+                                        type: "option",
+                                        prompt: "Create a 'Minimalist Breadcrumb' navigation. Use simple, muted text for parent links and a distinct primary color for the current active page. Use a forward slash (`/`) as a subtle separator between links, with adequate spacing.\n\nImplementation Rules:\n- If integrating into an existing repository, utilize the theme's secondary typography colors.\n- If standalone, provide a clean semantic `<nav>` and `<ol>` structure.",
+                                        dynamicInput: { type: "text", placeholder: "Specify path (e.g., Home / Category / Product)?", label: "Custom Details" }
+                                    },
+                                    "Chevron Block Breadcrumbs": {
+                                        type: "option",
+                                        prompt: "Create 'Chevron Block Breadcrumbs'. The links should be housed within connected, arrow-shaped blocks (chevrons) pointing to the right. Use contrasting background colors for each block to clearly indicate depth and progression.\n\nImplementation Rules:\n- If integrating into an existing repository, adapt the block colors to align with the primary brand gradient or palette.\n- If standalone, implement the chevron shapes using CSS borders or SVG backgrounds.",
+                                        dynamicInput: { type: "text", placeholder: "Specify path or framework?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Pagination": {
+                                type: "group",
+                                options: {
+                                    "Classic Numbered Pagination": {
+                                        type: "option",
+                                        prompt: "Create a 'Classic Numbered Pagination' block. It should feature 'Previous' and 'Next' buttons on the ends, with clickable page numbers in the middle. The current active page should be highlighted with a solid primary background, while inactive pages are subtle.\n\nImplementation Rules:\n- If integrating into an existing repository, ensure the interactive states match global button styles.\n- If standalone, provide a responsive list format ensuring elements wrap cleanly on small screens.",
+                                        dynamicInput: { type: "text", placeholder: "Total pages or framework?", label: "Custom Details" }
+                                    },
+                                    "Load More Trigger (Spinner)": {
+                                        type: "option",
+                                        prompt: "Create a 'Load More' button / Infinite Scroll Trigger. Instead of numbers, create a centered button at the bottom of a list. When clicked, it should transition to a loading spinner state while fetching more content.\n\nImplementation Rules:\n- If integrating into an existing repository, use existing SVG spinner assets and button loading states.\n- If standalone, provide the CSS keyframes for a simple spinner inside the button.",
+                                        dynamicInput: { type: "text", placeholder: "Text (e.g., 'Load More Articles')?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Tabs": {
+                                type: "group",
+                                options: {
+                                    "Underline Animated Tabs": {
+                                        type: "option",
+                                        prompt: "Create 'Underline Animated Tabs'. A horizontal list of text tabs. The active tab has a solid underline. When clicking a different tab, the underline must smoothly slide across the X-axis to align under the newly selected tab.\n\nImplementation Rules:\n- If integrating into an existing repository, sync the animation duration with global transition tokens.\n- If standalone, provide the JS logic required to calculate underline width and left-offset dynamically.",
+                                        dynamicInput: { type: "text", placeholder: "Tab names (e.g., Details, Reviews)?", label: "Custom Details" }
+                                    },
+                                    "Segmented Control (Pill) Tabs": {
+                                        type: "option",
+                                        prompt: "Create a 'Segmented Control' or 'Pill' tab interface. The tabs sit inside a common rounded container with a muted background. The active tab is a solid pill shape that sits inside this container, resembling an iOS segmented control.\n\nImplementation Rules:\n- If integrating into an existing repository, match the border radius to the project's form inputs.\n- If standalone, provide a clean flexbox layout with an active state class.",
+                                        dynamicInput: { type: "text", placeholder: "Tab names or framework?", label: "Custom Details" }
+                                    }
+                                }
+                            }
                         }
                     },
                     "Data Display & Layout": {
