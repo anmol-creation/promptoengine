@@ -93,6 +93,47 @@ export const effectsCategory = {
                 "Date & Time Stamp": { type: "option", prompt: "with a retro camcorder date/time stamp overlay" },
                 "Prism Effect": { type: "option", prompt: "with photographic prism light distortion" }
             }
+        },
+        "Typography & Text Overlays": {
+            type: "group",
+            icon: ICONS.magicWand, // Using generic icon for now
+            options: {
+                "Bold Intersecting Text": {
+                    type: "option",
+                    prompt: "dramatic portrait with giant bold typography text '{dynamic_input}' intersecting and blending with the subject, movie poster style, text behind and partially in front of subject",
+                    dynamicInput: { enabled: true, placeholder: "Type a word (e.g., ENDURE)", required: true }
+                },
+                "Text Mask (Subject Inside)": {
+                    type: "option",
+                    prompt: "subject's image visible only inside the large bold text '{dynamic_input}', masked over a solid background, modern typographic art",
+                    dynamicInput: { enabled: true, placeholder: "Type a word", required: true }
+                },
+                "Glowing Neon Sign": {
+                    type: "option",
+                    prompt: "subject illuminated by a bright glowing neon sign that reads '{dynamic_input}', cyberpunk or moody night aesthetic, vibrant reflections",
+                    dynamicInput: { enabled: true, placeholder: "Type a neon text", required: true }
+                },
+                "Magazine Cover Layout": {
+                    type: "option",
+                    prompt: "styled like a high-end fashion magazine cover with the bold title '{dynamic_input}' at the top, professional editorial layout",
+                    dynamicInput: { enabled: true, placeholder: "Magazine Name", required: true }
+                },
+                "Graffiti Wall Text": {
+                    type: "option",
+                    prompt: "subject standing in front of an urban brick wall with vibrant street graffiti text reading '{dynamic_input}' painted on it",
+                    dynamicInput: { enabled: true, placeholder: "Type graffiti text", required: true }
+                },
+                "Cinematic Movie Title": {
+                    type: "option",
+                    prompt: "epic cinematic movie poster composition with the title text '{dynamic_input}' in metallic, glowing font at the bottom center",
+                    dynamicInput: { enabled: true, placeholder: "Movie Title", required: true }
+                },
+                "Typewriter Print Overlay": {
+                    type: "option",
+                    prompt: "vintage artistic photo with random scattered typewriter print overlay words containing '{dynamic_input}', artistic grunge aesthetic",
+                    dynamicInput: { enabled: true, placeholder: "Type word(s)", required: true }
+                }
+            }
         }
     }
 };
