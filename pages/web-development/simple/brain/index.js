@@ -878,7 +878,64 @@ export const simpleBrainMap = {
                     }
                 }
             },
-            "Sections (Page Blocks)": { type: "group", options: {} },
+            "Sections (Page Blocks)": {
+                type: "group",
+                options: {
+                    "Hero & Headers (Top Sections)": {
+                        type: "group",
+                        options: {
+                            "Split Hero (Text Left, Image Right)": { type: "option", prompt: "Design a 'Split Hero' section. The left half should contain a prominent H1 headline, a subheadline, and a dual CTA button group. The right half should feature a large placeholder image or illustration.", dynamicInput: { type: "text", placeholder: "Headline or theme?", label: "Custom Details" } },
+                            "Centered Minimal Hero": { type: "option", prompt: "Create a 'Centered Minimal Hero' section with a massive, bold headline centered on the screen, followed by concise subtext and a single large CTA button.", dynamicInput: { type: "text", placeholder: "Specific text or styling?", label: "Custom Details" } },
+                            "Background Image/Video Hero": { type: "option", prompt: "Design a Hero section featuring a full-width background image or video placeholder with a dark overlay, ensuring the white centered text remains legible.", dynamicInput: { type: "text", placeholder: "Vibe or overlay color?", label: "Custom Details" } },
+                            "Interactive/3D Element Hero": { type: "option", prompt: "Create a modern Hero section with an interactive or 3D element placeholder on one side, paired with striking typography on the other.", dynamicInput: { type: "text", placeholder: "Type of interactive element?", label: "Custom Details" } }
+                        }
+                    },
+                    "Features & Services": {
+                        type: "group",
+                        options: {
+                            "3-Column Icon/Text Grid": { type: "option", prompt: "Design a '3-Column Feature Grid' section. Provide a section title, and a grid of 3 identical cards, each containing a top icon, a title, and a short description.", dynamicInput: { type: "text", placeholder: "Feature details?", label: "Custom Details" } },
+                            "Alternating Zig-Zag (Text & Image)": { type: "option", prompt: "Create an 'Alternating Features (Zig-Zag)' section with 3 consecutive rows. Alternate the layout (Left-Text/Right-Image, then Left-Image/Right-Text).", dynamicInput: { type: "text", placeholder: "Specific features?", label: "Custom Details" } },
+                            "Feature Comparison Table": { type: "option", prompt: "Design a 'Feature Comparison Table' section, typically used to compare 'Us vs. Them' or different product tiers, using checkmarks and crosses.", dynamicInput: { type: "text", placeholder: "Comparison points?", label: "Custom Details" } },
+                            "Interactive Feature Tabs": { type: "option", prompt: "Create an 'Interactive Feature Tabs' section. The left side should have clickable tab titles, and the right side should display the corresponding feature image and text.", dynamicInput: { type: "text", placeholder: "Tab names or framework?", label: "Custom Details" } }
+                        }
+                    },
+                    "Social Proof & Trust": {
+                        type: "group",
+                        options: {
+                            "Logo Cloud (Trusted By)": { type: "option", prompt: "Design a 'Logo Cloud' section. Use a subtle text 'Trusted by' followed by a horizontal flex row of 5 monochrome placeholder logos.", dynamicInput: { type: "text", placeholder: "Brand style?", label: "Custom Details" } },
+                            "Testimonial Cards Grid": { type: "option", prompt: "Create a 'Testimonial Cards Grid' using a multi-column masonry layout displaying user quotes, star ratings, and avatars.", dynamicInput: { type: "text", placeholder: "Review topics?", label: "Custom Details" } },
+                            "Featured Quote / Video Testimonial": { type: "option", prompt: "Design a section highlighting a single, massive 'Featured Quote' or a large placeholder for a video testimonial, accompanied by the author's details.", dynamicInput: { type: "text", placeholder: "Quote text or theme?", label: "Custom Details" } },
+                            "User Stats / Milestones Counter": { type: "option", prompt: "Create a 'Stats Counter' section displaying 3 or 4 large animated numbers (e.g., '1M+ Users', '99.9% Uptime') in a horizontal row.", dynamicInput: { type: "text", placeholder: "Specific stats?", label: "Custom Details" } }
+                        }
+                    },
+                    "Content & Information": {
+                        type: "group",
+                        options: {
+                            "About Us / Mission Block": { type: "option", prompt: "Design an 'About Us' section block. Use a 2-column layout with a mission statement and text on one side, and team or office photos on the other.", dynamicInput: { type: "text", placeholder: "Mission statement?", label: "Custom Details" } },
+                            "Team / Staff Grid": { type: "option", prompt: "Create a 'Team Grid' section featuring 4-6 staff profile cards containing a headshot, name, role, and social media links.", dynamicInput: { type: "text", placeholder: "Grid size or styling?", label: "Custom Details" } },
+                            "FAQ Accordion Section": { type: "option", prompt: "Design an 'FAQ Accordion' section. Center a column of collapsible question blocks that reveal answers when clicked.", dynamicInput: { type: "text", placeholder: "Specific questions?", label: "Custom Details" } },
+                            "Step-by-Step 'How it Works'": { type: "option", prompt: "Create a 'How it Works' section. Display 3 or 4 distinct steps either horizontally connected by a dashed line, or vertically stacked with large numbered circles.", dynamicInput: { type: "text", placeholder: "Step details?", label: "Custom Details" } }
+                        }
+                    },
+                    "Conversion & CTAs": {
+                        type: "group",
+                        options: {
+                            "Large Centered Newsletter Signup": { type: "option", prompt: "Design a 'Newsletter Signup' section. Center a bold headline, a short description, and an email input field with an inline 'Subscribe' button.", dynamicInput: { type: "text", placeholder: "Signup text or style?", label: "Custom Details" } },
+                            "Two-Column CTA Block": { type: "option", prompt: "Create a 'Two-Column CTA' block. One side has compelling text and a primary button, the other side has a secondary button or a supporting graphic. Wrap it in a distinct background color.", dynamicInput: { type: "text", placeholder: "CTA text or colors?", label: "Custom Details" } },
+                            "Pricing Tier Section (3 Columns)": { type: "option", prompt: "Design a 'Pricing Section' containing 3 vertical pricing tier cards. Emphasize the middle 'Pro' tier with a distinct border or color.", dynamicInput: { type: "text", placeholder: "Pricing details?", label: "Custom Details" } },
+                            "App Download Promo Block": { type: "option", prompt: "Create an 'App Promo Block' featuring a headline, 'Download on App Store / Google Play' badge graphics, and a smartphone mockup showing the app.", dynamicInput: { type: "text", placeholder: "App details?", label: "Custom Details" } }
+                        }
+                    },
+                    "Footers": {
+                        type: "group",
+                        options: {
+                            "Simple Centered Footer": { type: "option", prompt: "Design a 'Simple Centered Footer'. Keep it minimal with a row of essential text links, social icons, and a copyright notice at the bottom.", dynamicInput: { type: "text", placeholder: "Specific links?", label: "Custom Details" } },
+                            "Large Multi-Column Footer": { type: "option", prompt: "Create a 'Large Multi-Column Footer'. Include a company bio column, 3 columns for sitemap links, and a bottom edge with legal links and copyright.", dynamicInput: { type: "text", placeholder: "Sitemap columns?", label: "Custom Details" } },
+                            "Footer with Large Brand Graphic": { type: "option", prompt: "Design a Footer that integrates a massive, subtle background watermark or brand graphic, alongside standard multi-column links and a newsletter input.", dynamicInput: { type: "text", placeholder: "Graphic details or theme?", label: "Custom Details" } }
+                        }
+                    }
+                }
+            },
             "Layouts": { type: "group", options: {} },
             "Styles & Theming": { type: "group", options: {} },
             "Logic / Scripts": { type: "group", options: {} },
