@@ -936,7 +936,76 @@ export const simpleBrainMap = {
                     }
                 }
             },
-            "Layouts": { type: "group", options: {} },
+            "Layouts": {
+                type: "group",
+                options: {
+                    "Page Shells / App Frames": {
+                        type: "group",
+                        options: {
+                            "Classic Holy Grail Layout": {
+                                type: "option",
+                                prompt: "Create a 'Holy Grail Layout' structural shell. It must include a persistent Header at the top, a persistent Footer at the bottom, and a main content area in the middle that is split into 3 columns: a left sidebar, a wide main content area, and a right sidebar. Ensure the footer sticks to the bottom even if the content is short.",
+                                dynamicInput: { type: "text", placeholder: "Framework or specific widths?", label: "Custom Details" }
+                            },
+                            "Full-Screen Dashboard Shell": {
+                                type: "option",
+                                prompt: "Design a 'Full-Screen Dashboard Shell'. Create a 100vh layout with a fixed, narrow navigation sidebar on the left and a top utility header. The remaining main content area should have a distinct background color and be scrollable independently of the sidebar.",
+                                dynamicInput: { type: "text", placeholder: "Sidebar behavior or framework?", label: "Custom Details" }
+                            }
+                        }
+                    },
+                    "Grid Systems": {
+                        type: "group",
+                        options: {
+                            "Responsive Bento Box Grid": {
+                                type: "option",
+                                prompt: "Create a 'Bento Box' grid layout container. Use CSS Grid to create a responsive, asymmetric grid with varying cell sizes (e.g., some taking 2 spans horizontally, some vertically). Apply a standard gap and rounded corners to the empty placeholder cells.",
+                                dynamicInput: { type: "text", placeholder: "Number of cells or framework?", label: "Custom Details" }
+                            },
+                            "Standard 12-Column Grid Wrapper": {
+                                type: "option",
+                                prompt: "Set up a standard '12-Column Grid' wrapper. Include placeholder blocks demonstrating how to span 3, 4, 6, and 12 columns responsively. Use Tailwind CSS grid utilities if applicable.",
+                                dynamicInput: { type: "text", placeholder: "Framework (e.g., Tailwind, Bootstrap)?", label: "Custom Details" }
+                            },
+                            "Masonry Content Grid": {
+                                type: "option",
+                                prompt: "Create a 'Masonry Content Grid' layout. The columns should be fixed-width but the items inside should stack tightly regardless of their varying heights, leaving no awkward vertical gaps.",
+                                dynamicInput: { type: "text", placeholder: "CSS columns vs JS approach?", label: "Custom Details" }
+                            }
+                        }
+                    },
+                    "Sidebar & Split Layouts": {
+                        type: "group",
+                        options: {
+                            "Split-Screen Layout (50/50)": {
+                                type: "option",
+                                prompt: "Design a 'Split-Screen (50/50)' layout wrapper. Divide the viewport exactly in half horizontally. The left side should be fixed/sticky, and the right side should be independently scrollable.",
+                                dynamicInput: { type: "text", placeholder: "Mobile stacking behavior?", label: "Custom Details" }
+                            },
+                            "Sidebar with Main Content": {
+                                type: "option",
+                                prompt: "Create a classic 'Sidebar + Main Content' wrapper. The sidebar should take up roughly 25% (or a fixed width) of the container, while the main content takes the remaining space. Ensure the sidebar stacks below or hides on mobile.",
+                                dynamicInput: { type: "text", placeholder: "Sidebar left or right? Framework?", label: "Custom Details" }
+                            }
+                        }
+                    },
+                    "Content Containers": {
+                        type: "group",
+                        options: {
+                            "Narrow Reading Container": {
+                                type: "option",
+                                prompt: "Create a 'Narrow Reading Container' layout. Apply a maximum width (around 65ch or 700px) and center it horizontally to provide the optimal line length for reading long-form typography.",
+                                dynamicInput: { type: "text", placeholder: "Max-width preference?", label: "Custom Details" }
+                            },
+                            "Full-Bleed with Constrained Content": {
+                                type: "option",
+                                prompt: "Set up a 'Full-Bleed' layout wrapper where the background color or images stretch to the absolute edges of the screen, but the text/content inside remains constrained within a centered max-width container.",
+                                dynamicInput: { type: "text", placeholder: "Max-width of inner content?", label: "Custom Details" }
+                            }
+                        }
+                    }
+                }
+            },
             "Styles & Theming": { type: "group", options: {} },
             "Logic / Scripts": { type: "group", options: {} },
             "Backend / APIs": { type: "group", options: {} },
