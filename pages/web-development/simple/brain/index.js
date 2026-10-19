@@ -779,7 +779,36 @@ export const simpleBrainMap = {
                     "Landing & Marketing Pages": {
                         type: "group",
                         options: {
-                            "SaaS / Product Homepage": { type: "option", prompt: "Design a complete 'SaaS / Product Homepage'. Include a Hero section with dual CTAs, a Trusted By logo banner, a Features grid, Testimonials, a Pricing table, and a Footer.", dynamicInput: { type: "text", placeholder: "Industry or brand colors?", label: "Custom Details" } },
+                            "SaaS / Product Homepage": {
+                                type: "group",
+                                options: {
+                                    "Enterprise B2B SaaS": {
+                                        type: "option",
+                                        prompt: "Design an 'Enterprise B2B SaaS Homepage'. Focus on a highly professional, trustworthy aesthetic using deep blues or muted tones. The Hero section should have a conservative layout with a primary 'Request Demo' CTA. Include a prominent 'Trusted by Fortune 500' logo cloud, a complex 'Features' section showcasing data dashboards/security, a case-study/ROI metrics section, and a robust footer with compliance badges (SOC2, ISO).",
+                                        dynamicInput: { type: "text", placeholder: "Specific industry or brand colors?", label: "Custom Details" }
+                                    },
+                                    "Developer-Focused API / Tool": {
+                                        type: "option",
+                                        prompt: "Create a 'Developer-Focused Tool Homepage'. The design must be heavily dark-mode with neon or bright accent colors. The Hero section should feature an interactive or animated code snippet / terminal window alongside a bold, technical headline. Include a 'How it works' section with syntax-highlighted code blocks, a clear documentation link, and a 'Start Building for Free' CTA.",
+                                        dynamicInput: { type: "text", placeholder: "Tool type or specific code language?", label: "Custom Details" }
+                                    },
+                                    "Modern AI Product": {
+                                        type: "option",
+                                        prompt: "Design a 'Modern AI Product Homepage'. The aesthetic should feel magical and cutting-edge, utilizing fluid mesh gradients, subtle glassmorphism effects, and glowing accents. The Hero should feature a clean interface mockup with AI generation 'sparkle' effects. Include a 'Before/After' slider or interactive demo section, and feature blocks that highlight speed and automation.",
+                                        dynamicInput: { type: "text", placeholder: "AI feature specifics or color theme?", label: "Custom Details" }
+                                    },
+                                    "Minimalist Consumer App (B2C)": {
+                                        type: "option",
+                                        prompt: "Create a 'Minimalist Consumer App Homepage'. Use an extremely clean, bright design with massive amounts of whitespace, large friendly typography, and soft pastel or vibrant solid brand colors. The Hero should feature a large 3D smartphone mockup or playful illustration. Include simple, bold benefit statements (not complex features), user reviews, and a single, unmissable 'Download the App' CTA.",
+                                        dynamicInput: { type: "text", placeholder: "App purpose or primary color?", label: "Custom Details" }
+                                    },
+                                    "Open Source Project": {
+                                        type: "option",
+                                        prompt: "Design an 'Open Source Project Homepage'. It should feel welcoming and community-driven. The Hero must prominently display GitHub statistics (Stars, Forks) and dual CTAs: 'Get Started' and 'View on GitHub'. Include a section highlighting community contributors, a sponsor/backers section, and a simple feature grid highlighting the core open-source benefits.",
+                                        dynamicInput: { type: "text", placeholder: "Project name or specific stats?", label: "Custom Details" }
+                                    }
+                                }
+                            },
                             "Waitlist / Coming Soon Page": { type: "option", prompt: "Create a 'Waitlist / Coming Soon Page'. Focus on a highly conversion-optimized Hero section with an email capture form and a vibrant background.", dynamicInput: { type: "text", placeholder: "Product name or style?", label: "Custom Details" } },
                             "Event / Webinar Registration": { type: "option", prompt: "Design an 'Event / Webinar Registration Page'. It should display event details, a countdown timer, speaker profiles, and a clear registration form.", dynamicInput: { type: "text", placeholder: "Event theme or details?", label: "Custom Details" } },
                             "About Us / Company Page": { type: "option", prompt: "Create an 'About Us' page featuring a company mission statement, a timeline of history, and a 'Meet the Team' photo grid.", dynamicInput: { type: "text", placeholder: "Company vibe (e.g., Corporate, Startup)?", label: "Custom Details" } },
