@@ -639,16 +639,77 @@ export const simpleBrainMap = {
                             "Tables / Data Grids": { type: "option", prompt: "Tables / Data Grids" },
                             "Accordions / Collapsible Panels": { type: "option", prompt: "Accordions / Collapsible Panels" },
                             "Carousels / Image Sliders": { type: "option", prompt: "Carousels / Image Sliders" },
-                            "Modals / Dialogs": { type: "option", prompt: "Modals / Dialogs" },
-                            "Tooltips / Popovers": { type: "option", prompt: "Tooltips / Popovers" },
                             "Progress Bars": { type: "option", prompt: "Progress Bars" }
                         }
                     },
-                    "Feedback & Alerts": {
+                    "Feedback & Overlays": {
                         type: "group",
                         options: {
-                            "Alerts / Banners": { type: "option", prompt: "Alerts / Banners" },
-                            "Toast Notifications / Snackbars": { type: "option", prompt: "Toast Notifications / Snackbars" },
+                            "Alerts & Banners": {
+                                type: "group",
+                                options: {
+                                    "Success Alert (Green)": {
+                                        type: "option",
+                                        prompt: "Create a 'Success Alert' component. The design must feature a soft green background, a bold green border or accent line, a checkmark icon, and clear typography for the success message. Include a close 'X' button on the right.",
+                                        dynamicInput: { type: "text", placeholder: "Custom success message or framework?", label: "Custom Details" }
+                                    },
+                                    "Error / Danger Alert (Red)": {
+                                        type: "option",
+                                        prompt: "Design an 'Error Alert' box. It should have a subtle red/crimson background, a warning triangle or error icon, and stark, legible text warning the user of a failure. Make it stand out visually.",
+                                        dynamicInput: { type: "text", placeholder: "Custom error message or framework?", label: "Custom Details" }
+                                    },
+                                    "Information Banner (Blue)": {
+                                        type: "option",
+                                        prompt: "Create an 'Informational Banner' component designed to sit at the top of a page or section. Use a calm blue color palette, an 'info' icon, and a layout that accommodates a short message and an optional action link.",
+                                        dynamicInput: { type: "text", placeholder: "Custom info message or framework?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Toasts / Snackbars": {
+                                type: "group",
+                                options: {
+                                    "Notification Toast (Floating)": {
+                                        type: "option",
+                                        prompt: "Design a floating 'Notification Toast' component. It must look like it sits above the main content (high z-index, strong drop shadow), featuring a compact layout with a small icon, a brief message, and a subtle entry/exit animation.",
+                                        dynamicInput: { type: "text", placeholder: "Custom text or framework?", label: "Custom Details" }
+                                    },
+                                    "Actionable Snackbar": {
+                                        type: "option",
+                                        prompt: "Create a 'Snackbar' component typically placed at the bottom center or corner of the screen. It should have a dark, high-contrast background, concise white text, and a prominently colored 'Undo' or 'Action' button.",
+                                        dynamicInput: { type: "text", placeholder: "Custom action text or framework?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Modals / Dialogs": {
+                                type: "group",
+                                options: {
+                                    "Confirmation Modal (Are you sure?)": {
+                                        type: "option",
+                                        prompt: "Design a 'Confirmation Modal' dialog. Include a semi-transparent dark backdrop overlay (backdrop-blur). The modal box should be centered, featuring a warning icon, a title (e.g., 'Delete Item?'), descriptive text, a subtle 'Cancel' button, and a prominent, destructive 'Confirm' button (e.g., red).",
+                                        dynamicInput: { type: "text", placeholder: "Custom title/text or framework?", label: "Custom Details" }
+                                    },
+                                    "Feature Announcement Modal": {
+                                        type: "option",
+                                        prompt: "Create a 'Feature Announcement Modal'. It should have an elegant design, perhaps with an illustration or image at the top, followed by an exciting title, descriptive text, and a primary 'Try it out' Call-to-Action button.",
+                                        dynamicInput: { type: "text", placeholder: "Custom feature details or framework?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Tooltips & Popovers": {
+                                type: "group",
+                                options: {
+                                    "Simple Hover Tooltip": {
+                                        type: "option",
+                                        prompt: "Design a minimalist 'Tooltip' component that appears on hover. It must be very compact, with a dark background, white text, rounded corners, and a small directional arrow pointing towards the trigger element.",
+                                        dynamicInput: { type: "text", placeholder: "Custom tooltip text or framework?", label: "Custom Details" }
+                                    },
+                                    "Rich Popover": {
+                                        type: "option",
+                                        prompt: "Create a 'Rich Popover' component. Unlike a simple tooltip, this should be a small card containing a title, a paragraph of explanatory text, and perhaps a tiny link or button. Include a subtle shadow and directional arrow.",
+                                        dynamicInput: { type: "text", placeholder: "Custom popover content or framework?", label: "Custom Details" }
+                                    }
+                                }
+                            },
                             "Spinners / Loading Indicators": { type: "option", prompt: "Spinners / Loading Indicators" },
                             "Skeleton Screens": { type: "option", prompt: "Skeleton Screens (Loading state)" }
                         }
