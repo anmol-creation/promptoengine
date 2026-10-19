@@ -458,14 +458,71 @@ export const simpleBrainMap = {
                     "Form Elements": {
                         type: "group",
                         options: {
-                            "Input Fields": { type: "option", prompt: "Input Fields (Text, Password, Email, etc.)" },
-                            "Checkboxes & Radio Buttons": { type: "option", prompt: "Checkboxes & Radio Buttons" },
-                            "Dropdowns & Select Menus": { type: "option", prompt: "Dropdowns & Select Menus" },
-                            "Toggles / Switches": { type: "option", prompt: "Toggles / Switches" },
-                            "Textareas": { type: "option", prompt: "Textareas" },
-                            "Sliders / Range Inputs": { type: "option", prompt: "Sliders / Range Inputs" },
-                            "File Uploaders": { type: "option", prompt: "File Uploaders" },
-                            "Date / Time Pickers": { type: "option", prompt: "Date / Time Pickers" }
+                            "Text Inputs & Textareas": {
+                                type: "group",
+                                options: {
+                                    "Floating Label Input": {
+                                        type: "option",
+                                        prompt: "Create a 'Floating Label' text input component. When the user focuses on the input or types text, the placeholder text should smoothly animate upwards to become a small label on the top border. Include normal, focus, and error states.",
+                                        dynamicInput: { type: "text", placeholder: "Input name or framework?", label: "Custom Details" }
+                                    },
+                                    "Search Bar with Icon": {
+                                        type: "option",
+                                        prompt: "Design a modern 'Search Bar' component. It should be wide, feature a magnifying glass icon on the left, a clear 'X' button on the right (visible when text is entered), and a subtle drop shadow that intensifies on focus.",
+                                        dynamicInput: { type: "text", placeholder: "Custom placeholder or framework?", label: "Custom Details" }
+                                    },
+                                    "Password Input (with Toggle)": {
+                                        type: "option",
+                                        prompt: "Create a secure 'Password Input' field. Crucially, it must include an 'eye' icon button on the right side that toggles the input type between 'password' (hidden) and 'text' (visible).",
+                                        dynamicInput: { type: "text", placeholder: "Framework or specific styling?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Selection Controls": {
+                                type: "group",
+                                options: {
+                                    "Custom Styled Checkbox": {
+                                        type: "option",
+                                        prompt: "Design a 'Custom Styled Checkbox'. Do not use the default browser checkbox. Create a custom square box with smooth transitions, a checkmark animation when selected, and support for a disabled state. Keep the label text aligned properly.",
+                                        dynamicInput: { type: "text", placeholder: "Label text or color?", label: "Custom Details" }
+                                    },
+                                    "Custom Radio Button Group": {
+                                        type: "option",
+                                        prompt: "Create a 'Radio Button Group' with custom styling. The radio circles should have a smooth animation when the inner dot appears. Ensure they are fully accessible and group them under a single question/label.",
+                                        dynamicInput: { type: "text", placeholder: "Options or tech stack?", label: "Custom Details" }
+                                    },
+                                    "Modern Select Dropdown": {
+                                        type: "option",
+                                        prompt: "Design a 'Modern Select Dropdown' component. Instead of the native browser styling, use a custom button trigger with a chevron icon, and a clean, floating dropdown menu list for options. Include hover states for list items.",
+                                        dynamicInput: { type: "text", placeholder: "Dropdown options or framework?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Switches & Toggles": {
+                                type: "group",
+                                options: {
+                                    "Smooth Toggle Switch": {
+                                        type: "option",
+                                        prompt: "Create a 'Smooth Toggle Switch' component (often used for ON/OFF or Dark/Light mode). It should have a pill-shaped background that changes color when active, and a circular thumb that slides smoothly from left to right.",
+                                        dynamicInput: { type: "text", placeholder: "Label text or framework?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Complete Forms / Patterns": {
+                                type: "group",
+                                options: {
+                                    "Login / Sign-Up Form": {
+                                        type: "option",
+                                        prompt: "Design a complete 'Login / Sign-Up Form' card. It should include an email input, a password input (with visibility toggle), a 'Remember Me' checkbox, a 'Forgot Password' link, and a prominent submit button. Keep the layout clean and centered.",
+                                        dynamicInput: { type: "text", placeholder: "Specific requirements or framework?", label: "Custom Details" }
+                                    },
+                                    "Contact Us Form": {
+                                        type: "option",
+                                        prompt: "Create a 'Contact Us Form'. It needs fields for Name, Email, Subject (as a dropdown), and a large Textarea for the message. Include a Submit button and demonstrate how validation error messages would appear below the fields.",
+                                        dynamicInput: { type: "text", placeholder: "Custom fields or framework?", label: "Custom Details" }
+                                    }
+                                }
+                            }
                         }
                     },
                     "Navigation": {
