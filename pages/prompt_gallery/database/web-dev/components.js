@@ -43,5 +43,21 @@ export const componentsData = [
     css: "",
     tags: ["Card", "Profile", "Glassmorphism"],
     subject: "Component"
+  },
+  {
+    id: "wd-comp-03",
+    category: "Button",
+    title: "Glassmorphism CTA",
+    prompt: "Create an elegant 'Glassmorphism' style Call-to-Action (CTA) button. The design must include a semi-transparent frosted glass background (backdrop-blur), a subtle white or light border to define the edge, and clear, legible typography.\\n\\nImplementation Rules:\\n- If integrating into an existing repository, ensure the glass effect overlays seamlessly over the existing background context and adapts to the current color scheme.\\n- If standalone, include a colorful placeholder background behind the button to demonstrate the frosted effect.",
+    html: `
+<div class="flex items-center justify-center p-12 rounded-xl" style="background-image: radial-gradient(circle at top right, #ff7eb3, #ff758c, #ff6a5c); min-height: 200px;">
+  <button class="relative px-8 py-4 text-lg font-semibold text-white transition duration-300 bg-white/10 border border-white/30 rounded-2xl shadow-lg backdrop-blur-md hover:bg-white/20 hover:shadow-xl hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/50">
+    Get Started
+  </button>
+</div>
+    `,
+    css: "",
+    tags: ["Button", "Glassmorphism", "CTA", "Tailwind"],
+    subject: "Component"
   }
 ];
