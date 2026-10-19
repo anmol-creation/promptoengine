@@ -10,7 +10,9 @@ import { artist } from './database/image/artist.js';
 import { funData } from './database/image/fun.js';
 import { animal } from './database/image/animal.js';
 import { mythical } from './database/image/mythical.js';
-import { componentsData } from './database/web-dev/components.js';
+import { buttonsData } from './database/web-dev/buttons.js';
+import { cardsData } from './database/web-dev/cards.js';
+import { navbarsData } from './database/web-dev/navbars.js';
 
 export const promptDatabase = {
     "Natural": naturalData,
@@ -28,5 +30,7 @@ export const promptDatabase = {
 };
 
 export const webDevDatabase = {
-    "Components": componentsData
+    "Buttons": buttonsData,
+    "Cards": cardsData,
+    "Navbars": navbarsData
 };

@@ -458,14 +458,71 @@ export const simpleBrainMap = {
                     "Form Elements": {
                         type: "group",
                         options: {
-                            "Input Fields": { type: "option", prompt: "Input Fields (Text, Password, Email, etc.)" },
-                            "Checkboxes & Radio Buttons": { type: "option", prompt: "Checkboxes & Radio Buttons" },
-                            "Dropdowns & Select Menus": { type: "option", prompt: "Dropdowns & Select Menus" },
-                            "Toggles / Switches": { type: "option", prompt: "Toggles / Switches" },
-                            "Textareas": { type: "option", prompt: "Textareas" },
-                            "Sliders / Range Inputs": { type: "option", prompt: "Sliders / Range Inputs" },
-                            "File Uploaders": { type: "option", prompt: "File Uploaders" },
-                            "Date / Time Pickers": { type: "option", prompt: "Date / Time Pickers" }
+                            "Text Inputs & Textareas": {
+                                type: "group",
+                                options: {
+                                    "Floating Label Input": {
+                                        type: "option",
+                                        prompt: "Create a 'Floating Label' text input component. When the user focuses on the input or types text, the placeholder text should smoothly animate upwards to become a small label on the top border. Include normal, focus, and error states.",
+                                        dynamicInput: { type: "text", placeholder: "Input name or framework?", label: "Custom Details" }
+                                    },
+                                    "Search Bar with Icon": {
+                                        type: "option",
+                                        prompt: "Design a modern 'Search Bar' component. It should be wide, feature a magnifying glass icon on the left, a clear 'X' button on the right (visible when text is entered), and a subtle drop shadow that intensifies on focus.",
+                                        dynamicInput: { type: "text", placeholder: "Custom placeholder or framework?", label: "Custom Details" }
+                                    },
+                                    "Password Input (with Toggle)": {
+                                        type: "option",
+                                        prompt: "Create a secure 'Password Input' field. Crucially, it must include an 'eye' icon button on the right side that toggles the input type between 'password' (hidden) and 'text' (visible).",
+                                        dynamicInput: { type: "text", placeholder: "Framework or specific styling?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Selection Controls": {
+                                type: "group",
+                                options: {
+                                    "Custom Styled Checkbox": {
+                                        type: "option",
+                                        prompt: "Design a 'Custom Styled Checkbox'. Do not use the default browser checkbox. Create a custom square box with smooth transitions, a checkmark animation when selected, and support for a disabled state. Keep the label text aligned properly.",
+                                        dynamicInput: { type: "text", placeholder: "Label text or color?", label: "Custom Details" }
+                                    },
+                                    "Custom Radio Button Group": {
+                                        type: "option",
+                                        prompt: "Create a 'Radio Button Group' with custom styling. The radio circles should have a smooth animation when the inner dot appears. Ensure they are fully accessible and group them under a single question/label.",
+                                        dynamicInput: { type: "text", placeholder: "Options or tech stack?", label: "Custom Details" }
+                                    },
+                                    "Modern Select Dropdown": {
+                                        type: "option",
+                                        prompt: "Design a 'Modern Select Dropdown' component. Instead of the native browser styling, use a custom button trigger with a chevron icon, and a clean, floating dropdown menu list for options. Include hover states for list items.",
+                                        dynamicInput: { type: "text", placeholder: "Dropdown options or framework?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Switches & Toggles": {
+                                type: "group",
+                                options: {
+                                    "Smooth Toggle Switch": {
+                                        type: "option",
+                                        prompt: "Create a 'Smooth Toggle Switch' component (often used for ON/OFF or Dark/Light mode). It should have a pill-shaped background that changes color when active, and a circular thumb that slides smoothly from left to right.",
+                                        dynamicInput: { type: "text", placeholder: "Label text or framework?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Complete Forms / Patterns": {
+                                type: "group",
+                                options: {
+                                    "Login / Sign-Up Form": {
+                                        type: "option",
+                                        prompt: "Design a complete 'Login / Sign-Up Form' card. It should include an email input, a password input (with visibility toggle), a 'Remember Me' checkbox, a 'Forgot Password' link, and a prominent submit button. Keep the layout clean and centered.",
+                                        dynamicInput: { type: "text", placeholder: "Specific requirements or framework?", label: "Custom Details" }
+                                    },
+                                    "Contact Us Form": {
+                                        type: "option",
+                                        prompt: "Create a 'Contact Us Form'. It needs fields for Name, Email, Subject (as a dropdown), and a large Textarea for the message. Include a Submit button and demonstrate how validation error messages would appear below the fields.",
+                                        dynamicInput: { type: "text", placeholder: "Custom fields or framework?", label: "Custom Details" }
+                                    }
+                                }
+                            }
                         }
                     },
                     "Navigation": {
@@ -639,25 +696,316 @@ export const simpleBrainMap = {
                             "Tables / Data Grids": { type: "option", prompt: "Tables / Data Grids" },
                             "Accordions / Collapsible Panels": { type: "option", prompt: "Accordions / Collapsible Panels" },
                             "Carousels / Image Sliders": { type: "option", prompt: "Carousels / Image Sliders" },
-                            "Modals / Dialogs": { type: "option", prompt: "Modals / Dialogs" },
-                            "Tooltips / Popovers": { type: "option", prompt: "Tooltips / Popovers" },
                             "Progress Bars": { type: "option", prompt: "Progress Bars" }
                         }
                     },
-                    "Feedback & Alerts": {
+                    "Feedback & Overlays": {
                         type: "group",
                         options: {
-                            "Alerts / Banners": { type: "option", prompt: "Alerts / Banners" },
-                            "Toast Notifications / Snackbars": { type: "option", prompt: "Toast Notifications / Snackbars" },
+                            "Alerts & Banners": {
+                                type: "group",
+                                options: {
+                                    "Success Alert (Green)": {
+                                        type: "option",
+                                        prompt: "Create a 'Success Alert' component. The design must feature a soft green background, a bold green border or accent line, a checkmark icon, and clear typography for the success message. Include a close 'X' button on the right.",
+                                        dynamicInput: { type: "text", placeholder: "Custom success message or framework?", label: "Custom Details" }
+                                    },
+                                    "Error / Danger Alert (Red)": {
+                                        type: "option",
+                                        prompt: "Design an 'Error Alert' box. It should have a subtle red/crimson background, a warning triangle or error icon, and stark, legible text warning the user of a failure. Make it stand out visually.",
+                                        dynamicInput: { type: "text", placeholder: "Custom error message or framework?", label: "Custom Details" }
+                                    },
+                                    "Information Banner (Blue)": {
+                                        type: "option",
+                                        prompt: "Create an 'Informational Banner' component designed to sit at the top of a page or section. Use a calm blue color palette, an 'info' icon, and a layout that accommodates a short message and an optional action link.",
+                                        dynamicInput: { type: "text", placeholder: "Custom info message or framework?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Toasts / Snackbars": {
+                                type: "group",
+                                options: {
+                                    "Notification Toast (Floating)": {
+                                        type: "option",
+                                        prompt: "Design a floating 'Notification Toast' component. It must look like it sits above the main content (high z-index, strong drop shadow), featuring a compact layout with a small icon, a brief message, and a subtle entry/exit animation.",
+                                        dynamicInput: { type: "text", placeholder: "Custom text or framework?", label: "Custom Details" }
+                                    },
+                                    "Actionable Snackbar": {
+                                        type: "option",
+                                        prompt: "Create a 'Snackbar' component typically placed at the bottom center or corner of the screen. It should have a dark, high-contrast background, concise white text, and a prominently colored 'Undo' or 'Action' button.",
+                                        dynamicInput: { type: "text", placeholder: "Custom action text or framework?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Modals / Dialogs": {
+                                type: "group",
+                                options: {
+                                    "Confirmation Modal (Are you sure?)": {
+                                        type: "option",
+                                        prompt: "Design a 'Confirmation Modal' dialog. Include a semi-transparent dark backdrop overlay (backdrop-blur). The modal box should be centered, featuring a warning icon, a title (e.g., 'Delete Item?'), descriptive text, a subtle 'Cancel' button, and a prominent, destructive 'Confirm' button (e.g., red).",
+                                        dynamicInput: { type: "text", placeholder: "Custom title/text or framework?", label: "Custom Details" }
+                                    },
+                                    "Feature Announcement Modal": {
+                                        type: "option",
+                                        prompt: "Create a 'Feature Announcement Modal'. It should have an elegant design, perhaps with an illustration or image at the top, followed by an exciting title, descriptive text, and a primary 'Try it out' Call-to-Action button.",
+                                        dynamicInput: { type: "text", placeholder: "Custom feature details or framework?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Tooltips & Popovers": {
+                                type: "group",
+                                options: {
+                                    "Simple Hover Tooltip": {
+                                        type: "option",
+                                        prompt: "Design a minimalist 'Tooltip' component that appears on hover. It must be very compact, with a dark background, white text, rounded corners, and a small directional arrow pointing towards the trigger element.",
+                                        dynamicInput: { type: "text", placeholder: "Custom tooltip text or framework?", label: "Custom Details" }
+                                    },
+                                    "Rich Popover": {
+                                        type: "option",
+                                        prompt: "Create a 'Rich Popover' component. Unlike a simple tooltip, this should be a small card containing a title, a paragraph of explanatory text, and perhaps a tiny link or button. Include a subtle shadow and directional arrow.",
+                                        dynamicInput: { type: "text", placeholder: "Custom popover content or framework?", label: "Custom Details" }
+                                    }
+                                }
+                            },
                             "Spinners / Loading Indicators": { type: "option", prompt: "Spinners / Loading Indicators" },
                             "Skeleton Screens": { type: "option", prompt: "Skeleton Screens (Loading state)" }
                         }
                     }
                 }
             },
-            "Pages (Views)": { type: "group", options: {} },
-            "Sections (Page Blocks)": { type: "group", options: {} },
-            "Layouts": { type: "group", options: {} },
+            "Pages (Views)": {
+                type: "group",
+                options: {
+                    "Landing & Marketing Pages": {
+                        type: "group",
+                        options: {
+                            "SaaS / Product Homepage": {
+                                type: "group",
+                                options: {
+                                    "Enterprise B2B SaaS": {
+                                        type: "option",
+                                        prompt: "Design an 'Enterprise B2B SaaS Homepage'. Focus on a highly professional, trustworthy aesthetic using deep blues or muted tones. The Hero section should have a conservative layout with a primary 'Request Demo' CTA. Include a prominent 'Trusted by Fortune 500' logo cloud, a complex 'Features' section showcasing data dashboards/security, a case-study/ROI metrics section, and a robust footer with compliance badges (SOC2, ISO).",
+                                        dynamicInput: { type: "text", placeholder: "Specific industry or brand colors?", label: "Custom Details" }
+                                    },
+                                    "Developer-Focused API / Tool": {
+                                        type: "option",
+                                        prompt: "Create a 'Developer-Focused Tool Homepage'. The design must be heavily dark-mode with neon or bright accent colors. The Hero section should feature an interactive or animated code snippet / terminal window alongside a bold, technical headline. Include a 'How it works' section with syntax-highlighted code blocks, a clear documentation link, and a 'Start Building for Free' CTA.",
+                                        dynamicInput: { type: "text", placeholder: "Tool type or specific code language?", label: "Custom Details" }
+                                    },
+                                    "Modern AI Product": {
+                                        type: "option",
+                                        prompt: "Design a 'Modern AI Product Homepage'. The aesthetic should feel magical and cutting-edge, utilizing fluid mesh gradients, subtle glassmorphism effects, and glowing accents. The Hero should feature a clean interface mockup with AI generation 'sparkle' effects. Include a 'Before/After' slider or interactive demo section, and feature blocks that highlight speed and automation.",
+                                        dynamicInput: { type: "text", placeholder: "AI feature specifics or color theme?", label: "Custom Details" }
+                                    },
+                                    "Minimalist Consumer App (B2C)": {
+                                        type: "option",
+                                        prompt: "Create a 'Minimalist Consumer App Homepage'. Use an extremely clean, bright design with massive amounts of whitespace, large friendly typography, and soft pastel or vibrant solid brand colors. The Hero should feature a large 3D smartphone mockup or playful illustration. Include simple, bold benefit statements (not complex features), user reviews, and a single, unmissable 'Download the App' CTA.",
+                                        dynamicInput: { type: "text", placeholder: "App purpose or primary color?", label: "Custom Details" }
+                                    },
+                                    "Open Source Project": {
+                                        type: "option",
+                                        prompt: "Design an 'Open Source Project Homepage'. It should feel welcoming and community-driven. The Hero must prominently display GitHub statistics (Stars, Forks) and dual CTAs: 'Get Started' and 'View on GitHub'. Include a section highlighting community contributors, a sponsor/backers section, and a simple feature grid highlighting the core open-source benefits.",
+                                        dynamicInput: { type: "text", placeholder: "Project name or specific stats?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Waitlist / Coming Soon Page": { type: "option", prompt: "Create a 'Waitlist / Coming Soon Page'. Focus on a highly conversion-optimized Hero section with an email capture form and a vibrant background.", dynamicInput: { type: "text", placeholder: "Product name or style?", label: "Custom Details" } },
+                            "Event / Webinar Registration": { type: "option", prompt: "Design an 'Event / Webinar Registration Page'. It should display event details, a countdown timer, speaker profiles, and a clear registration form.", dynamicInput: { type: "text", placeholder: "Event theme or details?", label: "Custom Details" } },
+                            "About Us / Company Page": { type: "option", prompt: "Create an 'About Us' page featuring a company mission statement, a timeline of history, and a 'Meet the Team' photo grid.", dynamicInput: { type: "text", placeholder: "Company vibe (e.g., Corporate, Startup)?", label: "Custom Details" } },
+                            "Pricing Page": { type: "option", prompt: "Design a dedicated 'Pricing Page' with a toggle for Monthly/Yearly billing, 3 distinct pricing tier cards (highlighting the middle one), and an FAQ accordion below.", dynamicInput: { type: "text", placeholder: "Pricing structure or framework?", label: "Custom Details" } },
+                            "Contact Us Page": { type: "option", prompt: "Create a 'Contact Us' page featuring a contact form, company address with a placeholder map, and direct email/phone links.", dynamicInput: { type: "text", placeholder: "Contact details or framework?", label: "Custom Details" } },
+                            "Link-in-Bio / Personal Link Tree": { type: "option", prompt: "Design a mobile-first 'Link-in-Bio' page. Include a centered profile picture, bio text, and a vertical stack of styled buttons for various social and content links.", dynamicInput: { type: "text", placeholder: "User name or theme?", label: "Custom Details" } }
+                        }
+                    },
+                    "E-Commerce & Stores": {
+                        type: "group",
+                        options: {
+                            "Storefront / Catalog Homepage": { type: "option", prompt: "Create an E-commerce 'Storefront Homepage'. Include a large promotional hero banner, a 'Categories' grid, and a 'Trending Products' carousel.", dynamicInput: { type: "text", placeholder: "Store type (e.g., Fashion, Tech)?", label: "Custom Details" } },
+                            "Product Listing Page (Grid/List)": { type: "option", prompt: "Design a 'Product Listing Page'. Include a sidebar for filters (category, price, size) and a main area displaying a grid of product cards with pagination.", dynamicInput: { type: "text", placeholder: "Specific filters or layout?", label: "Custom Details" } },
+                            "Product Detail Page (PDP)": { type: "option", prompt: "Create a 'Product Detail Page'. Feature an image gallery on the left, and product details, price, variations (size/color), and an 'Add to Cart' button on the right.", dynamicInput: { type: "text", placeholder: "Product specifics?", label: "Custom Details" } },
+                            "Shopping Cart / Bag Page": { type: "option", prompt: "Design a 'Shopping Cart' page. Show an itemized list of added products with quantity adjusters, a subtotal calculation area, and a 'Proceed to Checkout' button.", dynamicInput: { type: "text", placeholder: "Framework or specific requirements?", label: "Custom Details" } },
+                            "Checkout / Payment Page": { type: "option", prompt: "Create a 'Checkout / Payment Page'. Use a 2-column layout: shipping/payment form on the left, and a sticky order summary on the right.", dynamicInput: { type: "text", placeholder: "Payment methods or styling?", label: "Custom Details" } },
+                            "Order Tracking / Success Page": { type: "option", prompt: "Design an 'Order Success' page. Display a large success checkmark, an order confirmation number, a summary of purchased items, and a 'Continue Shopping' button.", dynamicInput: { type: "text", placeholder: "Brand style or framework?", label: "Custom Details" } }
+                        }
+                    },
+                    "Dashboards & Admin Portals": {
+                        type: "group",
+                        options: {
+                            "Analytics / Metric Overview": { type: "option", prompt: "Design an 'Analytics Overview Dashboard'. Include a sidebar navigation, top header, KPI metric cards, a main chart area, and a recent activity table.", dynamicInput: { type: "text", placeholder: "Data types or dashboard style?", label: "Custom Details" } },
+                            "CRM / User Management Table": { type: "option", prompt: "Create a 'User Management Dashboard' page. The focus is a large, complex data table with columns for user info, status badges, and action menus (edit/delete). Include a top search bar and 'Add User' button.", dynamicInput: { type: "text", placeholder: "Specific columns or framework?", label: "Custom Details" } },
+                            "Project Management / Kanban": { type: "option", prompt: "Design a 'Kanban Board' page layout. It should have horizontal scrollable columns (e.g., To Do, In Progress, Done) containing draggable task cards.", dynamicInput: { type: "text", placeholder: "Project type or styling?", label: "Custom Details" } },
+                            "Financial / Invoice Dashboard": { type: "option", prompt: "Create a 'Financial Invoice Dashboard'. Display a summary of total revenue/outstanding balances, followed by a list of recent invoices with 'Paid' or 'Pending' statuses.", dynamicInput: { type: "text", placeholder: "Framework or specific metrics?", label: "Custom Details" } },
+                            "Account Settings / Profile": { type: "option", prompt: "Design a 'User Settings' page. Use a secondary side-navigation for tabs (Profile, Security, Billing) and display a form to update user details in the main area.", dynamicInput: { type: "text", placeholder: "Settings options or framework?", label: "Custom Details" } }
+                        }
+                    },
+                    "Authentication & Onboarding": {
+                        type: "group",
+                        options: {
+                            "Sign In / Login Page": { type: "option", prompt: "Create a 'Sign In' page. Center a clean login form (email, password, remember me, submit). Consider a split-screen design with a lifestyle image on one half.", dynamicInput: { type: "text", placeholder: "Brand style or layout preference?", label: "Custom Details" } },
+                            "Create Account / Sign Up Page": { type: "option", prompt: "Design a 'Sign Up' page. Include fields for name, email, password, confirm password, and a terms of service checkbox.", dynamicInput: { type: "text", placeholder: "Framework or styling?", label: "Custom Details" } },
+                            "Forgot Password / Reset Page": { type: "option", prompt: "Create a 'Forgot Password' page. It should be a simple, centered card asking for the user's email address to send a recovery link.", dynamicInput: { type: "text", placeholder: "Brand style or framework?", label: "Custom Details" } },
+                            "Multi-step User Onboarding": { type: "option", prompt: "Design a 'Multi-step Onboarding' page layout. Include a progress indicator at the top, a central content area for the current step's form/info, and 'Back'/'Next' buttons.", dynamicInput: { type: "text", placeholder: "Onboarding flow details?", label: "Custom Details" } },
+                            "2FA Verification Page": { type: "option", prompt: "Create a 'Two-Factor Authentication (2FA)' page. It should have a centered form with input slots for a 6-digit code and a 'Verify' button.", dynamicInput: { type: "text", placeholder: "Framework or styling?", label: "Custom Details" } }
+                        }
+                    },
+                    "Content & Media": {
+                        type: "group",
+                        options: {
+                            "Blog / News Homepage": { type: "option", prompt: "Design a 'Blog / News Homepage'. Use a magazine-style layout with a featured article at the top and a grid of smaller article cards below, categorized by topics.", dynamicInput: { type: "text", placeholder: "Blog theme or framework?", label: "Custom Details" } },
+                            "Single Article / Reading Page": { type: "option", prompt: "Create a 'Single Article' reading page. Focus on optimal typography and line length. Include a large cover image, author byline, formatted text content, and a share sidebar.", dynamicInput: { type: "text", placeholder: "Typography preferences?", label: "Custom Details" } },
+                            "Personal Portfolio Grid": { type: "option", prompt: "Design a 'Personal Portfolio' page. Include a brief intro section and a masonry or grid layout of project thumbnail cards that reveal details on hover.", dynamicInput: { type: "text", placeholder: "Profession (e.g., Designer, Dev)?", label: "Custom Details" } },
+                            "Podcast / Audio Player Page": { type: "option", prompt: "Create a 'Podcast Episode' page. Feature a large episode cover image, an integrated audio player (play/pause, timeline, volume), and show notes text below.", dynamicInput: { type: "text", placeholder: "Podcast theme or framework?", label: "Custom Details" } },
+                            "Video Streaming / Gallery": { type: "option", prompt: "Design a 'Video Gallery' page similar to YouTube. Include a large main video player area, video details/description, and a sidebar or grid of 'Up Next' related videos.", dynamicInput: { type: "text", placeholder: "Video platform style?", label: "Custom Details" } }
+                        }
+                    },
+                    "Social & Community": {
+                        type: "group",
+                        options: {
+                            "User Profile / Timeline Page": { type: "option", prompt: "Create a 'Social User Profile' page. Include a cover banner, a profile avatar overlapping it, user stats (followers/following), and a timeline feed of their posts.", dynamicInput: { type: "text", placeholder: "Social network style?", label: "Custom Details" } },
+                            "Social Feed / Newsfeed Page": { type: "option", prompt: "Design a 'Social Newsfeed' page. Include a top input area to 'Create a Post', followed by a vertical feed of post cards containing text, images, likes, and comment sections.", dynamicInput: { type: "text", placeholder: "Framework or specific features?", label: "Custom Details" } },
+                            "Chat / Messaging Interface": { type: "option", prompt: "Create a 'Chat / Messaging Interface'. The layout should have a left sidebar listing conversations, and a right main area showing the active chat bubbles and a bottom input field.", dynamicInput: { type: "text", placeholder: "Messaging app style (e.g., WhatsApp, Slack)?", label: "Custom Details" } },
+                            "Forum / Discussion Thread": { type: "option", prompt: "Design a 'Forum Discussion Thread' page. Show the original post at the top, followed by a list of nested or sequential reply cards.", dynamicInput: { type: "text", placeholder: "Forum theme (e.g., Reddit, Classic)?", label: "Custom Details" } }
+                        }
+                    },
+                    "Utility & Error Pages": {
+                        type: "group",
+                        options: {
+                            "404 / 500 Error Pages": { type: "option", prompt: "Create a creative '404 Error Page'. Include a large '404' graphic, friendly text explaining the page is missing, and a prominent 'Go Home' button.", dynamicInput: { type: "text", placeholder: "Brand style or specific message?", label: "Custom Details" } },
+                            "FAQ / Help Center Page": { type: "option", prompt: "Design a 'Help Center / FAQ' page. Include a large search bar at the top, followed by categorized accordions containing frequently asked questions and answers.", dynamicInput: { type: "text", placeholder: "Framework or specific questions?", label: "Custom Details" } },
+                            "Search Results Page": { type: "option", prompt: "Create a 'Search Results' page. Display the search query entered, a count of results found, and a list or grid of the results with brief excerpts.", dynamicInput: { type: "text", placeholder: "Result types (e.g., Products, Articles)?", label: "Custom Details" } },
+                            "Maintenance / Offline Page": { type: "option", prompt: "Design a 'Maintenance / Offline' page. Keep it minimal and polite, displaying an illustration, a 'We'll be right back' message, and perhaps a social media link.", dynamicInput: { type: "text", placeholder: "Brand colors or specific message?", label: "Custom Details" } }
+                        }
+                    }
+                }
+            },
+            "Sections (Page Blocks)": {
+                type: "group",
+                options: {
+                    "Hero & Headers (Top Sections)": {
+                        type: "group",
+                        options: {
+                            "Split Hero (Text Left, Image Right)": { type: "option", prompt: "Design a 'Split Hero' section. The left half should contain a prominent H1 headline, a subheadline, and a dual CTA button group. The right half should feature a large placeholder image or illustration.", dynamicInput: { type: "text", placeholder: "Headline or theme?", label: "Custom Details" } },
+                            "Centered Minimal Hero": { type: "option", prompt: "Create a 'Centered Minimal Hero' section with a massive, bold headline centered on the screen, followed by concise subtext and a single large CTA button.", dynamicInput: { type: "text", placeholder: "Specific text or styling?", label: "Custom Details" } },
+                            "Background Image/Video Hero": { type: "option", prompt: "Design a Hero section featuring a full-width background image or video placeholder with a dark overlay, ensuring the white centered text remains legible.", dynamicInput: { type: "text", placeholder: "Vibe or overlay color?", label: "Custom Details" } },
+                            "Interactive/3D Element Hero": { type: "option", prompt: "Create a modern Hero section with an interactive or 3D element placeholder on one side, paired with striking typography on the other.", dynamicInput: { type: "text", placeholder: "Type of interactive element?", label: "Custom Details" } }
+                        }
+                    },
+                    "Features & Services": {
+                        type: "group",
+                        options: {
+                            "3-Column Icon/Text Grid": { type: "option", prompt: "Design a '3-Column Feature Grid' section. Provide a section title, and a grid of 3 identical cards, each containing a top icon, a title, and a short description.", dynamicInput: { type: "text", placeholder: "Feature details?", label: "Custom Details" } },
+                            "Alternating Zig-Zag (Text & Image)": { type: "option", prompt: "Create an 'Alternating Features (Zig-Zag)' section with 3 consecutive rows. Alternate the layout (Left-Text/Right-Image, then Left-Image/Right-Text).", dynamicInput: { type: "text", placeholder: "Specific features?", label: "Custom Details" } },
+                            "Feature Comparison Table": { type: "option", prompt: "Design a 'Feature Comparison Table' section, typically used to compare 'Us vs. Them' or different product tiers, using checkmarks and crosses.", dynamicInput: { type: "text", placeholder: "Comparison points?", label: "Custom Details" } },
+                            "Interactive Feature Tabs": { type: "option", prompt: "Create an 'Interactive Feature Tabs' section. The left side should have clickable tab titles, and the right side should display the corresponding feature image and text.", dynamicInput: { type: "text", placeholder: "Tab names or framework?", label: "Custom Details" } }
+                        }
+                    },
+                    "Social Proof & Trust": {
+                        type: "group",
+                        options: {
+                            "Logo Cloud (Trusted By)": { type: "option", prompt: "Design a 'Logo Cloud' section. Use a subtle text 'Trusted by' followed by a horizontal flex row of 5 monochrome placeholder logos.", dynamicInput: { type: "text", placeholder: "Brand style?", label: "Custom Details" } },
+                            "Testimonial Cards Grid": { type: "option", prompt: "Create a 'Testimonial Cards Grid' using a multi-column masonry layout displaying user quotes, star ratings, and avatars.", dynamicInput: { type: "text", placeholder: "Review topics?", label: "Custom Details" } },
+                            "Featured Quote / Video Testimonial": { type: "option", prompt: "Design a section highlighting a single, massive 'Featured Quote' or a large placeholder for a video testimonial, accompanied by the author's details.", dynamicInput: { type: "text", placeholder: "Quote text or theme?", label: "Custom Details" } },
+                            "User Stats / Milestones Counter": { type: "option", prompt: "Create a 'Stats Counter' section displaying 3 or 4 large animated numbers (e.g., '1M+ Users', '99.9% Uptime') in a horizontal row.", dynamicInput: { type: "text", placeholder: "Specific stats?", label: "Custom Details" } }
+                        }
+                    },
+                    "Content & Information": {
+                        type: "group",
+                        options: {
+                            "About Us / Mission Block": { type: "option", prompt: "Design an 'About Us' section block. Use a 2-column layout with a mission statement and text on one side, and team or office photos on the other.", dynamicInput: { type: "text", placeholder: "Mission statement?", label: "Custom Details" } },
+                            "Team / Staff Grid": { type: "option", prompt: "Create a 'Team Grid' section featuring 4-6 staff profile cards containing a headshot, name, role, and social media links.", dynamicInput: { type: "text", placeholder: "Grid size or styling?", label: "Custom Details" } },
+                            "FAQ Accordion Section": { type: "option", prompt: "Design an 'FAQ Accordion' section. Center a column of collapsible question blocks that reveal answers when clicked.", dynamicInput: { type: "text", placeholder: "Specific questions?", label: "Custom Details" } },
+                            "Step-by-Step 'How it Works'": { type: "option", prompt: "Create a 'How it Works' section. Display 3 or 4 distinct steps either horizontally connected by a dashed line, or vertically stacked with large numbered circles.", dynamicInput: { type: "text", placeholder: "Step details?", label: "Custom Details" } }
+                        }
+                    },
+                    "Conversion & CTAs": {
+                        type: "group",
+                        options: {
+                            "Large Centered Newsletter Signup": { type: "option", prompt: "Design a 'Newsletter Signup' section. Center a bold headline, a short description, and an email input field with an inline 'Subscribe' button.", dynamicInput: { type: "text", placeholder: "Signup text or style?", label: "Custom Details" } },
+                            "Two-Column CTA Block": { type: "option", prompt: "Create a 'Two-Column CTA' block. One side has compelling text and a primary button, the other side has a secondary button or a supporting graphic. Wrap it in a distinct background color.", dynamicInput: { type: "text", placeholder: "CTA text or colors?", label: "Custom Details" } },
+                            "Pricing Tier Section (3 Columns)": { type: "option", prompt: "Design a 'Pricing Section' containing 3 vertical pricing tier cards. Emphasize the middle 'Pro' tier with a distinct border or color.", dynamicInput: { type: "text", placeholder: "Pricing details?", label: "Custom Details" } },
+                            "App Download Promo Block": { type: "option", prompt: "Create an 'App Promo Block' featuring a headline, 'Download on App Store / Google Play' badge graphics, and a smartphone mockup showing the app.", dynamicInput: { type: "text", placeholder: "App details?", label: "Custom Details" } }
+                        }
+                    },
+                    "Footers": {
+                        type: "group",
+                        options: {
+                            "Simple Centered Footer": { type: "option", prompt: "Design a 'Simple Centered Footer'. Keep it minimal with a row of essential text links, social icons, and a copyright notice at the bottom.", dynamicInput: { type: "text", placeholder: "Specific links?", label: "Custom Details" } },
+                            "Large Multi-Column Footer": { type: "option", prompt: "Create a 'Large Multi-Column Footer'. Include a company bio column, 3 columns for sitemap links, and a bottom edge with legal links and copyright.", dynamicInput: { type: "text", placeholder: "Sitemap columns?", label: "Custom Details" } },
+                            "Footer with Large Brand Graphic": { type: "option", prompt: "Design a Footer that integrates a massive, subtle background watermark or brand graphic, alongside standard multi-column links and a newsletter input.", dynamicInput: { type: "text", placeholder: "Graphic details or theme?", label: "Custom Details" } }
+                        }
+                    }
+                }
+            },
+            "Layouts": {
+                type: "group",
+                options: {
+                    "Page Shells / App Frames": {
+                        type: "group",
+                        options: {
+                            "Classic Holy Grail Layout": {
+                                type: "option",
+                                prompt: "Create a 'Holy Grail Layout' structural shell. It must include a persistent Header at the top, a persistent Footer at the bottom, and a main content area in the middle that is split into 3 columns: a left sidebar, a wide main content area, and a right sidebar. Ensure the footer sticks to the bottom even if the content is short.",
+                                dynamicInput: { type: "text", placeholder: "Framework or specific widths?", label: "Custom Details" }
+                            },
+                            "Full-Screen Dashboard Shell": {
+                                type: "option",
+                                prompt: "Design a 'Full-Screen Dashboard Shell'. Create a 100vh layout with a fixed, narrow navigation sidebar on the left and a top utility header. The remaining main content area should have a distinct background color and be scrollable independently of the sidebar.",
+                                dynamicInput: { type: "text", placeholder: "Sidebar behavior or framework?", label: "Custom Details" }
+                            }
+                        }
+                    },
+                    "Grid Systems": {
+                        type: "group",
+                        options: {
+                            "Responsive Bento Box Grid": {
+                                type: "option",
+                                prompt: "Create a 'Bento Box' grid layout container. Use CSS Grid to create a responsive, asymmetric grid with varying cell sizes (e.g., some taking 2 spans horizontally, some vertically). Apply a standard gap and rounded corners to the empty placeholder cells.",
+                                dynamicInput: { type: "text", placeholder: "Number of cells or framework?", label: "Custom Details" }
+                            },
+                            "Standard 12-Column Grid Wrapper": {
+                                type: "option",
+                                prompt: "Set up a standard '12-Column Grid' wrapper. Include placeholder blocks demonstrating how to span 3, 4, 6, and 12 columns responsively. Use Tailwind CSS grid utilities if applicable.",
+                                dynamicInput: { type: "text", placeholder: "Framework (e.g., Tailwind, Bootstrap)?", label: "Custom Details" }
+                            },
+                            "Masonry Content Grid": {
+                                type: "option",
+                                prompt: "Create a 'Masonry Content Grid' layout. The columns should be fixed-width but the items inside should stack tightly regardless of their varying heights, leaving no awkward vertical gaps.",
+                                dynamicInput: { type: "text", placeholder: "CSS columns vs JS approach?", label: "Custom Details" }
+                            }
+                        }
+                    },
+                    "Sidebar & Split Layouts": {
+                        type: "group",
+                        options: {
+                            "Split-Screen Layout (50/50)": {
+                                type: "option",
+                                prompt: "Design a 'Split-Screen (50/50)' layout wrapper. Divide the viewport exactly in half horizontally. The left side should be fixed/sticky, and the right side should be independently scrollable.",
+                                dynamicInput: { type: "text", placeholder: "Mobile stacking behavior?", label: "Custom Details" }
+                            },
+                            "Sidebar with Main Content": {
+                                type: "option",
+                                prompt: "Create a classic 'Sidebar + Main Content' wrapper. The sidebar should take up roughly 25% (or a fixed width) of the container, while the main content takes the remaining space. Ensure the sidebar stacks below or hides on mobile.",
+                                dynamicInput: { type: "text", placeholder: "Sidebar left or right? Framework?", label: "Custom Details" }
+                            }
+                        }
+                    },
+                    "Content Containers": {
+                        type: "group",
+                        options: {
+                            "Narrow Reading Container": {
+                                type: "option",
+                                prompt: "Create a 'Narrow Reading Container' layout. Apply a maximum width (around 65ch or 700px) and center it horizontally to provide the optimal line length for reading long-form typography.",
+                                dynamicInput: { type: "text", placeholder: "Max-width preference?", label: "Custom Details" }
+                            },
+                            "Full-Bleed with Constrained Content": {
+                                type: "option",
+                                prompt: "Set up a 'Full-Bleed' layout wrapper where the background color or images stretch to the absolute edges of the screen, but the text/content inside remains constrained within a centered max-width container.",
+                                dynamicInput: { type: "text", placeholder: "Max-width of inner content?", label: "Custom Details" }
+                            }
+                        }
+                    }
+                }
+            },
             "Styles & Theming": { type: "group", options: {} },
             "Logic / Scripts": { type: "group", options: {} },
             "Backend / APIs": { type: "group", options: {} },
