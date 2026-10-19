@@ -14,7 +14,19 @@
   <main class="gallery-page">
     <section class="gallery-hero" aria-labelledby="gallery-title">
       <div class="eyebrow"><span class="eyebrow-dot"></span> Curated prompt intelligence</div>
-      <div class="hero-heading"><div><h1 id="gallery-title">Find the prompt<br><em>behind the magic.</em></h1><p>Explore a living library of cinematic recipes, visual directions, and creative starting points.</p></div><div class="hero-stat"><strong id="results-count">0</strong><span>prompts indexed</span></div></div>
+      <div class="hero-heading">
+        <div>
+          <h1 id="gallery-title">Find the prompt<br><em>behind the magic.</em></h1>
+          <p>Explore a living library of cinematic recipes, visual directions, and creative starting points.</p>
+        </div>
+        <div class="hero-stat"><strong id="results-count">0</strong><span>prompts indexed</span></div>
+      </div>
+
+      <div class="mode-toggle-container" style="display: flex; gap: 10px; margin-bottom: 24px;">
+        <button id="mode-image-btn" class="tab-btn active">🖼️ Images</button>
+        <button id="mode-webdev-btn" class="tab-btn">💻 Web Dev</button>
+      </div>
+
       <div class="search-container"><span class="search-icon" aria-hidden="true">⌕</span><input type="search" id="gallery-search" placeholder="Search 'Cyberpunk', 'Cinematic', 'Hyper Realistic', 'Portrait'..." autocomplete="off" aria-label="Search prompts"><kbd>⌘ K</kbd><button id="search-btn">Search <span>↗</span></button></div>
       <div class="filters" aria-label="Prompt filters">
         <label>Sort By<select id="sort-select"><option value="newest">Newest First</option><option value="oldest">Oldest First</option></select></label>
