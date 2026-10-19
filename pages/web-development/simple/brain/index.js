@@ -773,7 +773,82 @@ export const simpleBrainMap = {
                     }
                 }
             },
-            "Pages (Views)": { type: "group", options: {} },
+            "Pages (Views)": {
+                type: "group",
+                options: {
+                    "Landing & Marketing Pages": {
+                        type: "group",
+                        options: {
+                            "SaaS / Product Homepage": { type: "option", prompt: "Design a complete 'SaaS / Product Homepage'. Include a Hero section with dual CTAs, a Trusted By logo banner, a Features grid, Testimonials, a Pricing table, and a Footer.", dynamicInput: { type: "text", placeholder: "Industry or brand colors?", label: "Custom Details" } },
+                            "Waitlist / Coming Soon Page": { type: "option", prompt: "Create a 'Waitlist / Coming Soon Page'. Focus on a highly conversion-optimized Hero section with an email capture form and a vibrant background.", dynamicInput: { type: "text", placeholder: "Product name or style?", label: "Custom Details" } },
+                            "Event / Webinar Registration": { type: "option", prompt: "Design an 'Event / Webinar Registration Page'. It should display event details, a countdown timer, speaker profiles, and a clear registration form.", dynamicInput: { type: "text", placeholder: "Event theme or details?", label: "Custom Details" } },
+                            "About Us / Company Page": { type: "option", prompt: "Create an 'About Us' page featuring a company mission statement, a timeline of history, and a 'Meet the Team' photo grid.", dynamicInput: { type: "text", placeholder: "Company vibe (e.g., Corporate, Startup)?", label: "Custom Details" } },
+                            "Pricing Page": { type: "option", prompt: "Design a dedicated 'Pricing Page' with a toggle for Monthly/Yearly billing, 3 distinct pricing tier cards (highlighting the middle one), and an FAQ accordion below.", dynamicInput: { type: "text", placeholder: "Pricing structure or framework?", label: "Custom Details" } },
+                            "Contact Us Page": { type: "option", prompt: "Create a 'Contact Us' page featuring a contact form, company address with a placeholder map, and direct email/phone links.", dynamicInput: { type: "text", placeholder: "Contact details or framework?", label: "Custom Details" } },
+                            "Link-in-Bio / Personal Link Tree": { type: "option", prompt: "Design a mobile-first 'Link-in-Bio' page. Include a centered profile picture, bio text, and a vertical stack of styled buttons for various social and content links.", dynamicInput: { type: "text", placeholder: "User name or theme?", label: "Custom Details" } }
+                        }
+                    },
+                    "E-Commerce & Stores": {
+                        type: "group",
+                        options: {
+                            "Storefront / Catalog Homepage": { type: "option", prompt: "Create an E-commerce 'Storefront Homepage'. Include a large promotional hero banner, a 'Categories' grid, and a 'Trending Products' carousel.", dynamicInput: { type: "text", placeholder: "Store type (e.g., Fashion, Tech)?", label: "Custom Details" } },
+                            "Product Listing Page (Grid/List)": { type: "option", prompt: "Design a 'Product Listing Page'. Include a sidebar for filters (category, price, size) and a main area displaying a grid of product cards with pagination.", dynamicInput: { type: "text", placeholder: "Specific filters or layout?", label: "Custom Details" } },
+                            "Product Detail Page (PDP)": { type: "option", prompt: "Create a 'Product Detail Page'. Feature an image gallery on the left, and product details, price, variations (size/color), and an 'Add to Cart' button on the right.", dynamicInput: { type: "text", placeholder: "Product specifics?", label: "Custom Details" } },
+                            "Shopping Cart / Bag Page": { type: "option", prompt: "Design a 'Shopping Cart' page. Show an itemized list of added products with quantity adjusters, a subtotal calculation area, and a 'Proceed to Checkout' button.", dynamicInput: { type: "text", placeholder: "Framework or specific requirements?", label: "Custom Details" } },
+                            "Checkout / Payment Page": { type: "option", prompt: "Create a 'Checkout / Payment Page'. Use a 2-column layout: shipping/payment form on the left, and a sticky order summary on the right.", dynamicInput: { type: "text", placeholder: "Payment methods or styling?", label: "Custom Details" } },
+                            "Order Tracking / Success Page": { type: "option", prompt: "Design an 'Order Success' page. Display a large success checkmark, an order confirmation number, a summary of purchased items, and a 'Continue Shopping' button.", dynamicInput: { type: "text", placeholder: "Brand style or framework?", label: "Custom Details" } }
+                        }
+                    },
+                    "Dashboards & Admin Portals": {
+                        type: "group",
+                        options: {
+                            "Analytics / Metric Overview": { type: "option", prompt: "Design an 'Analytics Overview Dashboard'. Include a sidebar navigation, top header, KPI metric cards, a main chart area, and a recent activity table.", dynamicInput: { type: "text", placeholder: "Data types or dashboard style?", label: "Custom Details" } },
+                            "CRM / User Management Table": { type: "option", prompt: "Create a 'User Management Dashboard' page. The focus is a large, complex data table with columns for user info, status badges, and action menus (edit/delete). Include a top search bar and 'Add User' button.", dynamicInput: { type: "text", placeholder: "Specific columns or framework?", label: "Custom Details" } },
+                            "Project Management / Kanban": { type: "option", prompt: "Design a 'Kanban Board' page layout. It should have horizontal scrollable columns (e.g., To Do, In Progress, Done) containing draggable task cards.", dynamicInput: { type: "text", placeholder: "Project type or styling?", label: "Custom Details" } },
+                            "Financial / Invoice Dashboard": { type: "option", prompt: "Create a 'Financial Invoice Dashboard'. Display a summary of total revenue/outstanding balances, followed by a list of recent invoices with 'Paid' or 'Pending' statuses.", dynamicInput: { type: "text", placeholder: "Framework or specific metrics?", label: "Custom Details" } },
+                            "Account Settings / Profile": { type: "option", prompt: "Design a 'User Settings' page. Use a secondary side-navigation for tabs (Profile, Security, Billing) and display a form to update user details in the main area.", dynamicInput: { type: "text", placeholder: "Settings options or framework?", label: "Custom Details" } }
+                        }
+                    },
+                    "Authentication & Onboarding": {
+                        type: "group",
+                        options: {
+                            "Sign In / Login Page": { type: "option", prompt: "Create a 'Sign In' page. Center a clean login form (email, password, remember me, submit). Consider a split-screen design with a lifestyle image on one half.", dynamicInput: { type: "text", placeholder: "Brand style or layout preference?", label: "Custom Details" } },
+                            "Create Account / Sign Up Page": { type: "option", prompt: "Design a 'Sign Up' page. Include fields for name, email, password, confirm password, and a terms of service checkbox.", dynamicInput: { type: "text", placeholder: "Framework or styling?", label: "Custom Details" } },
+                            "Forgot Password / Reset Page": { type: "option", prompt: "Create a 'Forgot Password' page. It should be a simple, centered card asking for the user's email address to send a recovery link.", dynamicInput: { type: "text", placeholder: "Brand style or framework?", label: "Custom Details" } },
+                            "Multi-step User Onboarding": { type: "option", prompt: "Design a 'Multi-step Onboarding' page layout. Include a progress indicator at the top, a central content area for the current step's form/info, and 'Back'/'Next' buttons.", dynamicInput: { type: "text", placeholder: "Onboarding flow details?", label: "Custom Details" } },
+                            "2FA Verification Page": { type: "option", prompt: "Create a 'Two-Factor Authentication (2FA)' page. It should have a centered form with input slots for a 6-digit code and a 'Verify' button.", dynamicInput: { type: "text", placeholder: "Framework or styling?", label: "Custom Details" } }
+                        }
+                    },
+                    "Content & Media": {
+                        type: "group",
+                        options: {
+                            "Blog / News Homepage": { type: "option", prompt: "Design a 'Blog / News Homepage'. Use a magazine-style layout with a featured article at the top and a grid of smaller article cards below, categorized by topics.", dynamicInput: { type: "text", placeholder: "Blog theme or framework?", label: "Custom Details" } },
+                            "Single Article / Reading Page": { type: "option", prompt: "Create a 'Single Article' reading page. Focus on optimal typography and line length. Include a large cover image, author byline, formatted text content, and a share sidebar.", dynamicInput: { type: "text", placeholder: "Typography preferences?", label: "Custom Details" } },
+                            "Personal Portfolio Grid": { type: "option", prompt: "Design a 'Personal Portfolio' page. Include a brief intro section and a masonry or grid layout of project thumbnail cards that reveal details on hover.", dynamicInput: { type: "text", placeholder: "Profession (e.g., Designer, Dev)?", label: "Custom Details" } },
+                            "Podcast / Audio Player Page": { type: "option", prompt: "Create a 'Podcast Episode' page. Feature a large episode cover image, an integrated audio player (play/pause, timeline, volume), and show notes text below.", dynamicInput: { type: "text", placeholder: "Podcast theme or framework?", label: "Custom Details" } },
+                            "Video Streaming / Gallery": { type: "option", prompt: "Design a 'Video Gallery' page similar to YouTube. Include a large main video player area, video details/description, and a sidebar or grid of 'Up Next' related videos.", dynamicInput: { type: "text", placeholder: "Video platform style?", label: "Custom Details" } }
+                        }
+                    },
+                    "Social & Community": {
+                        type: "group",
+                        options: {
+                            "User Profile / Timeline Page": { type: "option", prompt: "Create a 'Social User Profile' page. Include a cover banner, a profile avatar overlapping it, user stats (followers/following), and a timeline feed of their posts.", dynamicInput: { type: "text", placeholder: "Social network style?", label: "Custom Details" } },
+                            "Social Feed / Newsfeed Page": { type: "option", prompt: "Design a 'Social Newsfeed' page. Include a top input area to 'Create a Post', followed by a vertical feed of post cards containing text, images, likes, and comment sections.", dynamicInput: { type: "text", placeholder: "Framework or specific features?", label: "Custom Details" } },
+                            "Chat / Messaging Interface": { type: "option", prompt: "Create a 'Chat / Messaging Interface'. The layout should have a left sidebar listing conversations, and a right main area showing the active chat bubbles and a bottom input field.", dynamicInput: { type: "text", placeholder: "Messaging app style (e.g., WhatsApp, Slack)?", label: "Custom Details" } },
+                            "Forum / Discussion Thread": { type: "option", prompt: "Design a 'Forum Discussion Thread' page. Show the original post at the top, followed by a list of nested or sequential reply cards.", dynamicInput: { type: "text", placeholder: "Forum theme (e.g., Reddit, Classic)?", label: "Custom Details" } }
+                        }
+                    },
+                    "Utility & Error Pages": {
+                        type: "group",
+                        options: {
+                            "404 / 500 Error Pages": { type: "option", prompt: "Create a creative '404 Error Page'. Include a large '404' graphic, friendly text explaining the page is missing, and a prominent 'Go Home' button.", dynamicInput: { type: "text", placeholder: "Brand style or specific message?", label: "Custom Details" } },
+                            "FAQ / Help Center Page": { type: "option", prompt: "Design a 'Help Center / FAQ' page. Include a large search bar at the top, followed by categorized accordions containing frequently asked questions and answers.", dynamicInput: { type: "text", placeholder: "Framework or specific questions?", label: "Custom Details" } },
+                            "Search Results Page": { type: "option", prompt: "Create a 'Search Results' page. Display the search query entered, a count of results found, and a list or grid of the results with brief excerpts.", dynamicInput: { type: "text", placeholder: "Result types (e.g., Products, Articles)?", label: "Custom Details" } },
+                            "Maintenance / Offline Page": { type: "option", prompt: "Design a 'Maintenance / Offline' page. Keep it minimal and polite, displaying an illustration, a 'We'll be right back' message, and perhaps a social media link.", dynamicInput: { type: "text", placeholder: "Brand colors or specific message?", label: "Custom Details" } }
+                        }
+                    }
+                }
+            },
             "Sections (Page Blocks)": { type: "group", options: {} },
             "Layouts": { type: "group", options: {} },
             "Styles & Theming": { type: "group", options: {} },
