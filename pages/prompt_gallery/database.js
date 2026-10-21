@@ -13,6 +13,7 @@ import { mythical } from './database/image/mythical.js';
 import { buttonsData } from './database/web-dev/buttons.js';
 import { cardsData } from './database/web-dev/cards.js';
 import { navbarsData } from './database/web-dev/navbars.js';
+import { layoutsData } from './database/web-dev/layouts.js';
 
 export const promptDatabase = {
     "Natural": naturalData,
@@ -32,5 +33,6 @@ export const promptDatabase = {
 export const webDevDatabase = {
     "Buttons": buttonsData,
     "Cards": cardsData,
-    "Navbars": navbarsData
+    "Navbars": navbarsData,
+    "Layouts": layoutsData
 };
