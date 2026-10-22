@@ -1336,7 +1336,241 @@ export const simpleBrainMap = {
                     }
                 }
             },
-            "Logic / Scripts": { type: "group", options: {} },
+            "Logic / Scripts": {
+                type: "group",
+                options: {
+                    "UI Interactions & DOM Manipulation": {
+                        type: "group",
+                        options: {
+                            "Form Handling & Validation": {
+                                type: "group",
+                                options: {
+                                    "Client-Side Form Validation": {
+                                        type: "option",
+                                        prompt: "Generate a 'Client-Side Form Validation' script. The script should capture form submission, prevent the default reload, and validate inputs (e.g., required fields, email format, password strength). If validation fails, it must inject appropriate error messages into the DOM next to the invalid fields and apply 'error' CSS classes. If successful, it should trigger a success callback.",
+                                        dynamicInput: { type: "text", placeholder: "Form ID or specific validation rules?", label: "Custom Details" }
+                                    },
+                                    "Multi-Step Form Logic": {
+                                        type: "option",
+                                        prompt: "Generate a 'Multi-Step Form Logic' script. The script needs to manage state for a multi-part form (e.g., Step 1, Step 2, Review). It must handle hiding/showing respective fieldset sections in the DOM, validating the current step before allowing progression, and aggregating all data for the final submission.",
+                                        dynamicInput: { type: "text", placeholder: "Number of steps or specific fields?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Modals & Toggles": {
+                                type: "group",
+                                options: {
+                                    "Accessible Modal Controller": {
+                                        type: "option",
+                                        prompt: "Generate an 'Accessible Modal Controller' script. This script should handle opening and closing modals via trigger buttons. Crucially, it must trap focus within the modal while open, allow closing via the 'Escape' key or clicking the backdrop, and return focus to the original trigger button upon closing (following ARIA guidelines).",
+                                        dynamicInput: { type: "text", placeholder: "Modal ID or trigger classes?", label: "Custom Details" }
+                                    },
+                                    "Accordion / Collapse Logic": {
+                                        type: "option",
+                                        prompt: "Generate 'Accordion / Collapse' logic. The script should attach event listeners to accordion headers. When clicked, it must dynamically calculate the height of the associated content panel, apply an 'open' class for CSS transitions, and ensure only one panel remains open at a time (if specified).",
+                                        dynamicInput: { type: "text", placeholder: "Allow multiple open panels?", label: "Custom Details" }
+                                    },
+                                    "Dark / Light Mode Toggle": {
+                                        type: "option",
+                                        prompt: "Generate a 'Dark / Light Mode Toggle' script. It should attach a click listener to a theme switch button, toggle a 'dark-mode' class on the document body or root element, and save the user's preference to `localStorage`. On initial page load, it must check `localStorage` or `window.matchMedia('(prefers-color-scheme: dark)')` to set the initial state correctly.",
+                                        dynamicInput: { type: "text", placeholder: "Specific classes or framework (e.g., Tailwind)?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Advanced Interactions": {
+                                type: "group",
+                                options: {
+                                    "Drag and Drop (Native API)": {
+                                        type: "option",
+                                        prompt: "Generate 'Drag and Drop' logic using the native HTML5 Drag and Drop API. The script should define draggable elements (`dragstart`, `dragend`) and drop zones (`dragover`, `dragenter`, `drop`). It must handle transferring data via the `dataTransfer` object and updating the DOM to reflect the new position of the dropped item.",
+                                        dynamicInput: { type: "text", placeholder: "What is being dragged (e.g., list items, files)?", label: "Custom Details" }
+                                    },
+                                    "Custom Context Menu (Right Click)": {
+                                        type: "option",
+                                        prompt: "Generate a 'Custom Context Menu' script. It should listen for the `contextmenu` (right-click) event, prevent the default browser menu, and display a custom HTML menu at the exact X/Y coordinates of the mouse pointer. Ensure the menu closes when clicking anywhere else on the document.",
+                                        dynamicInput: { type: "text", placeholder: "Menu items or actions?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "State & Data Management": {
+                        type: "group",
+                        options: {
+                            "Local Storage": {
+                                type: "group",
+                                options: {
+                                    "Save/Load Preferences": {
+                                        type: "option",
+                                        prompt: "Generate a utility script to 'Save and Load User Preferences' using `localStorage`. It must include functions to serialize JSON data before saving (`setItem`), parse it upon retrieval (`getItem`), and handle potential errors (like storage limits or parsing failures). Use this to persist UI states like sidebar collapsed state or view modes.",
+                                        dynamicInput: { type: "text", placeholder: "Specific preference keys?", label: "Custom Details" }
+                                    },
+                                    "Recently Viewed Items": {
+                                        type: "option",
+                                        prompt: "Generate a 'Recently Viewed Items' script. It should maintain an array of item IDs in `localStorage`. When a new item is viewed, push it to the front of the array, remove duplicates, and slice the array to a maximum length (e.g., last 10 items). Provide a function to render these items in the DOM.",
+                                        dynamicInput: { type: "text", placeholder: "Max items to store?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "E-commerce / Cart Logic": {
+                                type: "group",
+                                options: {
+                                    "Shopping Cart State Manager": {
+                                        type: "option",
+                                        prompt: "Generate a robust 'Shopping Cart State Manager'. It needs functions to: 1) Add an item (handling quantity increments if it already exists), 2) Remove an item, 3) Update quantities, and 4) Calculate the subtotal and total cost. It must synchronize this state with `localStorage` or `sessionStorage`.",
+                                        dynamicInput: { type: "text", placeholder: "Tax rate or specific object structure?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Filtering & Searching": {
+                                type: "group",
+                                options: {
+                                    "Client-Side Search / Filter List": {
+                                        type: "option",
+                                        prompt: "Generate a 'Client-Side Search and Filter' script. Given an array of data objects and a DOM list, it should listen to a search input (with debounce) and category dropdowns. It must filter the array based on the criteria and dynamically re-render the DOM list to show only matching items.",
+                                        dynamicInput: { type: "text", placeholder: "What fields to search by (e.g., title, tags)?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "API & Data Fetching": {
+                        type: "group",
+                        options: {
+                            "REST API Integration": {
+                                type: "group",
+                                options: {
+                                    "Fetch & Render List (GET)": {
+                                        type: "option",
+                                        prompt: "Generate a script to 'Fetch and Render a List' from a REST API using the `fetch` API. It must handle async/await, check if `response.ok`, parse the JSON, and map over the data to dynamically create and append DOM elements (like cards or list items). Include a loading state (spinner) and error handling block.",
+                                        dynamicInput: { type: "text", placeholder: "API Endpoint URL or data structure?", label: "Custom Details" }
+                                    },
+                                    "Submit Form to API (POST)": {
+                                        type: "option",
+                                        prompt: "Generate a script to 'Submit Form Data via POST'. It should gather form data using `FormData`, convert it to JSON (if required by the API), send a `fetch` request with appropriate headers (`Content-Type: application/json`), and handle the response (success message or displaying server-side validation errors).",
+                                        dynamicInput: { type: "text", placeholder: "API Endpoint URL or specific payload?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Real-time & WebSockets": {
+                                type: "group",
+                                options: {
+                                    "Basic WebSocket Client": {
+                                        type: "option",
+                                        prompt: "Generate a 'Basic WebSocket Client' script. It should establish a connection to a WebSocket server (`new WebSocket()`), handle connection events (`onopen`, `onclose`, `onerror`), and listen for incoming messages (`onmessage`). Include a function to send data back to the server. Ideal for simple chat or live updates.",
+                                        dynamicInput: { type: "text", placeholder: "WebSocket URL?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Scroll & Animation Logic": {
+                        type: "group",
+                        options: {
+                            "Scroll Interactions": {
+                                type: "group",
+                                options: {
+                                    "Intersection Observer (Lazy Load / Animate)": {
+                                        type: "option",
+                                        prompt: "Generate an 'Intersection Observer' script. It should observe a set of DOM elements. When an element enters the viewport (e.g., 10% threshold), the observer should trigger a callback to either lazy-load an image (`src` swap) or add a CSS class (like `.animate-in`) to trigger a CSS transition, then optionally unobserve the element.",
+                                        dynamicInput: { type: "text", placeholder: "What to animate or lazy load?", label: "Custom Details" }
+                                    },
+                                    "Infinite Scrolling": {
+                                        type: "option",
+                                        prompt: "Generate 'Infinite Scrolling' logic using Intersection Observer. Place a 'sentinel' element at the bottom of a list. When the sentinel enters the viewport, trigger an async fetch for the next page of data, append the new items to the DOM, and update the pagination state. Handle the 'end of data' scenario gracefully.",
+                                        dynamicInput: { type: "text", placeholder: "API endpoint or pagination style?", label: "Custom Details" }
+                                    },
+                                    "Sticky / Shrinking Header on Scroll": {
+                                        type: "option",
+                                        prompt: "Generate logic for a 'Shrinking Header on Scroll'. Attach a throttled scroll event listener. If the `window.scrollY` exceeds a certain threshold (e.g., 50px), add a 'scrolled' class to the `<header>` element (which scales down the logo and reduces padding via CSS). Remove the class when scrolled back to the top.",
+                                        dynamicInput: { type: "text", placeholder: "Scroll threshold or header ID?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Math / Parallax": {
+                                type: "group",
+                                options: {
+                                    "Mouse Move Parallax": {
+                                        type: "option",
+                                        prompt: "Generate a 'Mouse Move Parallax' script. Listen to the `mousemove` event on a container. Calculate the mouse position relative to the center of the screen, and apply subtle CSS `transform: translate()` calculations to inner elements based on a data attribute defining their 'speed' or 'depth' coefficient.",
+                                        dynamicInput: { type: "text", placeholder: "Container ID or elements?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Browser & Device APIs": {
+                        type: "group",
+                        options: {
+                            "Hardware & Sensors": {
+                                type: "group",
+                                options: {
+                                    "Geolocation API": {
+                                        type: "option",
+                                        prompt: "Generate a script using the 'Geolocation API' (`navigator.geolocation`). Include a function to request the user's current position, handle the success callback (extracting latitude and longitude), and handle error callbacks (e.g., user denied permission, timeout).",
+                                        dynamicInput: { type: "text", placeholder: "What to do with coordinates?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "System Integration": {
+                                type: "group",
+                                options: {
+                                    "Copy to Clipboard API": {
+                                        type: "option",
+                                        prompt: "Generate a 'Copy to Clipboard' utility script using the modern `navigator.clipboard.writeText()` API. Bind it to a button click, copy specific text (from a code block or input field), and provide visual feedback (like changing button text to 'Copied!' temporarily) using a `setTimeout`.",
+                                        dynamicInput: { type: "text", placeholder: "Element ID to copy text from?", label: "Custom Details" }
+                                    },
+                                    "Web Share API": {
+                                        type: "option",
+                                        prompt: "Generate a script utilizing the 'Web Share API' (`navigator.share`). Create a function attached to a 'Share' button that triggers the native OS sharing dialog, passing in a title, text, and URL. Ensure there is a fallback mechanism (like copying the link) if the API is not supported on the user's device.",
+                                        dynamicInput: { type: "text", placeholder: "Data to share (Title, URL)?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Utility / Helper Functions": {
+                        type: "group",
+                        options: {
+                            "Data Formatting": {
+                                type: "group",
+                                options: {
+                                    "Date & Time Formatter": {
+                                        type: "option",
+                                        prompt: "Generate a 'Date & Time Formatting' utility using the native `Intl.DateTimeFormat` API or pure JS. It should take an ISO string or Timestamp and convert it into human-readable formats like 'Relative time' (e.g., '2 hours ago') or localized short dates (e.g., 'Oct 24, 2023').",
+                                        dynamicInput: { type: "text", placeholder: "Preferred output format?", label: "Custom Details" }
+                                    },
+                                    "Currency & Number Formatter": {
+                                        type: "option",
+                                        prompt: "Generate a 'Currency and Number Formatting' utility using `Intl.NumberFormat`. Provide functions to format raw numbers into standard currency formats (e.g., $1,234.56), add thousands separators, or compact large numbers (e.g., 1.5K, 2M).",
+                                        dynamicInput: { type: "text", placeholder: "Currency code (e.g., USD, INR)?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "String Manipulation": {
+                                type: "group",
+                                options: {
+                                    "Truncate / Slugify": {
+                                        type: "option",
+                                        prompt: "Generate 'String Manipulation' utility functions. Include a `truncate(string, maxLength)` function that cuts text and appends '...', and a `slugify(string)` function that converts titles into URL-friendly strings (lowercased, spaces replaced with hyphens, special chars removed).",
+                                        dynamicInput: { type: "text", placeholder: "Specific string requirements?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Performance": {
+                                type: "group",
+                                options: {
+                                    "Debounce & Throttle": {
+                                        type: "option",
+                                        prompt: "Generate essential 'Debounce' and 'Throttle' utility functions. Ensure they properly handle `this` context and arguments. Provide examples of how to apply them to high-frequency events like window `resize`, `scroll`, or search input `keyup`.",
+                                        dynamicInput: { type: "text", placeholder: "Which event needs optimization?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
             "Backend / APIs": { type: "group", options: {} },
             "Configuration / Assets": { type: "group", options: {} }
         }
