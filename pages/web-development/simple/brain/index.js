@@ -1006,7 +1006,336 @@ export const simpleBrainMap = {
                     }
                 }
             },
-            "Styles & Theming": { type: "group", options: {} },
+            "Styles & Theming": {
+                type: "group",
+                options: {
+                    "Color Schemes / Palettes": {
+                        type: "group",
+                        options: {
+                            "Standard / Base Themes": {
+                                type: "group",
+                                options: {
+                                    "Light Mode": {
+                                        type: "option",
+                                        prompt: "Apply a 'Light Mode' color scheme. The design should feel clean, bright, and standard. Use a white or very light grey background, dark grey or black text for high readability, and a distinct primary color for links and primary buttons. Ensure borders and dividers are subtle and light.",
+                                        dynamicInput: { type: "text", placeholder: "Primary accent color?", label: "Custom Details" }
+                                    },
+                                    "Dark Mode": {
+                                        type: "option",
+                                        prompt: "Apply a 'Dark Mode' color scheme. The design must be sleek and easy on the eyes. Use a deep charcoal, dark blue-grey, or pure black background. Text should be off-white or light grey to reduce eye strain. Use bright, saturated accent colors for interactive elements so they stand out against the dark background.",
+                                        dynamicInput: { type: "text", placeholder: "Primary accent color?", label: "Custom Details" }
+                                    },
+                                    "High Contrast": {
+                                        type: "option",
+                                        prompt: "Apply a 'High Contrast' color scheme. This is focused on accessibility and sharpness. Use starkly contrasting colors, such as pure black on pure white, or bright yellow on dark backgrounds. Avoid subtle shades or low-contrast text. Borders should be thick and clearly defined.",
+                                        dynamicInput: { type: "text", placeholder: "Preferred contrast pair?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Mood / Vibe Based": {
+                                type: "group",
+                                options: {
+                                    "Cyberpunk / Neon": {
+                                        type: "option",
+                                        prompt: "Apply a 'Cyberpunk / Neon' color palette. The aesthetic should feature a very dark, near-black or deep purple background. Accentuate the design with vibrant, glowing neon colors like hot pink, electric blue, or neon green. Use these colors for borders, text highlights, and button glows.",
+                                        dynamicInput: { type: "text", placeholder: "Specific neon colors?", label: "Custom Details" }
+                                    },
+                                    "Pastel / Soft": {
+                                        type: "option",
+                                        prompt: "Apply a 'Pastel / Soft' color palette. The design should feel calming and muted. Use light, washed-out colors like baby pink, mint green, or soft lavender for backgrounds and large areas. Pair with slightly darker, but still soft, shades for text to maintain readability without harsh contrast.",
+                                        dynamicInput: { type: "text", placeholder: "Preferred pastel tones?", label: "Custom Details" }
+                                    },
+                                    "Earthy / Nature": {
+                                        type: "option",
+                                        prompt: "Apply an 'Earthy / Nature' color palette. The vibe should be organic and warm. Utilize a palette of warm greens, earthy browns, sand/beige, and muted terracotta. The background should be a warm off-white or light beige, avoiding stark white.",
+                                        dynamicInput: { type: "text", placeholder: "Specific earthy shades?", label: "Custom Details" }
+                                    },
+                                    "Minimalist Monochrome": {
+                                        type: "option",
+                                        prompt: "Apply a 'Minimalist Monochrome' color palette. The design must be strictly black, white, and varying shades of grey. Do not use any other colors, even for links or buttons. Rely on typography scale, whitespace, and font weight to create hierarchy and indicate interactivity.",
+                                        dynamicInput: { type: "text", placeholder: "Any subtle tint (e.g., cool grey)?", label: "Custom Details" }
+                                    },
+                                    "Vibrant & Playful": {
+                                        type: "option",
+                                        prompt: "Apply a 'Vibrant & Playful' color palette. The design should be energetic and lively. Use bright, saturated primary and secondary colors (reds, blues, yellows, oranges). Allow large blocks of color and high-contrast combinations. It should feel friendly and bold.",
+                                        dynamicInput: { type: "text", placeholder: "Primary vibrant color?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Industry / Brand Specific": {
+                                type: "group",
+                                options: {
+                                    "Corporate / Trust": {
+                                        type: "option",
+                                        prompt: "Apply a 'Corporate / Trust' color palette. The design needs to feel professional, reliable, and secure. Heavily utilize a spectrum of professional blues, combined with crisp white backgrounds and structured slate or silver-greys for secondary elements and text.",
+                                        dynamicInput: { type: "text", placeholder: "Specific shade of blue?", label: "Custom Details" }
+                                    },
+                                    "Luxury / Premium": {
+                                        type: "option",
+                                        prompt: "Apply a 'Luxury / Premium' color palette. The design should evoke exclusivity and high-end quality. Use a palette built around deep rich tones (like midnight blue, forest green, or stark black) accented with metallic colors like gold, silver, or rose gold. Keep backgrounds clean and use high contrast.",
+                                        dynamicInput: { type: "text", placeholder: "Specific metallic accent?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Typography / Fonts": {
+                        type: "group",
+                        options: {
+                            "Modern & Clean (Sans-Serif)": {
+                                type: "group",
+                                options: {
+                                    "Geometric (e.g., Poppins)": {
+                                        type: "option",
+                                        prompt: "Apply a 'Geometric Sans-Serif' typography style (e.g., Poppins, Montserrat, Futura). The fonts should have perfectly circular curves and clean, even stroke widths. This gives a highly modern, friendly, and structured look. Use bold weights for headings and regular weights for body text.",
+                                        dynamicInput: { type: "text", placeholder: "Specific font family?", label: "Custom Details" }
+                                    },
+                                    "Neutral / UI (e.g., Inter)": {
+                                        type: "option",
+                                        prompt: "Apply a 'Neutral / UI Sans-Serif' typography style (e.g., Inter, Roboto, San Francisco). The font should be highly legible, unobtrusive, and designed specifically for user interfaces. It should blend in seamlessly and prioritize readability at all sizes, especially on screens.",
+                                        dynamicInput: { type: "text", placeholder: "Specific font family?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Elegant & Classic (Serif)": {
+                                type: "group",
+                                options: {
+                                    "Editorial / Magazine": {
+                                        type: "option",
+                                        prompt: "Apply an 'Editorial / Magazine Serif' typography style (e.g., Playfair Display, Lora). The font should have high contrast between thick and thin strokes, giving it a sophisticated, fashionable, and literary feel. Ideal for large, striking headlines.",
+                                        dynamicInput: { type: "text", placeholder: "Specific font family?", label: "Custom Details" }
+                                    },
+                                    "Traditional (e.g., Merriweather)": {
+                                        type: "option",
+                                        prompt: "Apply a 'Traditional Serif' typography style (e.g., Merriweather, Times New Roman, Georgia). The font should be highly readable for long-form text, with sturdy serifs and a classic, authoritative feel. Excellent for blogs, news, and academic content.",
+                                        dynamicInput: { type: "text", placeholder: "Specific font family?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Technical (Monospace)": {
+                                type: "group",
+                                options: {
+                                    "Clean Mono (e.g., Fira Code)": {
+                                        type: "option",
+                                        prompt: "Apply a 'Clean Monospace' typography style (e.g., Fira Code, JetBrains Mono, Roboto Mono). Every character should take up the exact same horizontal width. This gives a technical, developer-focused, or raw 'terminal' aesthetic to the design.",
+                                        dynamicInput: { type: "text", placeholder: "Specific font family?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Creative & Expressive": {
+                                type: "group",
+                                options: {
+                                    "Handwritten / Casual": {
+                                        type: "option",
+                                        prompt: "Apply a 'Handwritten / Casual' typography style. The font should mimic natural handwriting, cursive, or casual marker strokes. Use this sparingly for accents, signatures, or playful subheadings, while keeping body text in a legible sans-serif.",
+                                        dynamicInput: { type: "text", placeholder: "Specific font family?", label: "Custom Details" }
+                                    },
+                                    "Chunky / Display": {
+                                        type: "option",
+                                        prompt: "Apply a 'Chunky / Display' typography style. The font should be extremely thick, bold, and heavy, designed for maximum impact in large headlines. It should feel loud, confident, and graphic.",
+                                        dynamicInput: { type: "text", placeholder: "Specific font family?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Visual Styles & Aesthetics": {
+                        type: "group",
+                        options: {
+                            "Modern UI Trends": {
+                                type: "group",
+                                options: {
+                                    "Glassmorphism": {
+                                        type: "option",
+                                        prompt: "Apply a 'Glassmorphism' aesthetic. Key elements (like cards, navbars, or sidebars) should feature a frosted glass effect using background blur (`backdrop-filter: blur`), semi-transparent white or dark backgrounds, and delicate 1px light borders to define the edges. Place colorful shapes or gradients behind these elements to make the glass effect visible.",
+                                        dynamicInput: { type: "text", placeholder: "Level of blur (e.g., high, subtle)?", label: "Custom Details" }
+                                    },
+                                    "Neumorphism": {
+                                        type: "option",
+                                        prompt: "Apply a 'Neumorphism' (Soft UI) aesthetic. The design should mimic soft, extruded plastic. Elements should have the exact same background color as their parent container. Create depth purely using dual soft box-shadows: a light shadow on the top-left and a dark shadow on the bottom-right. Use inner shadows for pressed/active states.",
+                                        dynamicInput: { type: "text", placeholder: "Background color to base shadows on?", label: "Custom Details" }
+                                    },
+                                    "Claymorphism": {
+                                        type: "option",
+                                        prompt: "Apply a 'Claymorphism' aesthetic. Elements should look like 3D, fluffy clay objects. Achieve this using a combination of a light background color, a double inner shadow (one light, one dark) to create a rounded 3D volume, and an outer drop shadow. Use highly rounded corners (border-radius).",
+                                        dynamicInput: { type: "text", placeholder: "Primary clay color?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Standard / Industry Tested": {
+                                type: "group",
+                                options: {
+                                    "Material Design": {
+                                        type: "option",
+                                        prompt: "Apply a 'Material Design' aesthetic. Follow Google's principles: use solid, flat colors, distinct card-based layouts with subtle, layered drop shadows to indicate elevation (z-index). Include ripple effects for interactions and clear, bold typography.",
+                                        dynamicInput: { type: "text", placeholder: "Primary brand color?", label: "Custom Details" }
+                                    },
+                                    "Flat Design": {
+                                        type: "option",
+                                        prompt: "Apply a 'Flat Design' aesthetic. Strictly avoid any gradients, shadows, bevels, or 3D effects. Rely entirely on solid colors, crisp typography, and sharp vector iconography to create a clean, 2D minimalist interface.",
+                                        dynamicInput: { type: "text", placeholder: "Color palette details?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Bold & Experimental": {
+                                type: "group",
+                                options: {
+                                    "Brutalism": {
+                                        type: "option",
+                                        prompt: "Apply a 'Brutalism' aesthetic. The design should look raw, unpolished, and intentionally break standard rules. Use stark contrasting colors, thick harsh borders, oversized clashing typography, visible grid lines, and minimal spacing. The feel is anti-design and structural.",
+                                        dynamicInput: { type: "text", placeholder: "Primary harsh colors?", label: "Custom Details" }
+                                    },
+                                    "Retro / 90s Web": {
+                                        type: "option",
+                                        prompt: "Apply a 'Retro / 90s Web' aesthetic. Emulate classic operating systems or early web design. Use harsh standard colors (like pure blue links), pixelated or monospace fonts, sharp bevels on buttons (classic Windows 95 style), visible table borders, and repeating background patterns.",
+                                        dynamicInput: { type: "text", placeholder: "Specific retro era/system?", label: "Custom Details" }
+                                    },
+                                    "Apple-like Minimalist": {
+                                        type: "option",
+                                        prompt: "Apply an 'Apple-like Minimalist' aesthetic. Focus on extreme cleanliness and premium quality. Utilize massive amounts of whitespace, huge, elegant typography, very subtle metallic or grey gradients, and high-quality, large-scale imagery. Keep UI elements extremely subtle until interacted with.",
+                                        dynamicInput: { type: "text", placeholder: "Specific typography preference?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Shapes, Borders & Shadows": {
+                        type: "group",
+                        options: {
+                            "Corner Radius": {
+                                type: "group",
+                                options: {
+                                    "Sharp Edges": {
+                                        type: "option",
+                                        prompt: "Apply a 'Sharp Edges' styling rule globally. Set `border-radius: 0px` on all elements including buttons, cards, inputs, and images. This gives a very strict, corporate, or brutalist architectural feel.",
+                                        dynamicInput: { type: "text", placeholder: "Any exceptions?", label: "Custom Details" }
+                                    },
+                                    "Soft / Subtle Rounded": {
+                                        type: "option",
+                                        prompt: "Apply a 'Soft / Subtle Rounded' styling rule globally. Use a small border-radius (around 4px to 8px) on interactive elements and cards. This provides a modern, clean, standard UI look that takes the harshness off sharp corners.",
+                                        dynamicInput: { type: "text", placeholder: "Specific pixel radius?", label: "Custom Details" }
+                                    },
+                                    "Friendly / Highly Rounded": {
+                                        type: "option",
+                                        prompt: "Apply a 'Friendly / Highly Rounded' styling rule globally. Use a large border-radius (around 16px to 24px) for cards, images, and large containers. This makes the interface feel soft, approachable, and app-like.",
+                                        dynamicInput: { type: "text", placeholder: "Specific pixel radius?", label: "Custom Details" }
+                                    },
+                                    "Pill-Shaped": {
+                                        type: "option",
+                                        prompt: "Apply a 'Pill-Shaped' styling rule primarily for buttons, badges, and chips. Set the border-radius high enough (e.g., `rounded-full` or `9999px`) so the left and right edges form perfect semi-circles.",
+                                        dynamicInput: { type: "text", placeholder: "Apply to inputs as well?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Border Styles": {
+                                type: "group",
+                                options: {
+                                    "Borderless": {
+                                        type: "option",
+                                        prompt: "Apply a 'Borderless' styling rule. Remove explicit borders from cards, inputs, and buttons. Rely entirely on whitespace (padding/margins), distinct background colors, and subtle shadows to define boundaries between elements.",
+                                        dynamicInput: { type: "text", placeholder: "How to handle inputs?", label: "Custom Details" }
+                                    },
+                                    "Delicate / Thin": {
+                                        type: "option",
+                                        prompt: "Apply a 'Delicate / Thin' border styling rule. Use very subtle, thin 1px borders with a light, low-contrast color (like light grey) on cards, dividers, and inputs to create a crisp, clean outline without adding visual weight.",
+                                        dynamicInput: { type: "text", placeholder: "Border color?", label: "Custom Details" }
+                                    },
+                                    "Bold / Thick": {
+                                        type: "option",
+                                        prompt: "Apply a 'Bold / Thick' border styling rule. Use thick, dark, and highly visible borders (3px-4px) around containers, buttons, and images. This creates a strong, graphic, comic-book, or brutalist aesthetic.",
+                                        dynamicInput: { type: "text", placeholder: "Border thickness/color?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Shadows (Depth)": {
+                                type: "group",
+                                options: {
+                                    "Soft & Diffused": {
+                                        type: "option",
+                                        prompt: "Apply a 'Soft & Diffused' shadow styling rule globally. Use large, blurry, low-opacity drop shadows. The shadows should look elegant and ethereal, making elements feel like they are floating gently above the background.",
+                                        dynamicInput: { type: "text", placeholder: "Shadow color tint?", label: "Custom Details" }
+                                    },
+                                    "Hard & Solid": {
+                                        type: "option",
+                                        prompt: "Apply a 'Hard & Solid' shadow styling rule. Instead of blurred shadows, use solid blocks of color offset from the element (e.g., 4px right, 4px down, 0px blur). This gives a retro, pop-art, or sharp tactile look.",
+                                        dynamicInput: { type: "text", placeholder: "Solid shadow color?", label: "Custom Details" }
+                                    },
+                                    "Flat (No Shadows)": {
+                                        type: "option",
+                                        prompt: "Apply a 'Flat' styling rule regarding depth. Strictly prohibit the use of drop shadows or box shadows anywhere in the design. Depth must be conveyed through color contrast and overlapping elements only.",
+                                        dynamicInput: { type: "text", placeholder: "Any specific instructions?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Animations & Transitions": {
+                        type: "group",
+                        options: {
+                            "Interaction / Hover Effects": {
+                                type: "group",
+                                options: {
+                                    "Subtle Fade": {
+                                        type: "option",
+                                        prompt: "Apply a 'Subtle Fade' animation rule for interactions. On hover or focus, elements (like buttons, links, cards) should only have a slight color change, opacity shift, or a very gentle 1-2px shadow increase, transitioning smoothly and quickly.",
+                                        dynamicInput: { type: "text", placeholder: "Transition duration?", label: "Custom Details" }
+                                    },
+                                    "Playful & Bouncy": {
+                                        type: "option",
+                                        prompt: "Apply a 'Playful & Bouncy' animation rule for interactions. On hover, elements should scale up slightly (e.g., `scale: 1.05`), rotate a few degrees, or feature a spring-like bounce effect to feel highly interactive and fun.",
+                                        dynamicInput: { type: "text", placeholder: "Specific transform effects?", label: "Custom Details" }
+                                    },
+                                    "3D / Transform": {
+                                        type: "option",
+                                        prompt: "Apply a '3D / Transform' animation rule. On hover, apply perspective effects, such as a slight tilt (rotateX/rotateY), a flip animation, or an intense shadow depth increase, making the elements feel like physical objects in a 3D space.",
+                                        dynamicInput: { type: "text", placeholder: "Transform details?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Page / Scroll Animations": {
+                                type: "group",
+                                options: {
+                                    "Fade In & Up": {
+                                        type: "option",
+                                        prompt: "Apply a 'Fade In & Up' scroll animation rule. As the user scrolls down the page, new elements (images, text blocks, cards) should smoothly fade in from 0% opacity while translating slightly upwards into their final position.",
+                                        dynamicInput: { type: "text", placeholder: "Animation trigger point?", label: "Custom Details" }
+                                    },
+                                    "Staggered Load": {
+                                        type: "option",
+                                        prompt: "Apply a 'Staggered Load' animation rule for lists or grids. When a section enters the viewport, its child elements (like a row of cards) should animate in one by one with a slight delay between each, creating a cascading reveal effect.",
+                                        dynamicInput: { type: "text", placeholder: "Delay duration?", label: "Custom Details" }
+                                    },
+                                    "Parallax Scrolling": {
+                                        type: "option",
+                                        prompt: "Apply a 'Parallax' scroll animation rule. Background images or decorative background shapes should move at a slower speed relative to the foreground content as the user scrolls, creating an illusion of depth.",
+                                        dynamicInput: { type: "text", placeholder: "Intensity of parallax?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Overall Motion Feel": {
+                                type: "group",
+                                options: {
+                                    "Snappy & Fast": {
+                                        type: "option",
+                                        prompt: "Apply a 'Snappy & Fast' global motion feel. Keep all CSS transitions and animations very short (e.g., 100ms - 150ms) with a linear or fast ease-out timing function. The UI should feel instantly responsive and technical.",
+                                        dynamicInput: { type: "text", placeholder: "Preferred timing function?", label: "Custom Details" }
+                                    },
+                                    "Smooth & Fluid": {
+                                        type: "option",
+                                        prompt: "Apply a 'Smooth & Fluid' global motion feel. Use longer transition durations (e.g., 300ms - 500ms) with gentle, elegant easing functions (like ease-in-out or custom cubic-bezier curves). The UI should feel luxurious and deliberate.",
+                                        dynamicInput: { type: "text", placeholder: "Preferred easing curve?", label: "Custom Details" }
+                                    },
+                                    "Reduced Motion": {
+                                        type: "option",
+                                        prompt: "Apply a 'Reduced Motion' global rule. Disable all decorative animations, scroll effects, and hover transforms. Keep only necessary state changes (like color swaps on hover) with zero transition time to prioritize accessibility and performance.",
+                                        dynamicInput: { type: "text", placeholder: "Any allowed minimal animations?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
             "Logic / Scripts": { type: "group", options: {} },
             "Backend / APIs": { type: "group", options: {} },
             "Configuration / Assets": { type: "group", options: {} }
