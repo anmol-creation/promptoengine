@@ -1006,8 +1006,571 @@ export const simpleBrainMap = {
                     }
                 }
             },
-            "Styles & Theming": { type: "group", options: {} },
-            "Logic / Scripts": { type: "group", options: {} },
+            "Styles & Theming": {
+                type: "group",
+                options: {
+                    "Color Schemes / Palettes": {
+                        type: "group",
+                        options: {
+                            "Standard / Base Themes": {
+                                type: "group",
+                                options: {
+                                    "Light Mode": {
+                                        type: "option",
+                                        prompt: "Apply a 'Light Mode' color scheme. The design should feel clean, bright, and standard. Use a white or very light grey background, dark grey or black text for high readability, and a distinct primary color for links and primary buttons. Ensure borders and dividers are subtle and light.",
+                                        dynamicInput: { type: "text", placeholder: "Primary accent color?", label: "Custom Details" }
+                                    },
+                                    "Dark Mode": {
+                                        type: "option",
+                                        prompt: "Apply a 'Dark Mode' color scheme. The design must be sleek and easy on the eyes. Use a deep charcoal, dark blue-grey, or pure black background. Text should be off-white or light grey to reduce eye strain. Use bright, saturated accent colors for interactive elements so they stand out against the dark background.",
+                                        dynamicInput: { type: "text", placeholder: "Primary accent color?", label: "Custom Details" }
+                                    },
+                                    "High Contrast": {
+                                        type: "option",
+                                        prompt: "Apply a 'High Contrast' color scheme. This is focused on accessibility and sharpness. Use starkly contrasting colors, such as pure black on pure white, or bright yellow on dark backgrounds. Avoid subtle shades or low-contrast text. Borders should be thick and clearly defined.",
+                                        dynamicInput: { type: "text", placeholder: "Preferred contrast pair?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Mood / Vibe Based": {
+                                type: "group",
+                                options: {
+                                    "Cyberpunk / Neon": {
+                                        type: "option",
+                                        prompt: "Apply a 'Cyberpunk / Neon' color palette. The aesthetic should feature a very dark, near-black or deep purple background. Accentuate the design with vibrant, glowing neon colors like hot pink, electric blue, or neon green. Use these colors for borders, text highlights, and button glows.",
+                                        dynamicInput: { type: "text", placeholder: "Specific neon colors?", label: "Custom Details" }
+                                    },
+                                    "Pastel / Soft": {
+                                        type: "option",
+                                        prompt: "Apply a 'Pastel / Soft' color palette. The design should feel calming and muted. Use light, washed-out colors like baby pink, mint green, or soft lavender for backgrounds and large areas. Pair with slightly darker, but still soft, shades for text to maintain readability without harsh contrast.",
+                                        dynamicInput: { type: "text", placeholder: "Preferred pastel tones?", label: "Custom Details" }
+                                    },
+                                    "Earthy / Nature": {
+                                        type: "option",
+                                        prompt: "Apply an 'Earthy / Nature' color palette. The vibe should be organic and warm. Utilize a palette of warm greens, earthy browns, sand/beige, and muted terracotta. The background should be a warm off-white or light beige, avoiding stark white.",
+                                        dynamicInput: { type: "text", placeholder: "Specific earthy shades?", label: "Custom Details" }
+                                    },
+                                    "Minimalist Monochrome": {
+                                        type: "option",
+                                        prompt: "Apply a 'Minimalist Monochrome' color palette. The design must be strictly black, white, and varying shades of grey. Do not use any other colors, even for links or buttons. Rely on typography scale, whitespace, and font weight to create hierarchy and indicate interactivity.",
+                                        dynamicInput: { type: "text", placeholder: "Any subtle tint (e.g., cool grey)?", label: "Custom Details" }
+                                    },
+                                    "Vibrant & Playful": {
+                                        type: "option",
+                                        prompt: "Apply a 'Vibrant & Playful' color palette. The design should be energetic and lively. Use bright, saturated primary and secondary colors (reds, blues, yellows, oranges). Allow large blocks of color and high-contrast combinations. It should feel friendly and bold.",
+                                        dynamicInput: { type: "text", placeholder: "Primary vibrant color?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Industry / Brand Specific": {
+                                type: "group",
+                                options: {
+                                    "Corporate / Trust": {
+                                        type: "option",
+                                        prompt: "Apply a 'Corporate / Trust' color palette. The design needs to feel professional, reliable, and secure. Heavily utilize a spectrum of professional blues, combined with crisp white backgrounds and structured slate or silver-greys for secondary elements and text.",
+                                        dynamicInput: { type: "text", placeholder: "Specific shade of blue?", label: "Custom Details" }
+                                    },
+                                    "Luxury / Premium": {
+                                        type: "option",
+                                        prompt: "Apply a 'Luxury / Premium' color palette. The design should evoke exclusivity and high-end quality. Use a palette built around deep rich tones (like midnight blue, forest green, or stark black) accented with metallic colors like gold, silver, or rose gold. Keep backgrounds clean and use high contrast.",
+                                        dynamicInput: { type: "text", placeholder: "Specific metallic accent?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Typography / Fonts": {
+                        type: "group",
+                        options: {
+                            "Modern & Clean (Sans-Serif)": {
+                                type: "group",
+                                options: {
+                                    "Geometric (e.g., Poppins)": {
+                                        type: "option",
+                                        prompt: "Apply a 'Geometric Sans-Serif' typography style (e.g., Poppins, Montserrat, Futura). The fonts should have perfectly circular curves and clean, even stroke widths. This gives a highly modern, friendly, and structured look. Use bold weights for headings and regular weights for body text.",
+                                        dynamicInput: { type: "text", placeholder: "Specific font family?", label: "Custom Details" }
+                                    },
+                                    "Neutral / UI (e.g., Inter)": {
+                                        type: "option",
+                                        prompt: "Apply a 'Neutral / UI Sans-Serif' typography style (e.g., Inter, Roboto, San Francisco). The font should be highly legible, unobtrusive, and designed specifically for user interfaces. It should blend in seamlessly and prioritize readability at all sizes, especially on screens.",
+                                        dynamicInput: { type: "text", placeholder: "Specific font family?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Elegant & Classic (Serif)": {
+                                type: "group",
+                                options: {
+                                    "Editorial / Magazine": {
+                                        type: "option",
+                                        prompt: "Apply an 'Editorial / Magazine Serif' typography style (e.g., Playfair Display, Lora). The font should have high contrast between thick and thin strokes, giving it a sophisticated, fashionable, and literary feel. Ideal for large, striking headlines.",
+                                        dynamicInput: { type: "text", placeholder: "Specific font family?", label: "Custom Details" }
+                                    },
+                                    "Traditional (e.g., Merriweather)": {
+                                        type: "option",
+                                        prompt: "Apply a 'Traditional Serif' typography style (e.g., Merriweather, Times New Roman, Georgia). The font should be highly readable for long-form text, with sturdy serifs and a classic, authoritative feel. Excellent for blogs, news, and academic content.",
+                                        dynamicInput: { type: "text", placeholder: "Specific font family?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Technical (Monospace)": {
+                                type: "group",
+                                options: {
+                                    "Clean Mono (e.g., Fira Code)": {
+                                        type: "option",
+                                        prompt: "Apply a 'Clean Monospace' typography style (e.g., Fira Code, JetBrains Mono, Roboto Mono). Every character should take up the exact same horizontal width. This gives a technical, developer-focused, or raw 'terminal' aesthetic to the design.",
+                                        dynamicInput: { type: "text", placeholder: "Specific font family?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Creative & Expressive": {
+                                type: "group",
+                                options: {
+                                    "Handwritten / Casual": {
+                                        type: "option",
+                                        prompt: "Apply a 'Handwritten / Casual' typography style. The font should mimic natural handwriting, cursive, or casual marker strokes. Use this sparingly for accents, signatures, or playful subheadings, while keeping body text in a legible sans-serif.",
+                                        dynamicInput: { type: "text", placeholder: "Specific font family?", label: "Custom Details" }
+                                    },
+                                    "Chunky / Display": {
+                                        type: "option",
+                                        prompt: "Apply a 'Chunky / Display' typography style. The font should be extremely thick, bold, and heavy, designed for maximum impact in large headlines. It should feel loud, confident, and graphic.",
+                                        dynamicInput: { type: "text", placeholder: "Specific font family?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Visual Styles & Aesthetics": {
+                        type: "group",
+                        options: {
+                            "Modern UI Trends": {
+                                type: "group",
+                                options: {
+                                    "Glassmorphism": {
+                                        type: "option",
+                                        prompt: "Apply a 'Glassmorphism' aesthetic. Key elements (like cards, navbars, or sidebars) should feature a frosted glass effect using background blur (`backdrop-filter: blur`), semi-transparent white or dark backgrounds, and delicate 1px light borders to define the edges. Place colorful shapes or gradients behind these elements to make the glass effect visible.",
+                                        dynamicInput: { type: "text", placeholder: "Level of blur (e.g., high, subtle)?", label: "Custom Details" }
+                                    },
+                                    "Neumorphism": {
+                                        type: "option",
+                                        prompt: "Apply a 'Neumorphism' (Soft UI) aesthetic. The design should mimic soft, extruded plastic. Elements should have the exact same background color as their parent container. Create depth purely using dual soft box-shadows: a light shadow on the top-left and a dark shadow on the bottom-right. Use inner shadows for pressed/active states.",
+                                        dynamicInput: { type: "text", placeholder: "Background color to base shadows on?", label: "Custom Details" }
+                                    },
+                                    "Claymorphism": {
+                                        type: "option",
+                                        prompt: "Apply a 'Claymorphism' aesthetic. Elements should look like 3D, fluffy clay objects. Achieve this using a combination of a light background color, a double inner shadow (one light, one dark) to create a rounded 3D volume, and an outer drop shadow. Use highly rounded corners (border-radius).",
+                                        dynamicInput: { type: "text", placeholder: "Primary clay color?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Standard / Industry Tested": {
+                                type: "group",
+                                options: {
+                                    "Material Design": {
+                                        type: "option",
+                                        prompt: "Apply a 'Material Design' aesthetic. Follow Google's principles: use solid, flat colors, distinct card-based layouts with subtle, layered drop shadows to indicate elevation (z-index). Include ripple effects for interactions and clear, bold typography.",
+                                        dynamicInput: { type: "text", placeholder: "Primary brand color?", label: "Custom Details" }
+                                    },
+                                    "Flat Design": {
+                                        type: "option",
+                                        prompt: "Apply a 'Flat Design' aesthetic. Strictly avoid any gradients, shadows, bevels, or 3D effects. Rely entirely on solid colors, crisp typography, and sharp vector iconography to create a clean, 2D minimalist interface.",
+                                        dynamicInput: { type: "text", placeholder: "Color palette details?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Bold & Experimental": {
+                                type: "group",
+                                options: {
+                                    "Brutalism": {
+                                        type: "option",
+                                        prompt: "Apply a 'Brutalism' aesthetic. The design should look raw, unpolished, and intentionally break standard rules. Use stark contrasting colors, thick harsh borders, oversized clashing typography, visible grid lines, and minimal spacing. The feel is anti-design and structural.",
+                                        dynamicInput: { type: "text", placeholder: "Primary harsh colors?", label: "Custom Details" }
+                                    },
+                                    "Retro / 90s Web": {
+                                        type: "option",
+                                        prompt: "Apply a 'Retro / 90s Web' aesthetic. Emulate classic operating systems or early web design. Use harsh standard colors (like pure blue links), pixelated or monospace fonts, sharp bevels on buttons (classic Windows 95 style), visible table borders, and repeating background patterns.",
+                                        dynamicInput: { type: "text", placeholder: "Specific retro era/system?", label: "Custom Details" }
+                                    },
+                                    "Apple-like Minimalist": {
+                                        type: "option",
+                                        prompt: "Apply an 'Apple-like Minimalist' aesthetic. Focus on extreme cleanliness and premium quality. Utilize massive amounts of whitespace, huge, elegant typography, very subtle metallic or grey gradients, and high-quality, large-scale imagery. Keep UI elements extremely subtle until interacted with.",
+                                        dynamicInput: { type: "text", placeholder: "Specific typography preference?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Shapes, Borders & Shadows": {
+                        type: "group",
+                        options: {
+                            "Corner Radius": {
+                                type: "group",
+                                options: {
+                                    "Sharp Edges": {
+                                        type: "option",
+                                        prompt: "Apply a 'Sharp Edges' styling rule globally. Set `border-radius: 0px` on all elements including buttons, cards, inputs, and images. This gives a very strict, corporate, or brutalist architectural feel.",
+                                        dynamicInput: { type: "text", placeholder: "Any exceptions?", label: "Custom Details" }
+                                    },
+                                    "Soft / Subtle Rounded": {
+                                        type: "option",
+                                        prompt: "Apply a 'Soft / Subtle Rounded' styling rule globally. Use a small border-radius (around 4px to 8px) on interactive elements and cards. This provides a modern, clean, standard UI look that takes the harshness off sharp corners.",
+                                        dynamicInput: { type: "text", placeholder: "Specific pixel radius?", label: "Custom Details" }
+                                    },
+                                    "Friendly / Highly Rounded": {
+                                        type: "option",
+                                        prompt: "Apply a 'Friendly / Highly Rounded' styling rule globally. Use a large border-radius (around 16px to 24px) for cards, images, and large containers. This makes the interface feel soft, approachable, and app-like.",
+                                        dynamicInput: { type: "text", placeholder: "Specific pixel radius?", label: "Custom Details" }
+                                    },
+                                    "Pill-Shaped": {
+                                        type: "option",
+                                        prompt: "Apply a 'Pill-Shaped' styling rule primarily for buttons, badges, and chips. Set the border-radius high enough (e.g., `rounded-full` or `9999px`) so the left and right edges form perfect semi-circles.",
+                                        dynamicInput: { type: "text", placeholder: "Apply to inputs as well?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Border Styles": {
+                                type: "group",
+                                options: {
+                                    "Borderless": {
+                                        type: "option",
+                                        prompt: "Apply a 'Borderless' styling rule. Remove explicit borders from cards, inputs, and buttons. Rely entirely on whitespace (padding/margins), distinct background colors, and subtle shadows to define boundaries between elements.",
+                                        dynamicInput: { type: "text", placeholder: "How to handle inputs?", label: "Custom Details" }
+                                    },
+                                    "Delicate / Thin": {
+                                        type: "option",
+                                        prompt: "Apply a 'Delicate / Thin' border styling rule. Use very subtle, thin 1px borders with a light, low-contrast color (like light grey) on cards, dividers, and inputs to create a crisp, clean outline without adding visual weight.",
+                                        dynamicInput: { type: "text", placeholder: "Border color?", label: "Custom Details" }
+                                    },
+                                    "Bold / Thick": {
+                                        type: "option",
+                                        prompt: "Apply a 'Bold / Thick' border styling rule. Use thick, dark, and highly visible borders (3px-4px) around containers, buttons, and images. This creates a strong, graphic, comic-book, or brutalist aesthetic.",
+                                        dynamicInput: { type: "text", placeholder: "Border thickness/color?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Shadows (Depth)": {
+                                type: "group",
+                                options: {
+                                    "Soft & Diffused": {
+                                        type: "option",
+                                        prompt: "Apply a 'Soft & Diffused' shadow styling rule globally. Use large, blurry, low-opacity drop shadows. The shadows should look elegant and ethereal, making elements feel like they are floating gently above the background.",
+                                        dynamicInput: { type: "text", placeholder: "Shadow color tint?", label: "Custom Details" }
+                                    },
+                                    "Hard & Solid": {
+                                        type: "option",
+                                        prompt: "Apply a 'Hard & Solid' shadow styling rule. Instead of blurred shadows, use solid blocks of color offset from the element (e.g., 4px right, 4px down, 0px blur). This gives a retro, pop-art, or sharp tactile look.",
+                                        dynamicInput: { type: "text", placeholder: "Solid shadow color?", label: "Custom Details" }
+                                    },
+                                    "Flat (No Shadows)": {
+                                        type: "option",
+                                        prompt: "Apply a 'Flat' styling rule regarding depth. Strictly prohibit the use of drop shadows or box shadows anywhere in the design. Depth must be conveyed through color contrast and overlapping elements only.",
+                                        dynamicInput: { type: "text", placeholder: "Any specific instructions?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Animations & Transitions": {
+                        type: "group",
+                        options: {
+                            "Interaction / Hover Effects": {
+                                type: "group",
+                                options: {
+                                    "Subtle Fade": {
+                                        type: "option",
+                                        prompt: "Apply a 'Subtle Fade' animation rule for interactions. On hover or focus, elements (like buttons, links, cards) should only have a slight color change, opacity shift, or a very gentle 1-2px shadow increase, transitioning smoothly and quickly.",
+                                        dynamicInput: { type: "text", placeholder: "Transition duration?", label: "Custom Details" }
+                                    },
+                                    "Playful & Bouncy": {
+                                        type: "option",
+                                        prompt: "Apply a 'Playful & Bouncy' animation rule for interactions. On hover, elements should scale up slightly (e.g., `scale: 1.05`), rotate a few degrees, or feature a spring-like bounce effect to feel highly interactive and fun.",
+                                        dynamicInput: { type: "text", placeholder: "Specific transform effects?", label: "Custom Details" }
+                                    },
+                                    "3D / Transform": {
+                                        type: "option",
+                                        prompt: "Apply a '3D / Transform' animation rule. On hover, apply perspective effects, such as a slight tilt (rotateX/rotateY), a flip animation, or an intense shadow depth increase, making the elements feel like physical objects in a 3D space.",
+                                        dynamicInput: { type: "text", placeholder: "Transform details?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Page / Scroll Animations": {
+                                type: "group",
+                                options: {
+                                    "Fade In & Up": {
+                                        type: "option",
+                                        prompt: "Apply a 'Fade In & Up' scroll animation rule. As the user scrolls down the page, new elements (images, text blocks, cards) should smoothly fade in from 0% opacity while translating slightly upwards into their final position.",
+                                        dynamicInput: { type: "text", placeholder: "Animation trigger point?", label: "Custom Details" }
+                                    },
+                                    "Staggered Load": {
+                                        type: "option",
+                                        prompt: "Apply a 'Staggered Load' animation rule for lists or grids. When a section enters the viewport, its child elements (like a row of cards) should animate in one by one with a slight delay between each, creating a cascading reveal effect.",
+                                        dynamicInput: { type: "text", placeholder: "Delay duration?", label: "Custom Details" }
+                                    },
+                                    "Parallax Scrolling": {
+                                        type: "option",
+                                        prompt: "Apply a 'Parallax' scroll animation rule. Background images or decorative background shapes should move at a slower speed relative to the foreground content as the user scrolls, creating an illusion of depth.",
+                                        dynamicInput: { type: "text", placeholder: "Intensity of parallax?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Overall Motion Feel": {
+                                type: "group",
+                                options: {
+                                    "Snappy & Fast": {
+                                        type: "option",
+                                        prompt: "Apply a 'Snappy & Fast' global motion feel. Keep all CSS transitions and animations very short (e.g., 100ms - 150ms) with a linear or fast ease-out timing function. The UI should feel instantly responsive and technical.",
+                                        dynamicInput: { type: "text", placeholder: "Preferred timing function?", label: "Custom Details" }
+                                    },
+                                    "Smooth & Fluid": {
+                                        type: "option",
+                                        prompt: "Apply a 'Smooth & Fluid' global motion feel. Use longer transition durations (e.g., 300ms - 500ms) with gentle, elegant easing functions (like ease-in-out or custom cubic-bezier curves). The UI should feel luxurious and deliberate.",
+                                        dynamicInput: { type: "text", placeholder: "Preferred easing curve?", label: "Custom Details" }
+                                    },
+                                    "Reduced Motion": {
+                                        type: "option",
+                                        prompt: "Apply a 'Reduced Motion' global rule. Disable all decorative animations, scroll effects, and hover transforms. Keep only necessary state changes (like color swaps on hover) with zero transition time to prioritize accessibility and performance.",
+                                        dynamicInput: { type: "text", placeholder: "Any allowed minimal animations?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "Logic / Scripts": {
+                type: "group",
+                options: {
+                    "UI Interactions & DOM Manipulation": {
+                        type: "group",
+                        options: {
+                            "Form Handling & Validation": {
+                                type: "group",
+                                options: {
+                                    "Client-Side Form Validation": {
+                                        type: "option",
+                                        prompt: "Generate a 'Client-Side Form Validation' script. The script should capture form submission, prevent the default reload, and validate inputs (e.g., required fields, email format, password strength). If validation fails, it must inject appropriate error messages into the DOM next to the invalid fields and apply 'error' CSS classes. If successful, it should trigger a success callback.",
+                                        dynamicInput: { type: "text", placeholder: "Form ID or specific validation rules?", label: "Custom Details" }
+                                    },
+                                    "Multi-Step Form Logic": {
+                                        type: "option",
+                                        prompt: "Generate a 'Multi-Step Form Logic' script. The script needs to manage state for a multi-part form (e.g., Step 1, Step 2, Review). It must handle hiding/showing respective fieldset sections in the DOM, validating the current step before allowing progression, and aggregating all data for the final submission.",
+                                        dynamicInput: { type: "text", placeholder: "Number of steps or specific fields?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Modals & Toggles": {
+                                type: "group",
+                                options: {
+                                    "Accessible Modal Controller": {
+                                        type: "option",
+                                        prompt: "Generate an 'Accessible Modal Controller' script. This script should handle opening and closing modals via trigger buttons. Crucially, it must trap focus within the modal while open, allow closing via the 'Escape' key or clicking the backdrop, and return focus to the original trigger button upon closing (following ARIA guidelines).",
+                                        dynamicInput: { type: "text", placeholder: "Modal ID or trigger classes?", label: "Custom Details" }
+                                    },
+                                    "Accordion / Collapse Logic": {
+                                        type: "option",
+                                        prompt: "Generate 'Accordion / Collapse' logic. The script should attach event listeners to accordion headers. When clicked, it must dynamically calculate the height of the associated content panel, apply an 'open' class for CSS transitions, and ensure only one panel remains open at a time (if specified).",
+                                        dynamicInput: { type: "text", placeholder: "Allow multiple open panels?", label: "Custom Details" }
+                                    },
+                                    "Dark / Light Mode Toggle": {
+                                        type: "option",
+                                        prompt: "Generate a 'Dark / Light Mode Toggle' script. It should attach a click listener to a theme switch button, toggle a 'dark-mode' class on the document body or root element, and save the user's preference to `localStorage`. On initial page load, it must check `localStorage` or `window.matchMedia('(prefers-color-scheme: dark)')` to set the initial state correctly.",
+                                        dynamicInput: { type: "text", placeholder: "Specific classes or framework (e.g., Tailwind)?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Advanced Interactions": {
+                                type: "group",
+                                options: {
+                                    "Drag and Drop (Native API)": {
+                                        type: "option",
+                                        prompt: "Generate 'Drag and Drop' logic using the native HTML5 Drag and Drop API. The script should define draggable elements (`dragstart`, `dragend`) and drop zones (`dragover`, `dragenter`, `drop`). It must handle transferring data via the `dataTransfer` object and updating the DOM to reflect the new position of the dropped item.",
+                                        dynamicInput: { type: "text", placeholder: "What is being dragged (e.g., list items, files)?", label: "Custom Details" }
+                                    },
+                                    "Custom Context Menu (Right Click)": {
+                                        type: "option",
+                                        prompt: "Generate a 'Custom Context Menu' script. It should listen for the `contextmenu` (right-click) event, prevent the default browser menu, and display a custom HTML menu at the exact X/Y coordinates of the mouse pointer. Ensure the menu closes when clicking anywhere else on the document.",
+                                        dynamicInput: { type: "text", placeholder: "Menu items or actions?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "State & Data Management": {
+                        type: "group",
+                        options: {
+                            "Local Storage": {
+                                type: "group",
+                                options: {
+                                    "Save/Load Preferences": {
+                                        type: "option",
+                                        prompt: "Generate a utility script to 'Save and Load User Preferences' using `localStorage`. It must include functions to serialize JSON data before saving (`setItem`), parse it upon retrieval (`getItem`), and handle potential errors (like storage limits or parsing failures). Use this to persist UI states like sidebar collapsed state or view modes.",
+                                        dynamicInput: { type: "text", placeholder: "Specific preference keys?", label: "Custom Details" }
+                                    },
+                                    "Recently Viewed Items": {
+                                        type: "option",
+                                        prompt: "Generate a 'Recently Viewed Items' script. It should maintain an array of item IDs in `localStorage`. When a new item is viewed, push it to the front of the array, remove duplicates, and slice the array to a maximum length (e.g., last 10 items). Provide a function to render these items in the DOM.",
+                                        dynamicInput: { type: "text", placeholder: "Max items to store?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "E-commerce / Cart Logic": {
+                                type: "group",
+                                options: {
+                                    "Shopping Cart State Manager": {
+                                        type: "option",
+                                        prompt: "Generate a robust 'Shopping Cart State Manager'. It needs functions to: 1) Add an item (handling quantity increments if it already exists), 2) Remove an item, 3) Update quantities, and 4) Calculate the subtotal and total cost. It must synchronize this state with `localStorage` or `sessionStorage`.",
+                                        dynamicInput: { type: "text", placeholder: "Tax rate or specific object structure?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Filtering & Searching": {
+                                type: "group",
+                                options: {
+                                    "Client-Side Search / Filter List": {
+                                        type: "option",
+                                        prompt: "Generate a 'Client-Side Search and Filter' script. Given an array of data objects and a DOM list, it should listen to a search input (with debounce) and category dropdowns. It must filter the array based on the criteria and dynamically re-render the DOM list to show only matching items.",
+                                        dynamicInput: { type: "text", placeholder: "What fields to search by (e.g., title, tags)?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "API & Data Fetching": {
+                        type: "group",
+                        options: {
+                            "REST API Integration": {
+                                type: "group",
+                                options: {
+                                    "Fetch & Render List (GET)": {
+                                        type: "option",
+                                        prompt: "Generate a script to 'Fetch and Render a List' from a REST API using the `fetch` API. It must handle async/await, check if `response.ok`, parse the JSON, and map over the data to dynamically create and append DOM elements (like cards or list items). Include a loading state (spinner) and error handling block.",
+                                        dynamicInput: { type: "text", placeholder: "API Endpoint URL or data structure?", label: "Custom Details" }
+                                    },
+                                    "Submit Form to API (POST)": {
+                                        type: "option",
+                                        prompt: "Generate a script to 'Submit Form Data via POST'. It should gather form data using `FormData`, convert it to JSON (if required by the API), send a `fetch` request with appropriate headers (`Content-Type: application/json`), and handle the response (success message or displaying server-side validation errors).",
+                                        dynamicInput: { type: "text", placeholder: "API Endpoint URL or specific payload?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Real-time & WebSockets": {
+                                type: "group",
+                                options: {
+                                    "Basic WebSocket Client": {
+                                        type: "option",
+                                        prompt: "Generate a 'Basic WebSocket Client' script. It should establish a connection to a WebSocket server (`new WebSocket()`), handle connection events (`onopen`, `onclose`, `onerror`), and listen for incoming messages (`onmessage`). Include a function to send data back to the server. Ideal for simple chat or live updates.",
+                                        dynamicInput: { type: "text", placeholder: "WebSocket URL?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Scroll & Animation Logic": {
+                        type: "group",
+                        options: {
+                            "Scroll Interactions": {
+                                type: "group",
+                                options: {
+                                    "Intersection Observer (Lazy Load / Animate)": {
+                                        type: "option",
+                                        prompt: "Generate an 'Intersection Observer' script. It should observe a set of DOM elements. When an element enters the viewport (e.g., 10% threshold), the observer should trigger a callback to either lazy-load an image (`src` swap) or add a CSS class (like `.animate-in`) to trigger a CSS transition, then optionally unobserve the element.",
+                                        dynamicInput: { type: "text", placeholder: "What to animate or lazy load?", label: "Custom Details" }
+                                    },
+                                    "Infinite Scrolling": {
+                                        type: "option",
+                                        prompt: "Generate 'Infinite Scrolling' logic using Intersection Observer. Place a 'sentinel' element at the bottom of a list. When the sentinel enters the viewport, trigger an async fetch for the next page of data, append the new items to the DOM, and update the pagination state. Handle the 'end of data' scenario gracefully.",
+                                        dynamicInput: { type: "text", placeholder: "API endpoint or pagination style?", label: "Custom Details" }
+                                    },
+                                    "Sticky / Shrinking Header on Scroll": {
+                                        type: "option",
+                                        prompt: "Generate logic for a 'Shrinking Header on Scroll'. Attach a throttled scroll event listener. If the `window.scrollY` exceeds a certain threshold (e.g., 50px), add a 'scrolled' class to the `<header>` element (which scales down the logo and reduces padding via CSS). Remove the class when scrolled back to the top.",
+                                        dynamicInput: { type: "text", placeholder: "Scroll threshold or header ID?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Math / Parallax": {
+                                type: "group",
+                                options: {
+                                    "Mouse Move Parallax": {
+                                        type: "option",
+                                        prompt: "Generate a 'Mouse Move Parallax' script. Listen to the `mousemove` event on a container. Calculate the mouse position relative to the center of the screen, and apply subtle CSS `transform: translate()` calculations to inner elements based on a data attribute defining their 'speed' or 'depth' coefficient.",
+                                        dynamicInput: { type: "text", placeholder: "Container ID or elements?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Browser & Device APIs": {
+                        type: "group",
+                        options: {
+                            "Hardware & Sensors": {
+                                type: "group",
+                                options: {
+                                    "Geolocation API": {
+                                        type: "option",
+                                        prompt: "Generate a script using the 'Geolocation API' (`navigator.geolocation`). Include a function to request the user's current position, handle the success callback (extracting latitude and longitude), and handle error callbacks (e.g., user denied permission, timeout).",
+                                        dynamicInput: { type: "text", placeholder: "What to do with coordinates?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "System Integration": {
+                                type: "group",
+                                options: {
+                                    "Copy to Clipboard API": {
+                                        type: "option",
+                                        prompt: "Generate a 'Copy to Clipboard' utility script using the modern `navigator.clipboard.writeText()` API. Bind it to a button click, copy specific text (from a code block or input field), and provide visual feedback (like changing button text to 'Copied!' temporarily) using a `setTimeout`.",
+                                        dynamicInput: { type: "text", placeholder: "Element ID to copy text from?", label: "Custom Details" }
+                                    },
+                                    "Web Share API": {
+                                        type: "option",
+                                        prompt: "Generate a script utilizing the 'Web Share API' (`navigator.share`). Create a function attached to a 'Share' button that triggers the native OS sharing dialog, passing in a title, text, and URL. Ensure there is a fallback mechanism (like copying the link) if the API is not supported on the user's device.",
+                                        dynamicInput: { type: "text", placeholder: "Data to share (Title, URL)?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Utility / Helper Functions": {
+                        type: "group",
+                        options: {
+                            "Data Formatting": {
+                                type: "group",
+                                options: {
+                                    "Date & Time Formatter": {
+                                        type: "option",
+                                        prompt: "Generate a 'Date & Time Formatting' utility using the native `Intl.DateTimeFormat` API or pure JS. It should take an ISO string or Timestamp and convert it into human-readable formats like 'Relative time' (e.g., '2 hours ago') or localized short dates (e.g., 'Oct 24, 2023').",
+                                        dynamicInput: { type: "text", placeholder: "Preferred output format?", label: "Custom Details" }
+                                    },
+                                    "Currency & Number Formatter": {
+                                        type: "option",
+                                        prompt: "Generate a 'Currency and Number Formatting' utility using `Intl.NumberFormat`. Provide functions to format raw numbers into standard currency formats (e.g., $1,234.56), add thousands separators, or compact large numbers (e.g., 1.5K, 2M).",
+                                        dynamicInput: { type: "text", placeholder: "Currency code (e.g., USD, INR)?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "String Manipulation": {
+                                type: "group",
+                                options: {
+                                    "Truncate / Slugify": {
+                                        type: "option",
+                                        prompt: "Generate 'String Manipulation' utility functions. Include a `truncate(string, maxLength)` function that cuts text and appends '...', and a `slugify(string)` function that converts titles into URL-friendly strings (lowercased, spaces replaced with hyphens, special chars removed).",
+                                        dynamicInput: { type: "text", placeholder: "Specific string requirements?", label: "Custom Details" }
+                                    }
+                                }
+                            },
+                            "Performance": {
+                                type: "group",
+                                options: {
+                                    "Debounce & Throttle": {
+                                        type: "option",
+                                        prompt: "Generate essential 'Debounce' and 'Throttle' utility functions. Ensure they properly handle `this` context and arguments. Provide examples of how to apply them to high-frequency events like window `resize`, `scroll`, or search input `keyup`.",
+                                        dynamicInput: { type: "text", placeholder: "Which event needs optimization?", label: "Custom Details" }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
             "Backend / APIs": { type: "group", options: {} },
             "Configuration / Assets": { type: "group", options: {} }
         }
